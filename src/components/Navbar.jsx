@@ -6,6 +6,9 @@ import MenuSharpIcon from '@mui/icons-material/MenuSharp';
 import logo from '../Images/logo.png';
 
 const Navbar = () => {
+  // const window
+  const scroll = window.scrollY;
+  console.log(scroll);
   return (
     <Box
       width='100%'
@@ -17,6 +20,8 @@ const Navbar = () => {
       sx={{
         boxShadow: '1px 1px 10px 1px rgba(13, 13, 24, 0.14)',
       }}
+      // {window.scrollY > '100px' &&
+      //  console.log('hello')}
       >
         
        <Box
@@ -25,7 +30,6 @@ const Navbar = () => {
         justifyContent='space-between'
         alignItems='center'
         m='auto'
-        // border='2px solid green'
         sx={{
           width: '1200px',
         }}>
@@ -63,12 +67,11 @@ const Navbar = () => {
           </Box>
         </Box>
         <Box 
-          // border='2px solid green'
           top='0'
           height='100vh'
           width='100%'
           position='absolute'
-          display='flex'
+          display='none'// here is none display is for mobile
           alignItems='center'
           justifyContent='center'
           z-index='1'

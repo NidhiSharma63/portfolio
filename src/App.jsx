@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import About from './components/About';
 import MyProjects from './components/MyProjects';
 import Contact from './components/Contact';
+import HeroBanner from './components/HeroBanner';
 import './App.css';
 
 
@@ -26,6 +27,7 @@ const App = () => {
 
       }}>
         <Navbar />
+        <HeroBanner/>
       </Box>
   )
 }
