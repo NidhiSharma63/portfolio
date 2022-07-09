@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --fontFamilyPtSerif: 'PT Serif', serif;
+    --fontFamilyRobotoSlab: 'Roboto Slab', serif;
+}
+.lightTheme{
+    --background-color:#FFFFFF;
+    --primary-color:#181717;
+    --secondary-color:#331EB0;
+}
+.DarkTheme{
+    --background-color:#181717;
+    --primary-color:#FFFFFF;
+}
+
