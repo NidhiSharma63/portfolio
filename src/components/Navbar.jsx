@@ -25,7 +25,7 @@ const Navbar = () => {
         justifyContent='space-between'
         alignItems='center'
         m='auto'
-        border='2px solid green'
+        // border='2px solid green'
         sx={{
           width: '1200px',
         }}>
@@ -63,7 +63,7 @@ const Navbar = () => {
           </Box>
         </Box>
         <Box 
-          border='2px solid green'
+          // border='2px solid green'
           top='0'
           height='100vh'
           width='100%'
@@ -79,8 +79,8 @@ const Navbar = () => {
             backgroundColor:{xs:'rgb(13, 13, 24, 0.4)',md:'transparent'},
           }}>
             <Stack
-              fontSize={{xs:'30px',md:'23px',lg:'26px'}}
-              spacing={{xs:3,md:12}}
+              fontSize={{xs:'30px',md:'23px'}}
+              spacing={{xs:3,md:13}}
               fontFamily='var(--fontFamilyWorkSans)'
               fontWeight='400'
               direction={{xs:'column',md:'row'}}

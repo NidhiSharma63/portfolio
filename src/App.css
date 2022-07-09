@@ -30,13 +30,13 @@ body{
     content: "";
     display: block;
     width: 0px;
-    height: 2px;
-    background-color: var(--primary-color);
+    height: 2.3px;
+    background-color: var(--secondary-color);
     transition: width 0.3s ease-in-out;
 }
 .navbar-link:hover::after{
-    width: 75px;
+    width: 65px;
 }
 .my-build:hover::after{
-    width: 110px;
+    width: 95px;
 }
