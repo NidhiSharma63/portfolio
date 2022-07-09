@@ -1,5 +1,5 @@
 import React from 'react';
-import Home from './components/Navbar';
+import Navbar from './components/Navbar';
 import About from './components/About';
 import MyProjects from './components/MyProjects';
 import Contact from './components/Contact';
@@ -13,12 +13,15 @@ const App = () => {
     <Box 
       border='2px solid green'
       m='auto'
+      p='10px'
       sx={{
         width:{
           xl:'1480px'
         } 
 
-      }}>App</Box>
+      }}>
+        <Navbar />
+      </Box>
   )
 }
 
