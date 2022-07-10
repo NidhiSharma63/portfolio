@@ -87,11 +87,13 @@ const About = () => {
           <Box>
             {/* <Box> */}
             <Box
+              className='html'
               position='relative'
               component='img'
               left='60px'
               top='50px'
               sx={{
+                transform:'translateX(0px)',
                 width:'120px',
               }}
               src={html}
