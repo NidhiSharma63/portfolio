@@ -118,8 +118,7 @@ const About = () => {
               className='jsImg'
               position='relative'
               component='img'
-              left= '86px'
-              top= '100px'
+              
               sx={{
                 width:'130px',
                 transform: 'translate(10px,7px)',

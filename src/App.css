@@ -92,12 +92,15 @@ body{
     /* animation-delay: .1s; */
 }
 .cssImg{
-    /* animation-name: cssAnim; */
-    animation-delay: 2.7s;
+    animation-name: cssAnim;
+    animation-delay: .1s;
 }
 .jsImg{
-    /* animation-name: jsAnim;
-    animation-delay: .2s; */
+    left:86px;
+    top:100px;
+    animation-name: jsAnim;
+    animation-duration: 7s;
+    animation-delay: .3s;
 
 }
 .figmaImg{
@@ -109,70 +112,86 @@ body{
     animation-delay: 6.7s;
 }
 @keyframes htmlAnim1{
-    /* 0%, */
+    0%{
+        top:-14px;
+    }
     25%{
-        transform: translate(0px, -62px);
-        border: 3px solid orange;
+        top: -14px;
+        left: 354px;
     }
     50%{
-        transform: translate(346px, -66px);
-        border: 3px solid green;
-
+        top: 222px;
+        left: 354px;
     }
     75%{
-        transform: translate(346px, 170px);
-        border: 3px solid yellow;
-
+        top: 222px;
+        left: 0px;
     }
     100%{
-        transform: translate(0px, 170px);
-        border: 3px solid red;
+        top: 0px;
+        left: 0px;
     }
-    0%{
-        transform: translate(0px, 0px);
-        border: 3px solid pink;
-    }
+   
    
 }
 
 @keyframes cssAnim {
-    25% {
-        transform: translate(151px, 0px);
+    0%{
+        left: 70px;
+        top: -3px;
     }
-    50%{
-        transform: translate(151px, 238px);
+    10%{
+        left: 224px;
+        top: -3px;
     }
-    75%{
-        transform: translate(-170px, 238px);
+   
+    32.5%{
+        left: 224px;
+        top: 244px;    
+    }
+    62.5%{
+        left: -110px;
+        top: 244px;
+    }
+    82.5%{
+        left: -110px;
+        top: 0px;
     }
     100%{
-        transform: translate(-180px, 0px);
-    }
-    0%{
-        transform: translate(161px, 0px);
+        left: 70px;
+        top: -3px;
     }
 }
 @keyframes jsAnim {
     0% {
-        transform: translate3d(10px, 158px, 0px);
+        left:86px;
+        top:100px;
     }
-    25%{
-        transform: translate3d(-200px, 158px, 0px);
+    12%{
+        left: 87px;
+        top: 223px;
     }
-    50%{
-        transform: translate3d(-200px, -44px, 0px);
-
+    32.5%{
+        left: -259px;
+        top: 223px;
     }
-    75%{
-        transform: translate3d(0px, -44px, 0px);
+    62.5%{
+        left: -259px;
+        top: -14px;
+    }
+    82.5%{
+        left: 92px;
+        top: -14px;
     }
     100%{
-        transform: translate3d(10px, 158px, 0px);
+        left:86px;
+        top:100px;
     }
 }
+
 @keyframes figmaAnim {
     0% {
-        transform: translate3d(-184px, 0px, 0px);
+       
     }
     25%{
         transform: translate3d(-184px, -209px, 0px);
