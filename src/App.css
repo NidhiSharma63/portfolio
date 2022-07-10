@@ -75,17 +75,33 @@ body{
     background: rgb(131,58,180);
     background: linear-gradient(180deg, rgba(131,58,180,0) 0%, rgba(203,38,231,0.03125) 18%, rgba(235,29,253,0.06486344537815125) 39%, rgba(78,69,252,0.07046568627450978) 67%, rgba(78,69,252,0) 96%);
 }
-.html{
-    animation-name: htmlAnim;
+.htmlImg,
+.cssImg,
+.jsImg,
+.reactImg,
+.figmaImg{
     animation-duration: 7s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
-
+.htmlImg{
+    /* animation-name: htmlAnim; */
+}
+.cssImg{
+    /* animation-name: cssAnim; */
+}
+.jsImg{
+    /* animation-name: jsAnim; */
+}
+.figmaImg{
+    /* animation-name: figmaAnim; */
+}
+.reactImg{
+    animation-name: reactAnim;
+}
 @keyframes htmlAnim {
     0% {
-        /* transform: translate3d(10px, 10px, 0); */
-        transform: translate3d(0px, -29px, 0px);
+        transform: translate3d(-3px, -29px, 0px);
     }
     25%{
         transform: translate3d(236px, -29px, 0px);
@@ -98,6 +114,78 @@ body{
         transform: translate3d(0px, 149px, 0px);
     }
     100%{
-        transform: translate3d(0px, 0px, 0px);
+        transform: translate3d(-3px, -29px, 0px);
+    }
+}
+@keyframes cssAnim {
+    0% {
+        transform: translate3d(133px, 0px, 0px);
+    }
+    25%{
+        transform: translate3d(133px, 182px, 0px);
+    }
+    50%{
+        transform: translate3d(-121px, 182px, 0px);
+
+    }
+    75%{
+        transform: translate3d(-121px, 0px, 0px);
+    }
+    100%{
+        transform: translate3d(133px, 0px, 0px);
+    }
+}
+@keyframes jsAnim {
+    0% {
+        transform: translate3d(10px, 158px, 0px);
+    }
+    25%{
+        transform: translate3d(-200px, 158px, 0px);
+    }
+    50%{
+        transform: translate3d(-200px, -44px, 0px);
+
+    }
+    75%{
+        transform: translate3d(0px, -44px, 0px);
+    }
+    100%{
+        transform: translate3d(10px, 158px, 0px);
+    }
+}
+@keyframes figmaAnim {
+    0% {
+        transform: translate3d(-184px, 0px, 0px);
+    }
+    25%{
+        transform: translate3d(-184px, -209px, 0px);
+    }
+    50%{
+        transform: translate3d(53px, -209px, 0px);
+
+    }
+    75%{
+        transform: translate3d(53px, -7px, 0px);
+    }
+    100%{
+        transform: translate3d(-184px, 0px, 0px);
+    }
+}
+@keyframes reactAnim {
+     0% {
+        transform: translate3d(-46px, -149px, 0px);
+    }
+    25%{
+        transform: translate3d(225px, -149px, 0px);
+    }
+    50%{
+        transform: translate3d(225px, 39px, 0px);
+
+    }
+    75%{
+        transform: translate3d(-13px, 39px, 0px);
+    }
+    100%{
+        transform: translate3d(-46px, -149px, 0px);
     }
 }

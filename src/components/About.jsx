@@ -87,7 +87,7 @@ const About = () => {
           <Box>
             {/* <Box> */}
             <Box
-              className='html'
+              className='htmlImg'
               position='relative'
               component='img'
               left='60px'
@@ -99,40 +99,46 @@ const About = () => {
               src={html}
             />
             <Box
+              className='cssImg'
               position='relative'
               component='img'
-              left='50px'
-              top='20px'
+              left='76px'
+              top='31px'
               sx={{
                 width:'130px',
+                transform: 'translateX(-3px)',
               }}
               src={css2}
             />
             <Box
+              className='jsImg'
               position='relative'
               component='img'
-              left= '20px'
-              top= '50px'
+              left= '37px'
+              top= '100px'
               sx={{
                 width:'130px',
+                transform: 'translate(10px,7px)',
               }}
               src={js}
             />
             <Box
+              className='reactImg'
               position='relative'
               component='img'
-              left='130px'
-              top='0px'
+              left='84px'
+              top='32px'
               sx={{
                 width:'130px',
               }}
               src={react}
             />
             <Box
+              className='figmaImg'
               position='relative'
               component='img'
-              left='100px'
-              top='5px'
+              left='94px'
+              top='82px'
               sx={{
                 width:'160px',
               }}
