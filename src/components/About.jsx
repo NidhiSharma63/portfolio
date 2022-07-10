@@ -107,8 +107,6 @@ const About = () => {
               className='cssImg'
               position='relative'
               component='img'
-              left='70px'
-              top='-3px'
               sx={{
                 width:'130px',
               }}
@@ -129,14 +127,12 @@ const About = () => {
               className='reactImg'
               position='relative'
               component='img'
-              left='16px'
-              top='60px'
               sx={{
                 width:'130px',
               }}
               src={react}
             />
-            <Box
+            {/* <Box
               className='figmaImg'
               position='relative'
               component='img'
@@ -146,7 +142,7 @@ const About = () => {
                 width:'160px',
               }}
               src={figma}
-            />
+            /> */}
             {/* </Box> */}
           </Box>
         </Box>
