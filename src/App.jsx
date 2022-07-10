@@ -28,6 +28,7 @@ const App = () => {
       }}>
         <Navbar />
         <HeroBanner/>
+        <About />
       </Box>
   )
 }
