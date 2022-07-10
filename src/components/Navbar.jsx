@@ -4,6 +4,7 @@ import { Box,Stack,Button} from '@mui/material';
 import MenuSharpIcon from '@mui/icons-material/MenuSharp';
 
 import logo from '../Images/logo.png';
+import ButtonComponent from './Button';
 
 const Navbar = () => {
   // const window
@@ -11,12 +12,14 @@ const Navbar = () => {
   console.log(scroll);
   return (
     <Box
+      className="navbar"
       width='100%'
       position='relative'
       display='flex'
       p='6px'
       justifyContent='space-between'
       alignItems='center'
+      // backgroundColor='white'
       sx={{
         boxShadow: '1px 1px 10px 1px rgba(13, 13, 24, 0.14)',
       }}
@@ -99,30 +102,15 @@ const Navbar = () => {
               position='relative'>My build</a>
           </Stack>
         </Box>
-        <Button
-          size='small'
-          className='nav-btn'
-          sx={{
-            backgroundColor:'var(--secondary-color)',
-            color:'white',
-            fontFamily:'var(--fontFamilyWorkSans)',
-            fontSize:'13px',
-            fontWeight:'bold',
-            width:'110px',
-            height:'40px',
-            marginRight:'14px',
-            boxShadow: '1px 1px 8px 1px rgba(13, 13, 24, 0.24)',
-            "&.MuiButtonBase-root:hover": {
-              bgcolor: "transparent",
-              border: "3px solid var(--secondary-color)",
-              color: "var(--secondary-color)",
-            }
-          }}
-          >Contact me</Button>
+        <Box
+          component='span'
+          marginRight='20px'>
+          <ButtonComponent value='Contact me'/>
+        </Box>
 
        </Box>
     </Box>
   )
 }
 
-export default Navbar
+export default Navbar;

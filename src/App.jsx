@@ -29,6 +29,7 @@ const App = () => {
         <Navbar />
         <HeroBanner/>
         <About />
+        <MyProjects/>
       </Box>
   )
 }

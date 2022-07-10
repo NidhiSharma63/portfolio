@@ -35,7 +35,8 @@ const About = () => {
       <Box
         marginTop='30px'>
         {/* textContainer */}
-        <Box>
+        <Box
+          p='0px 10px'>
           {/* single box */}
           {
             IntroText.map((text,index) => {
@@ -66,61 +67,69 @@ const About = () => {
         {/* textContainer end */}
         {/* imagesContainer */}
         <Box 
+          className='imagesContainer'
           marginTop='30px'
           position='relative'
-          border='1px solid orange'>
-          <Box
-            position='relative'
-            component='img'
-            left='30px'
-            top='50px'
-            sx={{
-              width:'120px',
-            }}
-            src={html}
-          />
-          <Box
-            position='relative'
-            component='img'
-            left='20px'
-            top='20px'
-            sx={{
-              width:'130px',
-            }}
-            src={css2}
-          />
-          <Box
-            position='relative'
-            component='img'
-            left= '-2px'
-            top= '30px'
-            sx={{
-              width:'130px',
-            }}
-            src={js}
-          />
-          <Box
-            position='relative'
-            component='img'
-            right='160px'
-            top='120px'
-            sx={{
-              width:'100px',
-            }}
-            src={react}
-          />
-          <Box
-            position='relative'
-            component='img'
-            left='80px'
-            top='5px'
-            sx={{
-              width:'160px',
-            }}
-            src={figma}
-          />
+          // border='1px solid orange'
+          display='flex'
+          alignItems='center'>
+          <Box>
+            {/* <Box> */}
+            <Box
+              position='relative'
+              component='img'
+              left='60px'
+              top='50px'
+              sx={{
+                width:'120px',
+              }}
+              src={html}
+            />
+            <Box
+              position='relative'
+              component='img'
+              left='50px'
+              top='20px'
+              sx={{
+                width:'130px',
+              }}
+              src={css2}
+            />
+            <Box
+              position='relative'
+              component='img'
+              left= '20px'
+              top= '50px'
+              sx={{
+                width:'130px',
+              }}
+              src={js}
+            />
+            <Box
+              position='relative'
+              component='img'
+              left='130px'
+              top='0px'
+              sx={{
+                width:'130px',
+              }}
+              src={react}
+            />
+            <Box
+              position='relative'
+              component='img'
+              left='100px'
+              top='5px'
+              sx={{
+                width:'160px',
+              }}
+              src={figma}
+            />
+            {/* </Box> */}
+          </Box>
         </Box>
         {/* imagesContainer end*/}
+
       </Box>
     </Box>
   )

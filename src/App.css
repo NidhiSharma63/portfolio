@@ -14,6 +14,9 @@
 }
 body{
     overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    position: relative;
 }
 .lightTheme{
     --background-color:#FFFFFF;
@@ -39,4 +42,34 @@ body{
 }
 .my-build:hover::after{
     width: 95px;
+}
+.underLine-pTag::after{
+   content: '';
+   /* position: relative; */
+   display: block;
+   margin-top: 10px;
+   height: 2px;
+   background-color: var(--secondary-color);
+}
+.imagesContainer{
+    background-color: #bb71dd44;
+    box-shadow: 1px 24px 184px 0px #bb71dddc ;
+    border: 1px solid #bb71dd02;
+}
+.bg{
+    /* background-color: rgba(255, 172, 19, 0.301); */
+    width: 100%;
+    position: absolute;
+    height: 300px;
+    border-bottom-right-radius: 11%;
+    top: 0;
+    left: 0;
+    margin-top: 80px;
+    box-shadow: 1px 0px 100px  rgba(8, 8, 173, 0.137);
+    z-index: -1;
+    background: rgb(45,53,253);
+    background: linear-gradient(0deg, rgba(45,53,253,0.08167016806722693) 9%, rgba(34,34,195,0.2049194677871149) 100%);
+}
+.navbar{
+    box-shadow: 1px 1px 1px 1px rgb(45,53,253) inset;
 }
