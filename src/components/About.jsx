@@ -76,22 +76,27 @@ const About = () => {
           className='imagesContainer'
           position='relative'
           m='auto'
-          display='flex'
-          alignItems='center'
           height='300px'
           sx={{
             marginTop:{xs:'30px',md:'0px'},
             width:{xs:'492px',md:'663px'},
 
           }}>
+            <Box
+             position='absolute'
+             border='1px solid orange'
+             width='350px'
+             height='250px'
+             left='60px'
+             top='50px'>
+
+            </Box>
           <Box>
             {/* <Box> */}
             <Box
               className='htmlImg'
               position='relative'
               component='img'
-              left='60px'
-              top='50px'
               sx={{
                 transform:'translateX(0px)',
                 width:'120px',
@@ -102,11 +107,10 @@ const About = () => {
               className='cssImg'
               position='relative'
               component='img'
-              left='76px'
-              top='31px'
+              left='70px'
+              top='-3px'
               sx={{
                 width:'130px',
-                transform: 'translateX(-3px)',
               }}
               src={css2}
             />
@@ -114,7 +118,7 @@ const About = () => {
               className='jsImg'
               position='relative'
               component='img'
-              left= '37px'
+              left= '86px'
               top= '100px'
               sx={{
                 width:'130px',
@@ -126,8 +130,8 @@ const About = () => {
               className='reactImg'
               position='relative'
               component='img'
-              left='84px'
-              top='32px'
+              left='16px'
+              top='60px'
               sx={{
                 width:'130px',
               }}

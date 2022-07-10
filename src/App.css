@@ -83,56 +83,73 @@ body{
     animation-duration: 7s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+    /* animation-direction: alternate; */
 }
 .htmlImg{
-    /* animation-name: htmlAnim; */
+    left:6px;
+    top:50px;
+    animation-name: htmlAnim1;
+    /* animation-delay: .1s; */
 }
 .cssImg{
     /* animation-name: cssAnim; */
+    animation-delay: 2.7s;
 }
 .jsImg{
-    /* animation-name: jsAnim; */
+    /* animation-name: jsAnim;
+    animation-delay: .2s; */
+
 }
 .figmaImg{
-    /* animation-name: figmaAnim; */
+    /* animation-name: figmaAnim;
+    animation-delay: .3s; */
 }
 .reactImg{
-    animation-name: reactAnim;
+     /* animation-name: reactAnim; */
+    animation-delay: 6.7s;
 }
-@keyframes htmlAnim {
-    0% {
-        transform: translate3d(-3px, -29px, 0px);
-    }
+@keyframes htmlAnim1{
+    /* 0%, */
     25%{
-        transform: translate3d(236px, -29px, 0px);
+        transform: translate(0px, -62px);
+        border: 3px solid orange;
     }
     50%{
-        transform: translate3d(236px, 149px, 0px);
+        transform: translate(346px, -66px);
+        border: 3px solid green;
 
     }
     75%{
-        transform: translate3d(0px, 149px, 0px);
+        transform: translate(346px, 170px);
+        border: 3px solid yellow;
+
     }
     100%{
-        transform: translate3d(-3px, -29px, 0px);
+        transform: translate(0px, 170px);
+        border: 3px solid red;
     }
+    0%{
+        transform: translate(0px, 0px);
+        border: 3px solid pink;
+    }
+   
 }
+
 @keyframes cssAnim {
-    0% {
-        transform: translate3d(133px, 0px, 0px);
-    }
-    25%{
-        transform: translate3d(133px, 182px, 0px);
+    25% {
+        transform: translate(151px, 0px);
     }
     50%{
-        transform: translate3d(-121px, 182px, 0px);
-
+        transform: translate(151px, 238px);
     }
     75%{
-        transform: translate3d(-121px, 0px, 0px);
+        transform: translate(-170px, 238px);
     }
     100%{
-        transform: translate3d(133px, 0px, 0px);
+        transform: translate(-180px, 0px);
+    }
+    0%{
+        transform: translate(161px, 0px);
     }
 }
 @keyframes jsAnim {
@@ -172,20 +189,19 @@ body{
     }
 }
 @keyframes reactAnim {
-     0% {
-        transform: translate3d(-46px, -149px, 0px);
-    }
-    25%{
-        transform: translate3d(225px, -149px, 0px);
+    25% {
+        transform: translate(0px, -214px);
     }
     50%{
-        transform: translate3d(225px, 39px, 0px);
-
+        transform: translate(315px, -214px);
     }
     75%{
-        transform: translate3d(-13px, 39px, 0px);
+       transform: translate(315px, 5px);
     }
     100%{
-        transform: translate3d(-46px, -149px, 0px);
+        transform: translate(0px, 5px);
+    }
+    25%{
+        transform: translate(0px, -214px);
     }
 }
