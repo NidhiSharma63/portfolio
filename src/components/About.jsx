@@ -23,7 +23,8 @@ const About = () => {
       marginTop='140px'
       display='flex'
       flexDirection='column'
-      alignItems='center'>
+      alignItems='center'
+      className='About'>
       <Typography
         fontFamily='var(--fontFamilyMerriweather)'
         fontWeight='bold'
@@ -33,7 +34,12 @@ const About = () => {
         <Box component='span' color='var(--secondary-color)'>About</Box> me
       </Typography>
       <Box
-        marginTop='30px'>
+        marginTop='30px'
+        display='flex'
+        sx={{
+          flexDirection:{xs:'column',md:'row'},
+          width:{xs:'100%',md:'900px',lg:'1100px'},
+        }}>
         {/* textContainer */}
         <Box
           p='0px 10px'>
@@ -68,11 +74,16 @@ const About = () => {
         {/* imagesContainer */}
         <Box 
           className='imagesContainer'
-          marginTop='30px'
           position='relative'
-          // border='1px solid orange'
+          m='auto'
           display='flex'
-          alignItems='center'>
+          alignItems='center'
+          height='300px'
+          sx={{
+            marginTop:{xs:'30px',md:'0px'},
+            width:{xs:'492px',md:'663px'},
+
+          }}>
           <Box>
             {/* <Box> */}
             <Box
