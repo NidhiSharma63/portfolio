@@ -78,79 +78,60 @@ const About = () => {
         {/* imagesContainer */}
         <Box 
           className='imagesContainer'
-          position='relative'
-          m='auto'
-          height='300px'
           sx={{
             marginTop:{xs:'100px',md:'0px'},
-            width:{xs:'392px',md:'663px'},
-
+            width:{xs:'100%',md:'663px'},
           }}>
             <Box
-             position='absolute'
-             border='1px solid orange'
-             width='100%'
-             height='250px'
              className='lampContainer'
-            //  left='0px'
-             top='-50px'>
-                <Box
-                  className='lamp'
-                  component='img'
-                  // src={lamp}
-                />
+            >
+              <Box className="bulb-holder" id="b1">
+                <Box className="bulb">
+                    <Box className="light"></Box>
+                </Box>
+              </Box>
+              <Box className="bulb-holder" id="b2">
+                <Box className="bulb">
+                    <Box className="light"></Box>
+                </Box>
+              </Box>
+              <Box className="bulb-holder" id="b3">
+                <Box className="bulb">
+                    <Box className="light"></Box>
+                </Box>
+              </Box>
             </Box>
           <Box>
-            {/* <Box> */}
             <Box
               className='htmlImg'
-              position='relative'
               component='img'
-              sx={{
-                transform:'translateX(0px)',
-                width:'120px',
-              }}
+              sx={{width:'120px'}}
               src={html}
             />
             <Box
               className='cssImg'
-              position='relative'
               component='img'
-              sx={{
-                width:'130px',
-              }}
+              sx={{width:'130px'}}
               src={css2}
             />
             <Box
               className='jsImg'
-              position='relative'
               component='img'
-              
-              sx={{
-                width:'130px',
-                transform: 'translate(10px,7px)',
-              }}
+              sx={{width:'130px'}}
               src={js}
             />
             <Box
               className='reactImg'
-              position='relative'
               component='img'
-              sx={{
-                width:'130px',
-              }}
+              sx={{width:'130px',}}
               src={react}
             />
             <Box
               className='figmaImg'
-              position='relative'
               component='img'
-              sx={{
-                width:'160px',
-              }}
+              sx={{width:'160px'}}
               src={figma}
             />
-            {/* </Box> */}
           </Box>
         </Box>
         {/* imagesContainer end*/}
