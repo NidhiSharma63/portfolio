@@ -8,6 +8,10 @@ import css2 from '../Images/css2.png';
 import figma from '../Images/figma.png';
 import react from '../Images/react.png';
 import js from '../Images/js.png';
+import lamp from '../Images/lamp.png';
+import lamp2 from '../Images/lamp2.png';
+
+
 
 
 const IntroText = [
@@ -78,18 +82,23 @@ const About = () => {
           m='auto'
           height='300px'
           sx={{
-            marginTop:{xs:'30px',md:'0px'},
-            width:{xs:'492px',md:'663px'},
+            marginTop:{xs:'100px',md:'0px'},
+            width:{xs:'392px',md:'663px'},
 
           }}>
             <Box
              position='absolute'
              border='1px solid orange'
-             width='350px'
+             width='100%'
              height='250px'
-             left='60px'
-             top='50px'>
-
+             className='lampContainer'
+            //  left='0px'
+             top='-50px'>
+                <Box
+                  className='lamp'
+                  component='img'
+                  // src={lamp}
+                />
             </Box>
           <Box>
             {/* <Box> */}
@@ -132,17 +141,15 @@ const About = () => {
               }}
               src={react}
             />
-            {/* <Box
+            <Box
               className='figmaImg'
               position='relative'
               component='img'
-              left='94px'
-              top='82px'
               sx={{
                 width:'160px',
               }}
               src={figma}
-            /> */}
+            />
             {/* </Box> */}
           </Box>
         </Box>

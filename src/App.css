@@ -51,17 +51,11 @@ body{
    height: 2px;
    background-color: var(--secondary-color);
 }
-.imagesContainer{
-    /* background-color: #bb71dd44;
-    box-shadow: 1px 24px 184px 0px #bb71dddc ;
-    border: 1px solid #bb71dd02; */
-}
 .bg{
     width: 100%;
     position: absolute;
     height: 300px;
     border-bottom-right-radius: 11%;
-    top: 0;
     left: 0;
     margin-top: 80px;
     box-shadow: 1px 0px 100px  rgba(8, 8, 173, 0.137);
@@ -80,126 +74,137 @@ body{
 .jsImg,
 .reactImg,
 .figmaImg{
-    animation-duration: 7s;
+    animation-duration: .9s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     /* animation-direction: alternate; */
 }
-.htmlImg{
-    
-    left: 6px;
-    top: -10px;
+.imagesContainer{
+    /* background: rgb(251,5,101);
+background: linear-gradient(0deg, rgba(251,5,101,0.5578606442577031) 74%, rgba(34,193,195,0.19091386554621848) 90%, rgba(253,187,45,0.008841036414565795) 100%); */
+    /* background: rgb(178,14,218);
+background: linear-gradient(0deg, rgba(178,14,218,0.6138830532212884) 74%, rgba(34,193,195,0.19091386554621848) 90%, rgba(253,187,45,0.008841036414565795) 100%); */
+    /* background: rgb(14,72,218);
+    background: linear-gradient(0deg, rgba(14,72,218,0.6138830532212884) 74%, rgba(34,193,195,0.19091386554621848) 90%, rgba(253,187,45,0.008841036414565795) 100%); */
+    /* background: rgb(17,45,116);
+    background: linear-gradient(0deg, rgba(17,45,116,0.36738445378151263) 74%, rgba(34,193,195,0.19091386554621848) 90%, rgba(253,187,45,0.008841036414565795) 100%); */
+/* background: rgb(17,45,116);
+    background: linear-gradient(0deg, rgba(17,45,116,0.6138830532212884) 74%, rgba(34,193,195,0.19091386554621848) 90%, rgba(253,187,45,0.008841036414565795) 100%); */
+}
 
+.htmlImg{
+    left: 38px;
+    top: 60px;
+    transform-origin: bottom;
     animation-name: htmlAnim1;
     /* animation-delay: .1s; */
 }
 .cssImg{
+    left: 24px;
+    top: 22px;
     animation-name: cssAnim;
-    left: 225px;
-    top: -3px;
-    /* animation-delay: .1s; */
+    transform-origin: center;
+    animation-delay: 1s;
 }
 .jsImg{
-    left: 86px;
-    top: 211px;
+    left: 2px;
+    top: 37px;
     animation-name: jsAnim;
-    animation-duration: 7s;
-    animation-delay: .3s;
-
+    /* animation-duration: 7s; */
+    
 }
 .figmaImg{
-     animation-name: figmaAnim;
-  /*  animation-delay: .3s; */
+    left:94px;
+    top:12px;
+    animation-name: figmaAnim;
+    /*  animation-delay: .3s; */
 }
 .reactImg{
-     animation-name: reactAnim;
-     left: 16px;
-     top: 78px;
+    left: 121px;
+    /* transform: perspective(500px) rotateX(180deg); */
+    top: 20px;
+    animation-name: reactAnim;
     /* animation-delay: 6.7s; */
 }
 
 @keyframes htmlAnim1 {
+    0%{
+        transform: rotate(8deg);
+    }
     25%{
-        left: 349px;
-        top: -10px;
+        transform: rotate(-8deg)
     }
     50%{
-        left: 349px;
-        top: 223px;
+        transform: rotate(8deg);
+        top:80px
     }
     75%{
-        left: 0px;
-        top: 223px;
+        transform: rotate(-8deg);
+        top:60px
     }
     100%{
-        left: 0px;
-        top: -10px;
+        transform: rotate(8deg);
+        top:60px
     }
 }
 @keyframes cssAnim {
-    0%{
-        left: 225px;
-        top: -3px;
-    }
     25%{
-        left: 225px;
-        top: 223px;
+        transform: rotate(-8deg);
+        top:54px
     }
     50%{
-        left: -118px;
-        top: 223px;
+        transform: rotate(8deg);
+        top:24px
     }
     75%{
-        left: -118px;
-        top: -12px;
+        transform: rotate(-8deg);
     }
     100%{
-        left: 225px;
-        top: -3px;
+        transform: rotate(-8deg);
     }
 }
 @keyframes jsAnim {
     0%{
-        left: 86px;
-        top: 211px;
-    }
-    25%{
-        left: -260px;
-        top: 211px;
+        transform: perspective(500px) rotate(-10deg); 
+        transform-origin: -20% -20%;
     }
     50%{
-        left: -260px;
-        top: -32px;    
+        transform: perspective(500px) rotate(10deg); 
+        transform-origin: 90% 90%;
     }
-    75%{
-        left: 93px;
-        top: -32px;
-    }
-    100%{
-        left: 86px;
-        top: 211px;
-    }
+   100%{
+        transform: perspective(500px) rotate(-10deg); 
+        transform-origin: -20% -20%;
+   }
 }
 
 @keyframes reactAnim {
     0%{
-        left: 16px;
-        top: 78px;    
-    }
-    25%{
-        left: 16px;
-        top: -158px;
+        transform: perspective(500px) rotate(-10deg); 
+        transform-origin: 90% 90%;
     }
     50%{
-        left: 345px;
-        top: -158px;    
+        transform: perspective(500px) rotate(10deg); 
+        transform-origin: -20% -20%;
     }
-    75%{
-        left: 345px;
-        top: 96px;
+   100%{
+        transform: perspective(500px) rotate(-10deg); 
+        transform-origin: 90% 90%;
+   }
+}
+@keyframes figmaAnim {
+    0%{
+        transform: perspective(500px) rotate(-20deg); 
+        transform-origin: left bottom;
     }
-    100%{
-        left: 16px;
-        top: 78px;
+    50%{
+        transform: perspective(500px) rotate(20deg); 
+        transform-origin: right bottom;
+
     }
+   100%{
+        transform: perspective(500px) rotate(-20deg); 
+        transform-origin: left bottom;
+
+   }
 }

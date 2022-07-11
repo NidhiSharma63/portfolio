@@ -73,8 +73,10 @@ const HeroBanner = () => {
           />
       </Box>
       <Box
-        className='bg'>
-
+        className='bg'
+        sx={{
+          top:{sm:'0px',xs:'-3px'}
+        }}>
       </Box>
     </>
   )
