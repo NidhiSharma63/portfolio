@@ -119,14 +119,6 @@ body{
 }
 #b1{
     animation-name: bulb1;  
-    /* box-shadow:0px 31px 35px 5px blue,
-    0px 65px 41px 4px blue,
-    3px 84px 46px 10px blue,
-    -2px 132px 61px 35px blue,
-    -48px 202px 89px 33px blue,
-    48px 202px 89px 33px blue,
-    9px 316px 89px 33px blue;
-    ; */
     box-shadow: 
     0px 24px 51px -5px blue, 
     0px 56px 101px -3px blue, 
@@ -159,44 +151,91 @@ body{
     9px 316px 89px 3px rgb(0, 119, 255);
     animation-name: bulb3;
 }
-.light{
-    /* box-shadow:0px 31px 35px 5px blue,
-    0px 65px 41px 4px blue,
-    3px 84px 46px 10px blue,
-    -2px 132px 61px 35px blue,
-    -48px 202px 89px 33px blue,
-    48px 202px 89px 33px blue,
-    9px 316px 89px 33px blue;
-    ; */
-}
 @keyframes bulb1 {
   100%,0%{
     transform: rotate(-32deg);
+    box-shadow: 
+    0px 24px 51px -5px blue, 
+    0px 56px 101px -3px blue, 
+    3px 84px 87px 1px blue, 
+    -2px 110px 105px 10px blue, 
+    -48px 202px 126px 10px blue, 
+    9px 316px 89px 3px blue;
   }
   25%{
     transform: rotate(-46deg);
+    box-shadow: 
+    0px 24px 51px -5px rgb(183, 0, 255), 
+    0px 56px 101px -3px rgb(183, 0, 255), 
+    3px 84px 58px 2px rgb(183, 0, 255), 
+    -2px 110px 100px 30px rgb(183, 0, 255), 
+    -48px 202px 126px 10px rgb(183, 0, 255), 
+    9px 316px 89px 3px rgb(183, 0, 255);
   }
   75%{
     transform: rotate(0deg);
+    box-shadow: 
+    0px 24px 51px -5px rgb(0, 119, 255), 
+    0px 56px 101px -3px rgb(0, 119, 255), 
+    3px 84px 58px 2px rgb(0, 119, 255), 
+    -2px 110px 100px 30px rgb(0, 119, 255), 
+    -48px 202px 126px 10px rgb(0, 119, 255), 
+    9px 316px 89px 3px rgb(0, 119, 255);
   }
 }
 @keyframes bulb2 {
     100%,0%{
         transform: translateX(192px) rotate(-25deg);
+        box-shadow: 
+        0px 24px 51px -5px rgb(183, 0, 255), 
+        0px 56px 101px -3px rgb(183, 0, 255), 
+        3px 84px 58px 2px rgb(183, 0, 255), 
+        -2px 110px 100px 30px rgb(183, 0, 255), 
+        -48px 202px 126px 10px rgb(183, 0, 255), 
+        9px 316px 89px 3px rgb(183, 0, 255);
     }
     50%{
         transform: translateX(192px) rotate(15deg);
+        box-shadow: 
+        0px 24px 51px -5px blue, 
+        0px 56px 101px -3px blue, 
+        3px 84px 87px 1px blue, 
+        -2px 110px 105px 10px blue, 
+        -48px 202px 126px 10px blue, 
+        9px 316px 89px 3px blue;
     }
 }
 @keyframes bulb3 {
     100%,0%{
       transform: translateX(392px) rotate(20deg);
+      box-shadow: 
+      0px 24px 51px -5px rgb(0, 119, 255), 
+      0px 56px 101px -3px rgb(0, 119, 255), 
+      3px 84px 58px 2px rgb(0, 119, 255), 
+      -2px 110px 100px 30px rgb(0, 119, 255), 
+      -48px 202px 126px 10px rgb(0, 119, 255), 
+      9px 316px 89px 3px rgb(0, 119, 255);
+      animation-name: bulb3;
     }
     25%{
       transform: translateX(392px) rotate(-20deg);
+      box-shadow: 
+      0px 24px 51px -5px rgb(183, 0, 255), 
+      0px 56px 101px -3px rgb(183, 0, 255), 
+      3px 84px 58px 2px rgb(183, 0, 255), 
+      -2px 110px 100px 30px rgb(183, 0, 255), 
+      -48px 202px 126px 10px rgb(183, 0, 255), 
+      9px 316px 89px 3px rgb(183, 0, 255);
     }
     75%{
       transform: translateX(392px) rotate(40deg);
+      box-shadow: 
+      0px 24px 51px -5px blue, 
+      0px 56px 101px -3px blue, 
+      3px 84px 87px 1px blue, 
+      -2px 110px 105px 10px blue, 
+      -48px 202px 126px 10px blue, 
+      9px 316px 89px 3px blue;
     }
   }
 .imagesContainer{
