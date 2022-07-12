@@ -69,6 +69,19 @@ body{
     background: rgb(131,58,180);
     background: linear-gradient(180deg, rgba(131,58,180,0) 0%, rgba(203,38,231,0.03125) 18%, rgba(235,29,253,0.06486344537815125) 39%, rgba(78,69,252,0.07046568627450978) 67%, rgba(78,69,252,0) 96%);
 }
+.heading-outline::after{
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 2px;
+    background-color: var(--secondary-color);
+    bottom: 0;
+    left: 0;
+    transition: .6s;
+}
+.heading-outline:hover::after{
+    width: 0;
+}
 .htmlImg,
 .cssImg,
 .jsImg,
@@ -235,6 +248,7 @@ body{
 .imagesContainer{
     position:relative;
     margin:auto;
+    height: 400px;
 }
 .htmlImg{
     left: 38px;
@@ -270,7 +284,6 @@ body{
     animation-name: reactAnim;
     /* animation-delay: 6.7s; */
 }
-
 @keyframes htmlAnim1 {
     0%{
         transform: rotate(8deg);
@@ -350,4 +363,40 @@ body{
         transform-origin: left bottom;
 
    }
+}
+
+.label{
+    font-size: 20px;
+    font-weight: 700;
+    align-self: flex-start;
+}
+.input{
+    /* border: 1px solid #222020a6; */
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 17px;
+    color:var(--primary-color);
+    box-shadow: 0px 0px 4px 0px black;
+    outline: none;
+    width:100%;
+    transition: box-shadow .3s;
+}
+.input:hover{
+    box-shadow: 0px 0px 4px 0px var(--secondary-color);
+}
+.input:focus{
+    border:1.8px solid rgb(105, 28, 194);
+    box-shadow: none;
+}
+.textarea{
+    margin-top: 12px;
+    resize: none;
+}
+.MuiInput-underline:hover{
+  border-bottom: none;
+}
+.css-c672nl-MuiInputBase-root-MuiInput-root::after {
+    border-bottom: none !important;
 }

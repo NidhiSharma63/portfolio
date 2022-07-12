@@ -18,18 +18,17 @@ const App = () => {
   },[])
   return (
     <Box 
-      // border='2px solid green'
       m='auto'
       sx={{
         width:{
           xl:'1480px'
         } 
-
       }}>
         <Navbar />
         <HeroBanner/>
         <About />
-        <MyProjects/>
+        {/* <MyProjects/> */}
+        <Contact/>
       </Box>
   )
 }

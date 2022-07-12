@@ -28,8 +28,11 @@ const About = () => {
       <Typography
         fontFamily='var(--fontFamilyMerriweather)'
         fontWeight='bold'
+        className='heading-outline'
+        position='relative'
         sx={{
           fontSize:'24px',
+          cursor:'pointer'
         }}>
         <Box component='span' color='var(--secondary-color)'>About</Box> me
       </Typography>

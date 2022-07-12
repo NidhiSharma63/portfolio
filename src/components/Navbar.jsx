@@ -105,7 +105,7 @@ const Navbar = () => {
         <Box
           component='span'
           marginRight='20px'>
-          <ButtonComponent value='Contact me'/>
+          {/* <ButtonComponent value='Contact me'/> */}
         </Box>
 
        </Box>

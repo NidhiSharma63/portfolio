@@ -62,7 +62,7 @@ const HeroBanner = () => {
               >
               Frontend Developer with a passion for building beautiful,<br/> responsive websites and love to listening music.
             </Typography>
-            <ButtonComponent value='Hire me'/>
+            {/* <ButtonComponent value='Hire me'/> */}
           </Box>
           <Box
             component='img'
