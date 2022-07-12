@@ -8,10 +8,6 @@ import css2 from '../Images/css2.png';
 import figma from '../Images/figma.png';
 import react from '../Images/react.png';
 import js from '../Images/js.png';
-import lamp from '../Images/lamp.png';
-import lamp2 from '../Images/lamp2.png';
-
-
 
 
 const IntroText = [
@@ -80,7 +76,7 @@ const About = () => {
           className='imagesContainer'
           sx={{
             marginTop:{xs:'100px',md:'0px'},
-            width:{xs:'100%',md:'663px'},
+            width:{xs:'392px',sm:'494px',md:'663px'},
           }}>
             <Box
              className='lampContainer'

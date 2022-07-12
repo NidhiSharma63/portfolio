@@ -86,6 +86,9 @@ body{
     height:377px;
     top:-50px;
     z-index: 2;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
 }
 
 .bulb-holder{
@@ -120,7 +123,6 @@ body{
     9px 316px 89px 3px blue;
 }
 #b2{
-    transform: translateX(192px);
     margin-top: -49px;
     box-shadow: 
     0px 24px 51px -5px rgb(183, 0, 255), 
@@ -132,7 +134,7 @@ body{
     animation-name: bulb2;  
 }
 #b3{
-    transform: translateX(392px) rotate(20deg);
+    transform:  rotate(20deg);
     margin-top: -49px;
     box-shadow: 
     0px 24px 51px -5px rgb(0, 119, 255), 
@@ -177,7 +179,7 @@ body{
 }
 @keyframes bulb2 {
     100%,0%{
-        transform: translateX(192px) rotate(-25deg);
+        transform:rotate(-25deg);
         box-shadow: 
         0px 24px 51px -5px rgb(183, 0, 255), 
         0px 56px 101px -3px rgb(183, 0, 255), 
@@ -187,7 +189,7 @@ body{
         9px 316px 89px 3px rgb(183, 0, 255);
     }
     50%{
-        transform: translateX(192px) rotate(15deg);
+        transform:rotate(15deg);
         box-shadow: 
         0px 24px 51px -5px blue, 
         0px 56px 101px -3px blue, 
@@ -199,7 +201,7 @@ body{
 }
 @keyframes bulb3 {
     100%,0%{
-      transform: translateX(392px) rotate(20deg);
+      transform:rotate(20deg);
       box-shadow: 
       0px 24px 51px -5px rgb(0, 119, 255), 
       0px 56px 101px -3px rgb(0, 119, 255), 
@@ -210,7 +212,7 @@ body{
       animation-name: bulb3;
     }
     25%{
-      transform: translateX(392px) rotate(2deg);
+      transform:rotate(2deg);
       box-shadow: 
       0px 24px 51px -5px rgb(183, 0, 255), 
       0px 56px 101px -3px rgb(183, 0, 255), 
@@ -220,7 +222,7 @@ body{
       9px 316px 89px 3px rgb(183, 0, 255);
     }
     75%{
-      transform: translateX(392px) rotate(30deg);
+      transform:rotate(30deg);
       box-shadow: 
       0px 24px 51px -5px blue, 
       0px 56px 101px -3px blue, 
