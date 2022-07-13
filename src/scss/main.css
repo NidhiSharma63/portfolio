@@ -79,13 +79,6 @@ body {
   background: linear-gradient(0deg, rgba(45, 53, 253, 0.0816701681) 5%, rgba(34, 34, 195, 0.2049194678) 100%);
 }
 
-.About {
-  background: rgb(131, 58, 180);
-  background: linear-gradient(180deg, rgba(131, 58, 180, 0) 0%, rgba(235, 29, 253, 0.1516981793) 26%, rgba(78, 69, 252, 0.0704656863) 61%, rgba(78, 69, 252, 0) 96%);
-  background: rgb(131, 58, 180);
-  background: linear-gradient(180deg, rgba(131, 58, 180, 0) 0%, rgba(203, 38, 231, 0.03125) 18%, rgba(235, 29, 253, 0.0648634454) 39%, rgba(78, 69, 252, 0.0704656863) 67%, rgba(78, 69, 252, 0) 96%);
-}
-
 .heading-outline::after {
   content: "";
   position: absolute;

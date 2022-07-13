@@ -8,6 +8,7 @@ import css2 from '../Images/css2.png';
 import figma from '../Images/figma.png';
 import react from '../Images/react.png';
 import js from '../Images/js.png';
+import Bulb from './Bulb';
 
 
 const IntroText = [
@@ -21,7 +22,7 @@ const About = () => {
   return (
     <Box
       marginTop='140px'
-      className='About flex'>
+      className='flex'>
       <Typography
         fontFamily='var(--fontFamilyMerriweather)'
         fontWeight='bold'
@@ -81,21 +82,9 @@ const About = () => {
             <Box
              className='lampContainer'
             >
-              <Box className="bulb-holder" id="b1">
-                <Box className="bulb">
-                    <Box className="light"></Box>
-                </Box>
-              </Box>
-              <Box className="bulb-holder" id="b2">
-                <Box className="bulb">
-                    <Box className="light"></Box>
-                </Box>
-              </Box>
-              <Box className="bulb-holder" id="b3">
-                <Box className="bulb">
-                    <Box className="light"></Box>
-                </Box>
-              </Box>
+              <Bulb id='b1'/>
+              <Bulb id='b2'/>
+              <Bulb id='b3'/>
             </Box>
           <Box>
             <Box
