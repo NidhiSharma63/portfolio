@@ -1,6 +1,11 @@
 import React from 'react';
 
+import PhoneIcon from '@mui/icons-material/Phone';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import EmailIcon from '@mui/icons-material/Email';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import { Box, Typography, TextareaAutosize, Input, createTheme, ThemeProvider } from '@mui/material';
+import Button from './Button';
 
 const inputTheme = createTheme({
   components: {
@@ -17,6 +22,12 @@ const inputTheme = createTheme({
             borderBottom: 'none',
           }
         },
+        input: {
+          '&::placeholder': {
+            color: 'var(--secondary-color)',
+            fontWeight: 'bold',
+          }
+        }
       }
     },
   }
@@ -25,91 +36,110 @@ const inputTheme = createTheme({
 const Contact = () => {
   return (
     <Box
-      mb='30px'
+      m='auto'
+      mt='30px'
       className='flex'
-      >
+      sx={{
+        width:{xs:'100%', md:'70%'},
+      }}>
       <Typography
         fontFamily='var(--fontFamilyMerriweather)'
         fontWeight='bold'
-        className='contact-outline'
+        className='heading-outline'
         position='relative'
+        mb='30px'
         sx={{
           fontSize: '24px',
           cursor: 'pointer'
         }}>
         <Box component='span' color='var(--secondary-color)'>Contact</Box> me
       </Typography>
-      <Box
-        mt='30px'>
-        <form>
+        <form
+          className='form'
+          >
           <Box
             className='contact-form-box'
             gap='30px'
             p="0px 30px"
             sx={{
-              flexDirection: { xs: 'column', md: 'row' }
+              flexDirection: { xs: 'column', sm: 'row' }
             }}>
             <Box
-              border='1px'
               display='flex'
               flexDirection='column'
-              gap='10px'>
-              <Box>
-                <label
-                  htmlFor="clientName"
-                  className='label'
-                >your good name</label>
-                <ThemeProvider theme={inputTheme}>
-                  <Input
-                    type='name'
-                    placeholder='Enter your name'
-                    name='clientName'
-                    className='input'
-                    sx={{
-                      fontFamily: 'var(--fontFamilyRobotoSlab)',
-                    }}
-                  />
-                </ThemeProvider>
-              </Box>
-              <Box>
-                <label
-                  htmlFor="clientEmail"
-                  className='label'
-                >your email</label>
-                <ThemeProvider theme={inputTheme}>
-                  <Input
-                    type='email'
-                    placeholder='Enter your email'
-                    name='clientEmail'
-                    className='input'
-                    sx={{
-                      fontFamily: 'var(--fontFamilyRobotoSlab)',
-                    }}
-                  />
-                </ThemeProvider>
-                {/* <Box>fill your email</Box> */}
-              </Box>
+              sx={{
+                gap:{xs:'10px', md:'20px'}
+              }}
+              width='100%'>
+              <ThemeProvider theme={inputTheme}>
+                <Input
+                  type='name'
+                  placeholder='Enter your name'
+                  name='clientName'
+                  className='input'
+                  sx={{
+                    fontFamily: 'var(--fontFamilyRobotoSlab)',
+                  }}
+                />
+                <Input
+                  type='email'
+                  placeholder='Enter your email'
+                  name='clientEmail'
+                  className='input'
+                  sx={{
+                    fontFamily: 'var(--fontFamilyRobotoSlab)',
+                  }}
+                />
+              </ThemeProvider>
             </Box>
-            <Box>
-              <label
-                htmlFor="message"
-                className='label'
-              >message</label>
               <textarea
-                className='textarea input'
+                className='textarea'
                 name="message"
                 id=""
-                cols="30"
-                rows="10"
+                rows="7"
                 placeholder='message'>
               </textarea>
-              {/* <Button value='send'/> */}
-            </Box>
+          </Box>
+          <Box
+            className='form-btn-container'>
+          <Button 
+            value='send'
+            alignSelf='center'/>
           </Box>
         </form>
-      </Box>
     </Box>
   )
 }
 
-export default Contact
+export default Contact;
+
+
+{/* <Box
+className='contact-info'>
+<Box>
+  <PhoneIcon/>
+  <Typography>
+    +91 9634135976 <br/>
+    +91 6395932754 <br/>
+  </Typography>
+</Box>
+<Box>
+  <LocationOnIcon/>
+  <Typography>
+    Ghaziabad <br/>
+    Uttar Pradesh 
+  </Typography>
+</Box>
+<Box>
+  <EmailIcon/>
+  <Typography>
+    nidhisharma639593@gmail.com
+  </Typography>
+</Box>
+<Box>
+  <GitHubIcon/>
+  <Typography>
+    <a href='https://github.com/NidhiSharma63'>Github</a>
+  </Typography>
+</Box>
+</Box> */}
