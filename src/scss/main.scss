@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap');
 
 @import './utils';
+@import './common';
 
 * {
   margin: 0;
@@ -81,6 +82,7 @@ body {
   background: rgb(131, 58, 180);
   background: linear-gradient(180deg, rgba(131, 58, 180, 0) 0%, rgba(203, 38, 231, 0.03125) 18%, rgba(235, 29, 253, 0.06486344537815125) 39%, rgba(78, 69, 252, 0.07046568627450978) 67%, rgba(78, 69, 252, 0) 96%);
 }
+
 
 .heading-outline::after {
   content: '';

@@ -1,3 +1,11 @@
+
+@mixin flexproperty($alignItem, $justifyContent, $flexDirection) {
+  display: flex;
+  align-items: $alignItem;
+  justify-content: $justifyContent;
+  flex-direction: $flexDirection;
+}
+
 @mixin boxShadow($color) {
   box-shadow: 
   0px 24px 51px -5px ($color), 
@@ -7,3 +15,4 @@
   -48px 202px 126px 10px ($color), 
   9px 316px 89px 3px ($color);
 }
+

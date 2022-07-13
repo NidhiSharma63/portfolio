@@ -1,0 +1,5 @@
+@import './utils';
+
+.flex {
+  @include flexproperty($alignItem:center, $justifyContent:center, $flexDirection:column);
+}

@@ -21,10 +21,7 @@ const About = () => {
   return (
     <Box
       marginTop='140px'
-      display='flex'
-      flexDirection='column'
-      alignItems='center'
-      className='About'>
+      className='About flex'>
       <Typography
         fontFamily='var(--fontFamilyMerriweather)'
         fontWeight='bold'
