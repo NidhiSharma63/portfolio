@@ -9,7 +9,6 @@ import ButtonComponent from './Button';
 const Navbar = () => {
   // const window
   const scroll = window.scrollY;
-  console.log(scroll);
   return (
     <Box
       className="navbar"
@@ -105,7 +104,7 @@ const Navbar = () => {
         <Box
           component='span'
           marginRight='20px'>
-          {/* <ButtonComponent value='Contact me'/> */}
+          <ButtonComponent value='Contact me'/>
         </Box>
 
        </Box>

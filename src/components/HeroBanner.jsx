@@ -33,7 +33,7 @@ const HeroBanner = () => {
               fontWeight='bold'
               letterSpacing='1px'
               >
-              <Box component='span' color='var(--secondary-color)'>Hi,</Box>I'm <Box component='span' color='var(--secondary-color)'>Nidhi Sharma</Box>
+              <Box component='span' color='var(--secondary-color)'>Hi,</Box>I'm <Box component='span' color='var(--secondary-color)'></Box>
             </Typography>
             <Typography
               fontFamily='var(--fontFamilyMerriweather)'

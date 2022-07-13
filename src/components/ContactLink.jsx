@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Box} from '@mui/material';
+import {Box,Typography} from '@mui/material';
 
 import PhoneIcon from '@mui/icons-material/Phone';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
@@ -10,32 +10,85 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 const ContactLink = () => {
   return (
     <Box
-      className='contact-info'>
-      <Box>
-        <PhoneIcon/>
-        <Typography>
-          +91 9634135976 <br/>
-          +91 6395932754 <br/>
-        </Typography>
+      className='contact-info'
+      sx={{
+        flexDirection: {xs:'column',sm:'row'},
+        width:{xs:'98%',md:'900px',lg:'1100px'},
+      }}
+      mt='30px'>
+      <Box
+        className='contact-form-box'
+        sx={{
+          justifyContent:{xs:'space-between',sm:'space-around'},
+        }}
+        width='100%'>
+        <Box
+          className='contact-box-item'
+          sx={{
+            flexDirection: {xs:'row',sm:'column'},
+          }}>
+          <PhoneIcon
+            sx={{
+              color: 'var(--secondary-color)',
+            }}/>
+          <Typography
+            fontFamily='var(--fontFamilyWorkSans)'>
+            +91 6395932754 <br/>
+          </Typography>
+        </Box>
+        <Box
+          className='contact-box-item'
+          sx={{
+            flexDirection: {xs:'row',sm:'column'},
+          }}>
+          <LocationOnIcon
+            sx={{
+            color: 'var(--secondary-color)',
+          }}/>
+          <Typography
+            fontFamily='var(--fontFamilyWorkSans)'>
+            Ghaziabad 
+            Uttar Pradesh 
+          </Typography>
+        </Box>
       </Box>
-      <Box>
-        <LocationOnIcon/>
-        <Typography>
-          Ghaziabad <br/>
-          Uttar Pradesh 
-        </Typography>
-      </Box>
-      <Box>
-        <EmailIcon/>
-        <Typography>
-          nidhisharma639593@gmail.com
-        </Typography>
-      </Box>
-      <Box>
-        <GitHubIcon/>
-        <Typography>
-          <a href='https://github.com/NidhiSharma63'>Github</a>
-        </Typography>
+
+      <Box
+        className='contact-form-box'
+        sx={{
+          justifyContent:{xs:'space-between',sm:'space-around'},
+        }}
+        width='100%'>
+        <Box
+          className='contact-box-item'
+          sx={{
+            flexDirection: {xs:'row',sm:'column'},
+          }}>
+          <EmailIcon
+            sx={{
+              color: 'var(--secondary-color)',
+            }}/>
+
+          <Typography
+            fontFamily='var(--fontFamilyWorkSans)'>
+            nidhisharma639593@gmail.com
+          </Typography>
+        </Box>
+        <Box
+            className='contact-box-item'
+            sx={{
+              flexDirection: {xs:'row',sm:'column'},
+            }}>
+          <GitHubIcon
+            sx={{
+              color: 'var(--secondary-color)',
+            }}/>
+          <Typography
+            fontFamily='var(--fontFamilyWorkSans)'>
+            <a href='https://github.com/NidhiSharma63'
+            className='link-github'>Github</a>
+          </Typography>
+        </Box>
       </Box>
     </Box> 
   )

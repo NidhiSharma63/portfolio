@@ -466,7 +466,6 @@ body {
 }
 .form {
   width: 400px;
-  border: 2px solid;
   display: flex;
   flex-direction: column;
   width: 90%;
@@ -526,5 +525,23 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  border: 1px solid;
+  gap: 10px;
+}
+
+.contact-form-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.contact-box-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.link-github {
+  text-decoration: none;
+  color: var(--primary-color);
 }/*# sourceMappingURL=main.css.map */

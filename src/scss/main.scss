@@ -339,7 +339,6 @@ body {
 
 .form{
   width: 400px;
-  border: 2px solid;
   display: flex;
   flex-direction: column;
   width: 90%;
@@ -374,10 +373,6 @@ body {
   transition: box-shadow .3s;
 }
 
-// .input::placeholder{
-//   color: orange !important;
-// }
-
 .input:hover,
 .textarea:hover {
   box-shadow: 0px 0px 4px 0px var(--secondary-color);
@@ -390,5 +385,17 @@ body {
 }
 .contact-info{
   @include flexproperty($alignItem:center, $justifyContent:center, $flexDirection:row);
-  border: 1px solid;
+  gap:10px;
+}
+.contact-form-box{
+  @include flexproperty($alignItem:center, $justifyContent:space-between, $flexDirection:row);
+}
+.contact-box-item{
+  display :flex;
+  align-items:center;
+  gap: 5px;
+}
+.link-github{
+  text-decoration: none;
+  color: var(--primary-color);
 }

@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Box, Typography, TextareaAutosize, Input, createTheme, ThemeProvider } from '@mui/material';
 import Button from './Button';
+import ContactLink from './ContactLink';
 
 const inputTheme = createTheme({
   components: {
@@ -34,6 +35,7 @@ const Contact = () => {
     <Box
       m='auto'
       mt='30px'
+      mb='30px'
       className='flex'
       sx={{
         width:{xs:'100%', md:'70%'},
@@ -103,6 +105,7 @@ const Contact = () => {
             alignSelf='center'/>
           </Box>
         </form>
+        <ContactLink/>
     </Box>
   )
 }

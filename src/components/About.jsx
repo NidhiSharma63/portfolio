@@ -50,6 +50,7 @@ const About = () => {
             IntroText.map((text,index) => {
               return (
                  <Box
+                  key={index}
                   p='10px 0px'
                   display='flex'
                   gap='20px'>
