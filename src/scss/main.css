@@ -268,8 +268,6 @@ body {
   -webkit-animation-name: cssAnim;
           animation-name: cssAnim;
   transform-origin: center;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
 }
 
 .jsImg {

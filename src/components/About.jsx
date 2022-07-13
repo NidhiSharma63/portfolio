@@ -9,6 +9,7 @@ import figma from '../Images/figma.png';
 import react from '../Images/react.png';
 import js from '../Images/js.png';
 import Bulb from './Bulb';
+import Images from './Images';
 
 
 const IntroText = [
@@ -87,36 +88,26 @@ const About = () => {
               <Bulb id='b3'/>
             </Box>
           <Box>
-            <Box
-              className='htmlImg'
-              component='img'
-              sx={{width:'120px'}}
-              src={html}
-            />
-            <Box
-              className='cssImg'
-              component='img'
-              sx={{width:'130px'}}
-              src={css2}
-            />
-            <Box
-              className='jsImg'
-              component='img'
-              sx={{width:'130px'}}
-              src={js}
-            />
-            <Box
-              className='reactImg'
-              component='img'
-              sx={{width:'130px',}}
-              src={react}
-            />
-            <Box
-              className='figmaImg'
-              component='img'
-              sx={{width:'160px'}}
-              src={figma}
-            />
+            <Images 
+              ImageSrc={html}
+              Image='htmlImg'
+              width='120px'/>
+            <Images 
+              ImageSrc={css2}
+              Image='cssImg'
+              width='130px'/>
+            <Images 
+              ImageSrc={js}
+              Image='jsImg'
+              width='130px'/>
+            <Images 
+              ImageSrc={react}
+              Image='reactImg'
+              width='130px'/>
+            <Images 
+              ImageSrc={figma}
+              Image='figmaImg'
+              width='160px'/>
           </Box>
         </Box>
         {/* imagesContainer end*/}
