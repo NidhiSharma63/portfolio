@@ -1,9 +1,5 @@
 import React from 'react';
 
-import PhoneIcon from '@mui/icons-material/Phone';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import EmailIcon from '@mui/icons-material/Email';
-import GitHubIcon from '@mui/icons-material/GitHub';
 import { Box, Typography, TextareaAutosize, Input, createTheme, ThemeProvider } from '@mui/material';
 import Button from './Button';
 
