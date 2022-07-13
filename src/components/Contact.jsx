@@ -26,14 +26,12 @@ const Contact = () => {
   return (
     <Box
       mb='30px'
-      display='flex'
-      alignItem='center'
-      justifyContent='center'
-      flexDirection='column'>
+      className='flex'
+      >
       <Typography
         fontFamily='var(--fontFamilyMerriweather)'
         fontWeight='bold'
-        className='heading-outline'
+        className='contact-outline'
         position='relative'
         sx={{
           fontSize: '24px',
@@ -45,9 +43,7 @@ const Contact = () => {
         mt='30px'>
         <form>
           <Box
-            display='flex'
-            alignItem='center'
-            justifyContent='center'
+            className='contact-form-box'
             gap='30px'
             p="0px 30px"
             sx={{

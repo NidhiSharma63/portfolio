@@ -4,7 +4,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap');
 
 @import './utils';
-@import './common';
 
 * {
   margin: 0;
@@ -37,13 +36,7 @@ body {
 }
 
 .link::after {
-  cursor: pointer;
-  content: "";
-  display: block;
-  width: 0px;
-  height: 2.3px;
-  background-color: var(--secondary-color);
-  transition: width 0.3s ease-in-out;
+  @include underline(0px);
 }
 
 .navbar-link:hover::after {
@@ -76,18 +69,20 @@ body {
   background: linear-gradient(0deg, rgba(45, 53, 253, 0.08167016806722693) 5%, rgba(34, 34, 195, 0.2049194677871149) 100%);
 }
 
-.heading-outline::after {
-  content: '';
-  position: absolute;
-  width: 150px;
-  height: 2px;
-  background-color: var(--secondary-color);
-  bottom: 0;
-  left: 0;
-  transition: .6s;
+.About-outline::after {
+  @include underline(120px)
+  
 }
 
-.heading-outline:hover::after {
+.About-outline:hover::after {
+  width: 0;
+}
+.contact-outline::after {
+  @include underline(140px)
+  
+}
+
+.contact-outline:hover::after {
   width: 0;
 }
 
@@ -174,7 +169,6 @@ body {
 }
 
 @keyframes bulb2 {
-
   100%,
   0% {
     transform: rotate(-25deg);
@@ -348,7 +342,9 @@ body {
   font-weight: 700;
   align-self: flex-start;
 }
-
+.contact-form-box{
+  @include flexproperty($alignItem:center, $justifyContent:center, $flexDirection:column);
+}
 .input {
   margin-top: 10px;
   border: none;

@@ -40,13 +40,14 @@ body {
 }
 
 .link::after {
-  cursor: pointer;
   content: "";
-  display: block;
+  position: absolute;
   width: 0px;
-  height: 2.3px;
+  height: 2px;
   background-color: var(--secondary-color);
-  transition: width 0.3s ease-in-out;
+  bottom: 0;
+  left: 0;
+  transition: 0.6s;
 }
 
 .navbar-link:hover::after {
@@ -79,10 +80,10 @@ body {
   background: linear-gradient(0deg, rgba(45, 53, 253, 0.0816701681) 5%, rgba(34, 34, 195, 0.2049194678) 100%);
 }
 
-.heading-outline::after {
+.About-outline::after {
   content: "";
   position: absolute;
-  width: 150px;
+  width: 120px;
   height: 2px;
   background-color: var(--secondary-color);
   bottom: 0;
@@ -90,7 +91,22 @@ body {
   transition: 0.6s;
 }
 
-.heading-outline:hover::after {
+.About-outline:hover::after {
+  width: 0;
+}
+
+.contact-outline::after {
+  content: "";
+  position: absolute;
+  width: 140px;
+  height: 2px;
+  background-color: var(--secondary-color);
+  bottom: 0;
+  left: 0;
+  transition: 0.6s;
+}
+
+.contact-outline:hover::after {
   width: 0;
 }
 
@@ -452,6 +468,13 @@ body {
   font-size: 20px;
   font-weight: 700;
   align-self: flex-start;
+}
+
+.contact-form-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .input {

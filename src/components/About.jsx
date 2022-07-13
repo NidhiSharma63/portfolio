@@ -27,7 +27,7 @@ const About = () => {
       <Typography
         fontFamily='var(--fontFamilyMerriweather)'
         fontWeight='bold'
-        className='heading-outline'
+        className='About-outline'
         position='relative'
         sx={{
           fontSize:'24px',

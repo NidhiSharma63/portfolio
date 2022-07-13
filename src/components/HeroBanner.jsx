@@ -10,10 +10,7 @@ const HeroBanner = () => {
   return (
     <>
       <Box
-        display='flex'
-        alignItems='center'
-        justifyContent='center'
-        // position='relative'
+         className='flex'
         sx={{
           flexDirection:{xs:'column',md:'row'},
           margin:{xs:'50px',md:'50px 0px'},

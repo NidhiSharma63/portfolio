@@ -16,3 +16,17 @@
   9px 316px 89px 3px ($color);
 }
 
+.flex {
+  @include flexproperty($alignItem:center, $justifyContent:center, $flexDirection:column);
+}
+
+@mixin underline($width) {
+  content: '';
+  position: absolute;
+  width: $width;
+  height: 2px;
+  background-color: var(--secondary-color);
+  bottom: 0;
+  left: 0;
+  transition: .6s;
+}
