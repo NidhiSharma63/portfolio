@@ -1,0 +1,484 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --fontFamilyPtSerif: "PT Serif", serif;
+  --fontFamilyRobotoSlab: "Roboto Slab", serif;
+  --fontFamilyMerriweather: "Merriweather", serif;
+  --fontFamilyWorkSans: "Work Sans", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.lightTheme {
+  --background-color: #FFFFFF;
+  --primary-color: #1d1a1a;
+  --secondary-color: #331EB0;
+}
+
+.DarkTheme {
+  --background-color: #181717;
+  --primary-color: #FFFFFF;
+}
+
+.link::after {
+  cursor: pointer;
+  content: "";
+  display: block;
+  width: 0px;
+  height: 2.3px;
+  background-color: var(--secondary-color);
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar-link:hover::after {
+  width: 65px;
+}
+
+.my-build:hover::after {
+  width: 95px;
+}
+
+.underLine-pTag::after {
+  content: "";
+  position: relative;
+  display: block;
+  margin-top: 10px;
+  height: 2px;
+  background-color: var(--secondary-color);
+}
+
+.bg {
+  width: 100%;
+  position: absolute;
+  height: 300px;
+  border-bottom-right-radius: 11%;
+  left: 0;
+  margin-top: 80px;
+  box-shadow: 1px 0px 100px rgba(8, 8, 173, 0.137);
+  z-index: -1;
+  background: rgb(45, 53, 253);
+  background: linear-gradient(0deg, rgba(45, 53, 253, 0.0816701681) 5%, rgba(34, 34, 195, 0.2049194678) 100%);
+}
+
+.About {
+  background: rgb(131, 58, 180);
+  background: linear-gradient(180deg, rgba(131, 58, 180, 0) 0%, rgba(235, 29, 253, 0.1516981793) 26%, rgba(78, 69, 252, 0.0704656863) 61%, rgba(78, 69, 252, 0) 96%);
+  background: rgb(131, 58, 180);
+  background: linear-gradient(180deg, rgba(131, 58, 180, 0) 0%, rgba(203, 38, 231, 0.03125) 18%, rgba(235, 29, 253, 0.0648634454) 39%, rgba(78, 69, 252, 0.0704656863) 67%, rgba(78, 69, 252, 0) 96%);
+}
+
+.heading-outline::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 2px;
+  background-color: var(--secondary-color);
+  bottom: 0;
+  left: 0;
+  transition: 0.6s;
+}
+
+.heading-outline:hover::after {
+  width: 0;
+}
+
+.htmlImg,
+.cssImg,
+.jsImg,
+.reactImg,
+.figmaImg {
+  position: relative;
+  -webkit-animation-duration: 0.9s;
+          animation-duration: 0.9s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  z-index: 1;
+}
+
+.lampContainer {
+  position: absolute;
+  width: 100%;
+  height: 377px;
+  top: -50px;
+  z-index: 2;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.bulb-holder {
+  width: 50px;
+  height: 40px;
+  background: teal;
+  position: relative;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  transform: rotate(-32deg);
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.bulb {
+  width: 50px;
+  height: 20px;
+  background: #fff;
+  border-radius: 60%;
+  transform: translate(0px, 30px);
+  -webkit-animation: light 2000ms infinite cubic-bezier(1, -0.45, 0, 1.89);
+          animation: light 2000ms infinite cubic-bezier(1, -0.45, 0, 1.89);
+}
+
+#b1 {
+  -webkit-animation-name: bulb1;
+          animation-name: bulb1;
+  box-shadow: 0px 24px 51px -5px var(--secondary-color), 0px 56px 101px -3px var(--secondary-color), 3px 84px 87px 1px var(--secondary-color), -2px 110px 105px 10px var(--secondary-color), -48px 202px 126px 10px var(--secondary-color), 9px 316px 89px 3px var(--secondary-color);
+}
+
+#b2 {
+  margin-top: -49px;
+  box-shadow: 0px 24px 51px -5px rgb(183, 0, 255), 0px 56px 101px -3px rgb(183, 0, 255), 3px 84px 87px 1px rgb(183, 0, 255), -2px 110px 105px 10px rgb(183, 0, 255), -48px 202px 126px 10px rgb(183, 0, 255), 9px 316px 89px 3px rgb(183, 0, 255);
+  -webkit-animation-name: bulb2;
+          animation-name: bulb2;
+}
+
+#b3 {
+  transform: rotate(20deg);
+  margin-top: -49px;
+  box-shadow: 0px 24px 51px -5px rgb(0, 119, 255), 0px 56px 101px -3px rgb(0, 119, 255), 3px 84px 87px 1px rgb(0, 119, 255), -2px 110px 105px 10px rgb(0, 119, 255), -48px 202px 126px 10px rgb(0, 119, 255), 9px 316px 89px 3px rgb(0, 119, 255);
+  -webkit-animation-name: bulb3;
+          animation-name: bulb3;
+}
+
+@-webkit-keyframes bulb1 {
+  100%, 0% {
+    transform: rotate(-32deg);
+    box-shadow: 0px 24px 51px -5px var(--secondary-color), 0px 56px 101px -3px var(--secondary-color), 3px 84px 87px 1px var(--secondary-color), -2px 110px 105px 10px var(--secondary-color), -48px 202px 126px 10px var(--secondary-color), 9px 316px 89px 3px var(--secondary-color);
+  }
+  25% {
+    transform: rotate(-46deg);
+    box-shadow: 0px 24px 51px -5px rgb(183, 0, 255), 0px 56px 101px -3px rgb(183, 0, 255), 3px 84px 87px 1px rgb(183, 0, 255), -2px 110px 105px 10px rgb(183, 0, 255), -48px 202px 126px 10px rgb(183, 0, 255), 9px 316px 89px 3px rgb(183, 0, 255);
+  }
+  75% {
+    transform: rotate(0deg);
+    box-shadow: 0px 24px 51px -5px var(--secondary-color), 0px 56px 101px -3px var(--secondary-color), 3px 84px 87px 1px var(--secondary-color), -2px 110px 105px 10px var(--secondary-color), -48px 202px 126px 10px var(--secondary-color), 9px 316px 89px 3px var(--secondary-color);
+  }
+}
+
+@keyframes bulb1 {
+  100%, 0% {
+    transform: rotate(-32deg);
+    box-shadow: 0px 24px 51px -5px var(--secondary-color), 0px 56px 101px -3px var(--secondary-color), 3px 84px 87px 1px var(--secondary-color), -2px 110px 105px 10px var(--secondary-color), -48px 202px 126px 10px var(--secondary-color), 9px 316px 89px 3px var(--secondary-color);
+  }
+  25% {
+    transform: rotate(-46deg);
+    box-shadow: 0px 24px 51px -5px rgb(183, 0, 255), 0px 56px 101px -3px rgb(183, 0, 255), 3px 84px 87px 1px rgb(183, 0, 255), -2px 110px 105px 10px rgb(183, 0, 255), -48px 202px 126px 10px rgb(183, 0, 255), 9px 316px 89px 3px rgb(183, 0, 255);
+  }
+  75% {
+    transform: rotate(0deg);
+    box-shadow: 0px 24px 51px -5px var(--secondary-color), 0px 56px 101px -3px var(--secondary-color), 3px 84px 87px 1px var(--secondary-color), -2px 110px 105px 10px var(--secondary-color), -48px 202px 126px 10px var(--secondary-color), 9px 316px 89px 3px var(--secondary-color);
+  }
+}
+@-webkit-keyframes bulb2 {
+  100%, 0% {
+    transform: rotate(-25deg);
+    box-shadow: 0px 24px 51px -5px rgb(183, 0, 255), 0px 56px 101px -3px rgb(183, 0, 255), 3px 84px 87px 1px rgb(183, 0, 255), -2px 110px 105px 10px rgb(183, 0, 255), -48px 202px 126px 10px rgb(183, 0, 255), 9px 316px 89px 3px rgb(183, 0, 255);
+  }
+  50% {
+    transform: rotate(15deg);
+    box-shadow: 0px 24px 51px -5px var(--secondary-color), 0px 56px 101px -3px var(--secondary-color), 3px 84px 87px 1px var(--secondary-color), -2px 110px 105px 10px var(--secondary-color), -48px 202px 126px 10px var(--secondary-color), 9px 316px 89px 3px var(--secondary-color);
+  }
+}
+@keyframes bulb2 {
+  100%, 0% {
+    transform: rotate(-25deg);
+    box-shadow: 0px 24px 51px -5px rgb(183, 0, 255), 0px 56px 101px -3px rgb(183, 0, 255), 3px 84px 87px 1px rgb(183, 0, 255), -2px 110px 105px 10px rgb(183, 0, 255), -48px 202px 126px 10px rgb(183, 0, 255), 9px 316px 89px 3px rgb(183, 0, 255);
+  }
+  50% {
+    transform: rotate(15deg);
+    box-shadow: 0px 24px 51px -5px var(--secondary-color), 0px 56px 101px -3px var(--secondary-color), 3px 84px 87px 1px var(--secondary-color), -2px 110px 105px 10px var(--secondary-color), -48px 202px 126px 10px var(--secondary-color), 9px 316px 89px 3px var(--secondary-color);
+  }
+}
+@-webkit-keyframes bulb3 {
+  100%, 0% {
+    transform: rotate(20deg);
+    box-shadow: 0px 24px 51px -5px rgb(0, 119, 255), 0px 56px 101px -3px rgb(0, 119, 255), 3px 84px 87px 1px rgb(0, 119, 255), -2px 110px 105px 10px rgb(0, 119, 255), -48px 202px 126px 10px rgb(0, 119, 255), 9px 316px 89px 3px rgb(0, 119, 255);
+    -webkit-animation-name: bulb3;
+            animation-name: bulb3;
+  }
+  25% {
+    transform: rotate(2deg);
+    box-shadow: 0px 24px 51px -5px rgb(183, 0, 255), 0px 56px 101px -3px rgb(183, 0, 255), 3px 84px 87px 1px rgb(183, 0, 255), -2px 110px 105px 10px rgb(183, 0, 255), -48px 202px 126px 10px rgb(183, 0, 255), 9px 316px 89px 3px rgb(183, 0, 255);
+  }
+  75% {
+    transform: rotate(30deg);
+    box-shadow: 0px 24px 51px -5px var(--secondary-color), 0px 56px 101px -3px var(--secondary-color), 3px 84px 87px 1px var(--secondary-color), -2px 110px 105px 10px var(--secondary-color), -48px 202px 126px 10px var(--secondary-color), 9px 316px 89px 3px var(--secondary-color);
+  }
+}
+@keyframes bulb3 {
+  100%, 0% {
+    transform: rotate(20deg);
+    box-shadow: 0px 24px 51px -5px rgb(0, 119, 255), 0px 56px 101px -3px rgb(0, 119, 255), 3px 84px 87px 1px rgb(0, 119, 255), -2px 110px 105px 10px rgb(0, 119, 255), -48px 202px 126px 10px rgb(0, 119, 255), 9px 316px 89px 3px rgb(0, 119, 255);
+    -webkit-animation-name: bulb3;
+            animation-name: bulb3;
+  }
+  25% {
+    transform: rotate(2deg);
+    box-shadow: 0px 24px 51px -5px rgb(183, 0, 255), 0px 56px 101px -3px rgb(183, 0, 255), 3px 84px 87px 1px rgb(183, 0, 255), -2px 110px 105px 10px rgb(183, 0, 255), -48px 202px 126px 10px rgb(183, 0, 255), 9px 316px 89px 3px rgb(183, 0, 255);
+  }
+  75% {
+    transform: rotate(30deg);
+    box-shadow: 0px 24px 51px -5px var(--secondary-color), 0px 56px 101px -3px var(--secondary-color), 3px 84px 87px 1px var(--secondary-color), -2px 110px 105px 10px var(--secondary-color), -48px 202px 126px 10px var(--secondary-color), 9px 316px 89px 3px var(--secondary-color);
+  }
+}
+.imagesContainer {
+  position: relative;
+  margin: auto;
+  height: 400px;
+}
+
+.htmlImg {
+  left: 38px;
+  top: 60px;
+  transform-origin: bottom;
+  -webkit-animation-name: htmlAnim1;
+          animation-name: htmlAnim1;
+}
+
+.cssImg {
+  left: 24px;
+  top: 22px;
+  -webkit-animation-name: cssAnim;
+          animation-name: cssAnim;
+  transform-origin: center;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.jsImg {
+  left: 2px;
+  top: 37px;
+  -webkit-animation-name: jsAnim;
+          animation-name: jsAnim;
+}
+
+.figmaImg {
+  left: 94px;
+  top: 12px;
+  -webkit-animation-name: figmaAnim;
+          animation-name: figmaAnim;
+}
+
+.reactImg {
+  left: 121px;
+  top: 20px;
+  -webkit-animation-name: reactAnim;
+          animation-name: reactAnim;
+}
+
+@-webkit-keyframes htmlAnim1 {
+  0% {
+    transform: rotate(8deg);
+  }
+  25% {
+    transform: rotate(-8deg);
+  }
+  50% {
+    transform: rotate(8deg);
+    top: 80px;
+  }
+  75% {
+    transform: rotate(-8deg);
+    top: 60px;
+  }
+  100% {
+    transform: rotate(8deg);
+    top: 60px;
+  }
+}
+
+@keyframes htmlAnim1 {
+  0% {
+    transform: rotate(8deg);
+  }
+  25% {
+    transform: rotate(-8deg);
+  }
+  50% {
+    transform: rotate(8deg);
+    top: 80px;
+  }
+  75% {
+    transform: rotate(-8deg);
+    top: 60px;
+  }
+  100% {
+    transform: rotate(8deg);
+    top: 60px;
+  }
+}
+@-webkit-keyframes cssAnim {
+  25% {
+    transform: rotate(-8deg);
+    top: 54px;
+  }
+  50% {
+    transform: rotate(8deg);
+    top: 24px;
+  }
+  75% {
+    transform: rotate(-8deg);
+  }
+  100% {
+    transform: rotate(-8deg);
+  }
+}
+@keyframes cssAnim {
+  25% {
+    transform: rotate(-8deg);
+    top: 54px;
+  }
+  50% {
+    transform: rotate(8deg);
+    top: 24px;
+  }
+  75% {
+    transform: rotate(-8deg);
+  }
+  100% {
+    transform: rotate(-8deg);
+  }
+}
+@-webkit-keyframes jsAnim {
+  0% {
+    transform: perspective(500px) rotate(-10deg);
+    transform-origin: -20% -20%;
+  }
+  50% {
+    transform: perspective(500px) rotate(10deg);
+    transform-origin: 90% 90%;
+  }
+  100% {
+    transform: perspective(500px) rotate(-10deg);
+    transform-origin: -20% -20%;
+  }
+}
+@keyframes jsAnim {
+  0% {
+    transform: perspective(500px) rotate(-10deg);
+    transform-origin: -20% -20%;
+  }
+  50% {
+    transform: perspective(500px) rotate(10deg);
+    transform-origin: 90% 90%;
+  }
+  100% {
+    transform: perspective(500px) rotate(-10deg);
+    transform-origin: -20% -20%;
+  }
+}
+@-webkit-keyframes reactAnim {
+  0% {
+    transform: perspective(500px) rotate(-10deg);
+    transform-origin: 90% 90%;
+  }
+  50% {
+    transform: perspective(500px) rotate(10deg);
+    transform-origin: -20% -20%;
+  }
+  100% {
+    transform: perspective(500px) rotate(-10deg);
+    transform-origin: 90% 90%;
+  }
+}
+@keyframes reactAnim {
+  0% {
+    transform: perspective(500px) rotate(-10deg);
+    transform-origin: 90% 90%;
+  }
+  50% {
+    transform: perspective(500px) rotate(10deg);
+    transform-origin: -20% -20%;
+  }
+  100% {
+    transform: perspective(500px) rotate(-10deg);
+    transform-origin: 90% 90%;
+  }
+}
+@-webkit-keyframes figmaAnim {
+  0% {
+    transform: perspective(500px) rotate(-20deg);
+    transform-origin: left bottom;
+  }
+  50% {
+    transform: perspective(500px) rotate(20deg);
+    transform-origin: right bottom;
+  }
+  100% {
+    transform: perspective(500px) rotate(-20deg);
+    transform-origin: left bottom;
+  }
+}
+@keyframes figmaAnim {
+  0% {
+    transform: perspective(500px) rotate(-20deg);
+    transform-origin: left bottom;
+  }
+  50% {
+    transform: perspective(500px) rotate(20deg);
+    transform-origin: right bottom;
+  }
+  100% {
+    transform: perspective(500px) rotate(-20deg);
+    transform-origin: left bottom;
+  }
+}
+.label {
+  font-size: 20px;
+  font-weight: 700;
+  align-self: flex-start;
+}
+
+.input {
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 17px;
+  color: var(--primary-color);
+  box-shadow: 0px 0px 4px 0px black;
+  outline: none;
+  width: 100%;
+  transition: box-shadow 0.3s;
+}
+
+.input:hover {
+  box-shadow: 0px 0px 4px 0px var(--secondary-color);
+}
+
+.input:focus {
+  border: 1.8px solid rgb(105, 28, 194);
+  box-shadow: none;
+}
+
+.textarea {
+  margin-top: 12px;
+  resize: none;
+}/*# sourceMappingURL=main.css.map */

@@ -1,23 +1,13 @@
 import React from 'react';
 
 import { Box, Typography, TextareaAutosize, Input, createTheme, ThemeProvider } from '@mui/material';
-import Button from './Button'
-import { hover } from '@testing-library/user-event/dist/hover';
 
 const inputTheme = createTheme({
   components: {
     MuiInput: {
       styleOverrides: {
         root: {
-          borderBottom: 'none',
-          disableUnderline: true,
-          '&:hover::after': {
-            border: '0px solid var(--secondary-color)',
-          },
           '&.Mui-focused::after': {
-            borderBottom: '0px solid var(--secondary-color)',
-          },
-          '&.Mui-focused:hover::after': {
             borderBottom: '0px solid var(--secondary-color)',
           },
           '&.MuiInput-root::before': {
@@ -27,14 +17,6 @@ const inputTheme = createTheme({
             borderBottom: 'none',
           }
         },
-        input: {
-          '&.MuiInput-underline::after': {
-            disableUnderline: true,
-          },
-          '&:MuiInput-root::before': {
-            borderBottom: 'none',
-          }
-        }
       }
     },
   }
@@ -87,8 +69,6 @@ const Contact = () => {
                     placeholder='Enter your name'
                     name='clientName'
                     className='input'
-                    disableUnderline={false}
-                    borderBottom='none'
                     sx={{
                       fontFamily: 'var(--fontFamilyRobotoSlab)',
                     }}
@@ -106,8 +86,6 @@ const Contact = () => {
                     placeholder='Enter your email'
                     name='clientEmail'
                     className='input'
-                    disableUnderline={false}
-                    borderBottom='none'
                     sx={{
                       fontFamily: 'var(--fontFamilyRobotoSlab)',
                     }}

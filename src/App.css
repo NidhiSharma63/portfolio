@@ -2,33 +2,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
 }
-:root{
+
+:root {
     --fontFamilyPtSerif: 'PT Serif', serif;
     --fontFamilyRobotoSlab: 'Roboto Slab', serif;
     --fontFamilyMerriweather: 'Merriweather', serif;
     --fontFamilyWorkSans: 'Work Sans', sans-serif;
 }
-body{
+
+body {
     overflow-x: hidden;
     padding: 0;
     margin: 0;
     position: relative;
 }
-.lightTheme{
-    --background-color:#FFFFFF;
-    --primary-color:#1d1a1a;
-    --secondary-color:#331EB0;
-}
-.DarkTheme{
-    --background-color:#181717;
-    --primary-color:#FFFFFF;
+
+.lightTheme {
+    --background-color: #FFFFFF;
+    --primary-color: #1d1a1a;
+    --secondary-color: #331EB0;
 }
 
-.link::after{
+.DarkTheme {
+    --background-color: #181717;
+    --primary-color: #FFFFFF;
+}
+
+.link::after {
     cursor: pointer;
     content: "";
     display: block;
@@ -37,39 +42,45 @@ body{
     background-color: var(--secondary-color);
     transition: width 0.3s ease-in-out;
 }
-.navbar-link:hover::after{
+
+.navbar-link:hover::after {
     width: 65px;
 }
-.my-build:hover::after{
+
+.my-build:hover::after {
     width: 95px;
 }
-.underLine-pTag::after{
-   content: '';
-   /* position: relative; */
-   display: block;
-   margin-top: 10px;
-   height: 2px;
-   background-color: var(--secondary-color);
+
+.underLine-pTag::after {
+    content: '';
+    /* position: relative; */
+    display: block;
+    margin-top: 10px;
+    height: 2px;
+    background-color: var(--secondary-color);
 }
-.bg{
+
+.bg {
     width: 100%;
     position: absolute;
     height: 300px;
     border-bottom-right-radius: 11%;
     left: 0;
     margin-top: 80px;
-    box-shadow: 1px 0px 100px  rgba(8, 8, 173, 0.137);
+    box-shadow: 1px 0px 100px rgba(8, 8, 173, 0.137);
     z-index: -1;
-    background: rgb(45,53,253);
-    background: linear-gradient(0deg, rgba(45,53,253,0.08167016806722693) 5%, rgba(34,34,195,0.2049194677871149) 100%);
+    background: rgb(45, 53, 253);
+    background: linear-gradient(0deg, rgba(45, 53, 253, 0.08167016806722693) 5%, rgba(34, 34, 195, 0.2049194677871149) 100%);
 }
-.About{
-    background: rgb(131,58,180);
-    background: linear-gradient(180deg, rgba(131,58,180,0) 0%, rgba(235,29,253,0.1516981792717087) 26%, rgba(78,69,252,0.07046568627450978) 61%, rgba(78,69,252,0) 96%);
-    background: rgb(131,58,180);
-    background: linear-gradient(180deg, rgba(131,58,180,0) 0%, rgba(203,38,231,0.03125) 18%, rgba(235,29,253,0.06486344537815125) 39%, rgba(78,69,252,0.07046568627450978) 67%, rgba(78,69,252,0) 96%);
+
+.About {
+    background: rgb(131, 58, 180);
+    background: linear-gradient(180deg, rgba(131, 58, 180, 0) 0%, rgba(235, 29, 253, 0.1516981792717087) 26%, rgba(78, 69, 252, 0.07046568627450978) 61%, rgba(78, 69, 252, 0) 96%);
+    background: rgb(131, 58, 180);
+    background: linear-gradient(180deg, rgba(131, 58, 180, 0) 0%, rgba(203, 38, 231, 0.03125) 18%, rgba(235, 29, 253, 0.06486344537815125) 39%, rgba(78, 69, 252, 0.07046568627450978) 67%, rgba(78, 69, 252, 0) 96%);
 }
-.heading-outline::after{
+
+.heading-outline::after {
     content: '';
     position: absolute;
     width: 150px;
@@ -79,32 +90,35 @@ body{
     left: 0;
     transition: .6s;
 }
-.heading-outline:hover::after{
+
+.heading-outline:hover::after {
     width: 0;
 }
+
 .htmlImg,
 .cssImg,
 .jsImg,
 .reactImg,
-.figmaImg{
-    position:relative;
+.figmaImg {
+    position: relative;
     animation-duration: .9s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     z-index: 1;
 }
-.lampContainer{
-    position:absolute;
-    width:100%;
-    height:377px;
-    top:-50px;
+
+.lampContainer {
+    position: absolute;
+    width: 100%;
+    height: 377px;
+    top: -50px;
     z-index: 2;
     display: flex;
     align-items: baseline;
     justify-content: space-between;
 }
 
-.bulb-holder{
+.bulb-holder {
     width: 50px;
     height: 40px;
     background: teal;
@@ -117,286 +131,333 @@ body{
     animation-timing-function: linear;
 }
 
-.bulb{
+.bulb {
     width: 50px;
     height: 20px;
     background: #fff;
     border-radius: 60%;
-    transform: translate(0px,30px);
+    transform: translate(0px, 30px);
     animation: light 2000ms infinite cubic-bezier(1, -0.45, 0, 1.89);
 }
-#b1{
-    animation-name: bulb1;  
-    box-shadow: 
-    0px 24px 51px -5px blue, 
-    0px 56px 101px -3px blue, 
-    3px 84px 87px 1px blue, 
-    -2px 110px 105px 10px blue, 
-    -48px 202px 126px 10px blue, 
-    9px 316px 89px 3px blue;
+
+#b1 {
+    animation-name: bulb1;
+    box-shadow:
+        0px 24px 51px -5px blue,
+        0px 56px 101px -3px blue,
+        3px 84px 87px 1px blue,
+        -2px 110px 105px 10px blue,
+        -48px 202px 126px 10px blue,
+        9px 316px 89px 3px blue;
 }
-#b2{
+
+#b2 {
     margin-top: -49px;
-    box-shadow: 
-    0px 24px 51px -5px rgb(183, 0, 255), 
-    0px 56px 101px -3px rgb(183, 0, 255), 
-    3px 84px 58px 2px rgb(183, 0, 255), 
-    -2px 110px 100px 30px rgb(183, 0, 255), 
-    -48px 202px 126px 10px rgb(183, 0, 255), 
-    9px 316px 89px 3px rgb(183, 0, 255);
-    animation-name: bulb2;  
+    box-shadow:
+        0px 24px 51px -5px rgb(183, 0, 255),
+        0px 56px 101px -3px rgb(183, 0, 255),
+        3px 84px 58px 2px rgb(183, 0, 255),
+        -2px 110px 100px 30px rgb(183, 0, 255),
+        -48px 202px 126px 10px rgb(183, 0, 255),
+        9px 316px 89px 3px rgb(183, 0, 255);
+    animation-name: bulb2;
 }
-#b3{
-    transform:  rotate(20deg);
+
+#b3 {
+    transform: rotate(20deg);
     margin-top: -49px;
-    box-shadow: 
-    0px 24px 51px -5px rgb(0, 119, 255), 
-    0px 56px 101px -3px rgb(0, 119, 255), 
-    3px 84px 58px 2px rgb(0, 119, 255), 
-    -2px 110px 100px 30px rgb(0, 119, 255), 
-    -48px 202px 126px 10px rgb(0, 119, 255), 
-    9px 316px 89px 3px rgb(0, 119, 255);
+    box-shadow:
+        0px 24px 51px -5px rgb(0, 119, 255),
+        0px 56px 101px -3px rgb(0, 119, 255),
+        3px 84px 58px 2px rgb(0, 119, 255),
+        -2px 110px 100px 30px rgb(0, 119, 255),
+        -48px 202px 126px 10px rgb(0, 119, 255),
+        9px 316px 89px 3px rgb(0, 119, 255);
     animation-name: bulb3;
 }
+
 @keyframes bulb1 {
-  100%,0%{
-    transform: rotate(-32deg);
-    box-shadow: 
-    0px 24px 51px -5px blue, 
-    0px 56px 101px -3px blue, 
-    3px 84px 87px 1px blue, 
-    -2px 110px 105px 10px blue, 
-    -48px 202px 126px 10px blue, 
-    9px 316px 89px 3px blue;
-  }
-  25%{
-    transform: rotate(-46deg);
-    box-shadow: 
-    0px 24px 51px -5px rgb(183, 0, 255), 
-    0px 56px 101px -3px rgb(183, 0, 255), 
-    3px 84px 58px 2px rgb(183, 0, 255), 
-    -2px 110px 100px 30px rgb(183, 0, 255), 
-    -48px 202px 126px 10px rgb(183, 0, 255), 
-    9px 316px 89px 3px rgb(183, 0, 255);
-  }
-  75%{
-    transform: rotate(0deg);
-    box-shadow: 
-    0px 24px 51px -5px rgb(0, 119, 255), 
-    0px 56px 101px -3px rgb(0, 119, 255), 
-    3px 84px 58px 2px rgb(0, 119, 255), 
-    -2px 110px 100px 30px rgb(0, 119, 255), 
-    -48px 202px 126px 10px rgb(0, 119, 255), 
-    9px 316px 89px 3px rgb(0, 119, 255);
-  }
+
+    100%,
+    0% {
+        transform: rotate(-32deg);
+        box-shadow:
+            0px 24px 51px -5px blue,
+            0px 56px 101px -3px blue,
+            3px 84px 87px 1px blue,
+            -2px 110px 105px 10px blue,
+            -48px 202px 126px 10px blue,
+            9px 316px 89px 3px blue;
+    }
+
+    25% {
+        transform: rotate(-46deg);
+        box-shadow:
+            0px 24px 51px -5px rgb(183, 0, 255),
+            0px 56px 101px -3px rgb(183, 0, 255),
+            3px 84px 58px 2px rgb(183, 0, 255),
+            -2px 110px 100px 30px rgb(183, 0, 255),
+            -48px 202px 126px 10px rgb(183, 0, 255),
+            9px 316px 89px 3px rgb(183, 0, 255);
+    }
+
+    75% {
+        transform: rotate(0deg);
+        box-shadow:
+            0px 24px 51px -5px rgb(0, 119, 255),
+            0px 56px 101px -3px rgb(0, 119, 255),
+            3px 84px 58px 2px rgb(0, 119, 255),
+            -2px 110px 100px 30px rgb(0, 119, 255),
+            -48px 202px 126px 10px rgb(0, 119, 255),
+            9px 316px 89px 3px rgb(0, 119, 255);
+    }
 }
+
 @keyframes bulb2 {
-    100%,0%{
-        transform:rotate(-25deg);
-        box-shadow: 
-        0px 24px 51px -5px rgb(183, 0, 255), 
-        0px 56px 101px -3px rgb(183, 0, 255), 
-        3px 84px 58px 2px rgb(183, 0, 255), 
-        -2px 110px 100px 30px rgb(183, 0, 255), 
-        -48px 202px 126px 10px rgb(183, 0, 255), 
-        9px 316px 89px 3px rgb(183, 0, 255);
+
+    100%,
+    0% {
+        transform: rotate(-25deg);
+        box-shadow:
+            0px 24px 51px -5px rgb(183, 0, 255),
+            0px 56px 101px -3px rgb(183, 0, 255),
+            3px 84px 58px 2px rgb(183, 0, 255),
+            -2px 110px 100px 30px rgb(183, 0, 255),
+            -48px 202px 126px 10px rgb(183, 0, 255),
+            9px 316px 89px 3px rgb(183, 0, 255);
     }
-    50%{
-        transform:rotate(15deg);
-        box-shadow: 
-        0px 24px 51px -5px blue, 
-        0px 56px 101px -3px blue, 
-        3px 84px 87px 1px blue, 
-        -2px 110px 105px 10px blue, 
-        -48px 202px 126px 10px blue, 
-        9px 316px 89px 3px blue;
+
+    50% {
+        transform: rotate(15deg);
+        box-shadow:
+            0px 24px 51px -5px blue,
+            0px 56px 101px -3px blue,
+            3px 84px 87px 1px blue,
+            -2px 110px 105px 10px blue,
+            -48px 202px 126px 10px blue,
+            9px 316px 89px 3px blue;
     }
 }
+
 @keyframes bulb3 {
-    100%,0%{
-      transform:rotate(20deg);
-      box-shadow: 
-      0px 24px 51px -5px rgb(0, 119, 255), 
-      0px 56px 101px -3px rgb(0, 119, 255), 
-      3px 84px 58px 2px rgb(0, 119, 255), 
-      -2px 110px 100px 30px rgb(0, 119, 255), 
-      -48px 202px 126px 10px rgb(0, 119, 255), 
-      9px 316px 89px 3px rgb(0, 119, 255);
-      animation-name: bulb3;
+
+    100%,
+    0% {
+        transform: rotate(20deg);
+        box-shadow:
+            0px 24px 51px -5px rgb(0, 119, 255),
+            0px 56px 101px -3px rgb(0, 119, 255),
+            3px 84px 58px 2px rgb(0, 119, 255),
+            -2px 110px 100px 30px rgb(0, 119, 255),
+            -48px 202px 126px 10px rgb(0, 119, 255),
+            9px 316px 89px 3px rgb(0, 119, 255);
+        animation-name: bulb3;
     }
-    25%{
-      transform:rotate(2deg);
-      box-shadow: 
-      0px 24px 51px -5px rgb(183, 0, 255), 
-      0px 56px 101px -3px rgb(183, 0, 255), 
-      3px 84px 58px 2px rgb(183, 0, 255), 
-      -2px 110px 100px 30px rgb(183, 0, 255), 
-      -48px 202px 126px 10px rgb(183, 0, 255), 
-      9px 316px 89px 3px rgb(183, 0, 255);
+
+    25% {
+        transform: rotate(2deg);
+        box-shadow:
+            0px 24px 51px -5px rgb(183, 0, 255),
+            0px 56px 101px -3px rgb(183, 0, 255),
+            3px 84px 58px 2px rgb(183, 0, 255),
+            -2px 110px 100px 30px rgb(183, 0, 255),
+            -48px 202px 126px 10px rgb(183, 0, 255),
+            9px 316px 89px 3px rgb(183, 0, 255);
     }
-    75%{
-      transform:rotate(30deg);
-      box-shadow: 
-      0px 24px 51px -5px blue, 
-      0px 56px 101px -3px blue, 
-      3px 84px 87px 1px blue, 
-      -2px 110px 105px 10px blue, 
-      -48px 202px 126px 10px blue, 
-      9px 316px 89px 3px blue;
+
+    75% {
+        transform: rotate(30deg);
+        box-shadow:
+            0px 24px 51px -5px blue,
+            0px 56px 101px -3px blue,
+            3px 84px 87px 1px blue,
+            -2px 110px 105px 10px blue,
+            -48px 202px 126px 10px blue,
+            9px 316px 89px 3px blue;
     }
-  }
-.imagesContainer{
-    position:relative;
-    margin:auto;
+}
+
+.imagesContainer {
+    position: relative;
+    margin: auto;
     height: 400px;
 }
-.htmlImg{
+
+.htmlImg {
     left: 38px;
     top: 60px;
     transform-origin: bottom;
     animation-name: htmlAnim1;
     /* animation-delay: .1s; */
 }
-.cssImg{
+
+.cssImg {
     left: 24px;
     top: 22px;
     animation-name: cssAnim;
     transform-origin: center;
     animation-delay: 1s;
 }
-.jsImg{
+
+.jsImg {
     left: 2px;
     top: 37px;
     animation-name: jsAnim;
     /* animation-duration: 7s; */
-    
+
 }
-.figmaImg{
-    left:94px;
-    top:12px;
+
+.figmaImg {
+    left: 94px;
+    top: 12px;
     animation-name: figmaAnim;
     /*  animation-delay: .3s; */
 }
-.reactImg{
+
+.reactImg {
     left: 121px;
     /* transform: perspective(500px) rotateX(180deg); */
     top: 20px;
     animation-name: reactAnim;
     /* animation-delay: 6.7s; */
 }
+
 @keyframes htmlAnim1 {
-    0%{
+    0% {
         transform: rotate(8deg);
     }
-    25%{
+
+    25% {
         transform: rotate(-8deg)
     }
-    50%{
+
+    50% {
         transform: rotate(8deg);
-        top:80px
+        top: 80px
     }
-    75%{
+
+    75% {
         transform: rotate(-8deg);
-        top:60px
+        top: 60px
     }
-    100%{
+
+    100% {
         transform: rotate(8deg);
-        top:60px
+        top: 60px
     }
 }
+
 @keyframes cssAnim {
-    25%{
+    25% {
         transform: rotate(-8deg);
-        top:54px
+        top: 54px
     }
-    50%{
+
+    50% {
         transform: rotate(8deg);
-        top:24px
+        top: 24px
     }
-    75%{
+
+    75% {
         transform: rotate(-8deg);
     }
-    100%{
+
+    100% {
         transform: rotate(-8deg);
     }
 }
+
 @keyframes jsAnim {
-    0%{
-        transform: perspective(500px) rotate(-10deg); 
+    0% {
+        transform: perspective(500px) rotate(-10deg);
         transform-origin: -20% -20%;
     }
-    50%{
-        transform: perspective(500px) rotate(10deg); 
+
+    50% {
+        transform: perspective(500px) rotate(10deg);
         transform-origin: 90% 90%;
     }
-   100%{
-        transform: perspective(500px) rotate(-10deg); 
+
+    100% {
+        transform: perspective(500px) rotate(-10deg);
         transform-origin: -20% -20%;
-   }
+    }
 }
+
 @keyframes reactAnim {
-    0%{
-        transform: perspective(500px) rotate(-10deg); 
+    0% {
+        transform: perspective(500px) rotate(-10deg);
         transform-origin: 90% 90%;
     }
-    50%{
-        transform: perspective(500px) rotate(10deg); 
+
+    50% {
+        transform: perspective(500px) rotate(10deg);
         transform-origin: -20% -20%;
     }
-   100%{
-        transform: perspective(500px) rotate(-10deg); 
+
+    100% {
+        transform: perspective(500px) rotate(-10deg);
         transform-origin: 90% 90%;
-   }
+    }
 }
+
 @keyframes figmaAnim {
-    0%{
-        transform: perspective(500px) rotate(-20deg); 
+    0% {
+        transform: perspective(500px) rotate(-20deg);
         transform-origin: left bottom;
     }
-    50%{
-        transform: perspective(500px) rotate(20deg); 
+
+    50% {
+        transform: perspective(500px) rotate(20deg);
         transform-origin: right bottom;
 
     }
-   100%{
-        transform: perspective(500px) rotate(-20deg); 
+
+    100% {
+        transform: perspective(500px) rotate(-20deg);
         transform-origin: left bottom;
 
-   }
+    }
 }
 
-.label{
+.label {
     font-size: 20px;
     font-weight: 700;
     align-self: flex-start;
 }
-.input{
+
+.input {
     /* border: 1px solid #222020a6; */
     margin-top: 10px;
     border: none;
     border-radius: 10px;
     padding: 10px;
     font-size: 17px;
-    color:var(--primary-color);
+    color: var(--primary-color);
     box-shadow: 0px 0px 4px 0px black;
     outline: none;
-    width:100%;
+    width: 100%;
     transition: box-shadow .3s;
 }
-.input:hover{
+
+.input:hover {
     box-shadow: 0px 0px 4px 0px var(--secondary-color);
 }
-.input:focus{
-    border:1.8px solid rgb(105, 28, 194);
+
+.input:focus {
+    border: 1.8px solid rgb(105, 28, 194);
     box-shadow: none;
 }
-.textarea{
+
+.textarea {
     margin-top: 12px;
     resize: none;
 }
-.MuiInput-underline:hover{
-  border-bottom: none;
+
+.MuiInput-underline:hover {
+    border-bottom: none;
 }
+
 .css-c672nl-MuiInputBase-root-MuiInput-root::after {
     border-bottom: none !important;
 }
