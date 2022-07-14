@@ -73,7 +73,6 @@ const MyProjects = () => {
                 <Box
                 key={index}
                 className='projects-container'
-                // border='1px solid orange'
                 >
                   <Box
                   className='single-projects'

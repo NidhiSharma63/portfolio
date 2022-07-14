@@ -15,7 +15,6 @@ const HeroBanner = () => {
           flexDirection:{xs:'column',md:'row'},
           margin:{xs:'50px',md:'50px 0px'},
           gap:{xs:'40px',md:'0px'},
-
         }}>
        
         <Box
@@ -30,17 +29,17 @@ const HeroBanner = () => {
               sx={{
                 fontSize:{xs:'30px',sm:'42px',lg:'53px'}
               }}
-              fontWeight='bold'
+              fontWeight='var(--font-weight)'
               letterSpacing='1px'
               >
-              <Box component='span' color='var(--secondary-color)'>Hi,</Box>I'm <Box component='span' color='var(--secondary-color)'></Box>
+              <Box component='span' color='var(--secondary-color)'>Hi,</Box>I'm <Box component='span' color='var(--secondary-color)'>Nidhi Sharma</Box>
             </Typography>
             <Typography
               fontFamily='var(--fontFamilyMerriweather)'
               sx={{
                 fontSize:{xs:'23px',md:'29px',lg:'32px'}
               }}
-              fontWeight='bold'
+              fontWeight='var(--font-weight)'
               letterSpacing='2px'
               >
               A Frontend Developer
@@ -52,7 +51,7 @@ const HeroBanner = () => {
               sx={{
                 fontSize:{xs:'10px',sm:'13px',lg:'16px'},
               }}
-              fontWeight='bold'
+              fontWeight='var(--font-weight)'
               letterSpacing='1.5px'
               marginTop='10px'
               marginBottom='30px'

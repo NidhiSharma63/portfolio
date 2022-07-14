@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 
 import { Box, Typography, TextareaAutosize, Input, createTheme, ThemeProvider } from '@mui/material';
 import Button from './Button';
@@ -31,7 +31,17 @@ const inputTheme = createTheme({
   }
 })
 
+const  mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
 const Contact = () => {
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setmessage] = useState('');
+
+  
+
+
   return (
     <Box
       m='auto'
@@ -43,7 +53,7 @@ const Contact = () => {
       }}>
       <Typography
         fontFamily='var(--fontFamilyMerriweather)'
-        fontWeight='bold'
+        fontWeight='var(--font-weight)'
         className='contact-outline'
         position='relative'
         mb='30px'
@@ -67,9 +77,6 @@ const Contact = () => {
             <Box
               display='flex'
               flexDirection='column'
-              sx={{
-                gap:{xs:'10px', md:'20px'}
-              }}
               width='100%'>
               <ThemeProvider theme={inputTheme}>
                 <Input
@@ -77,19 +84,35 @@ const Contact = () => {
                   placeholder='Enter your name'
                   name='clientName'
                   className='input'
+                  autoComplete='off'
+                  required
                   sx={{
                     fontFamily: 'var(--fontFamilyRobotoSlab)',
                   }}
                 />
+                {<Typography
+                  color='red'
+                  letterSpacing='1.6px'
+                  marginLeft='10px'>
+                    enter your name
+                </Typography>}
                 <Input
                   type='email'
                   placeholder='Enter your email'
                   name='clientEmail'
                   className='input'
+                  required
                   sx={{
+                    marginTop:'30px',
                     fontFamily: 'var(--fontFamilyRobotoSlab)',
                   }}
                 />
+                {<Typography
+                  color='red'
+                  letterSpacing='1.6px'
+                  marginLeft='10px'>
+                    enter your email
+                </Typography>}
               </ThemeProvider>
             </Box>
               <textarea
@@ -113,34 +136,3 @@ const Contact = () => {
 }
 
 export default Contact;
-
-
-{/* <Box
-className='contact-info'>
-<Box>
-  <PhoneIcon/>
-  <Typography>
-    +91 9634135976 <br/>
-    +91 6395932754 <br/>
-  </Typography>
-</Box>
-<Box>
-  <LocationOnIcon/>
-  <Typography>
-    Ghaziabad <br/>
-    Uttar Pradesh 
-  </Typography>
-</Box>
-<Box>
-  <EmailIcon/>
-  <Typography>
-    nidhisharma639593@gmail.com
-  </Typography>
-</Box>
-<Box>
-  <GitHubIcon/>
-  <Typography>
-    <a href='https://github.com/NidhiSharma63'>Github</a>
-  </Typography>
-</Box>
-</Box> */}

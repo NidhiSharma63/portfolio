@@ -6,6 +6,7 @@ const ButtonComponent = ({value}) => {
     <Button
       size='small'
       className='nav-btn'
+      disabled={false}
       sx={{
         backgroundColor:'var(--secondary-color)',
         color:'white',

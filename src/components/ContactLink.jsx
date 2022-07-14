@@ -33,7 +33,8 @@ const ContactLink = () => {
             }}/>
           <Typography
             fontFamily='var(--fontFamilyWorkSans)'
-            color='var(--primary-color)'>
+            color='var(--primary-color)'
+            fontWeight='var(--font-weight)'>
             +91 6395932754 <br/>
           </Typography>
         </Box>
@@ -48,7 +49,8 @@ const ContactLink = () => {
           }}/>
           <Typography
             fontFamily='var(--fontFamilyWorkSans)'
-            color='var(--primary-color)'>
+            color='var(--primary-color)'
+            fontWeight='var(--font-weight)'>
             Ghaziabad 
             Uttar Pradesh 
           </Typography>
@@ -73,6 +75,7 @@ const ContactLink = () => {
 
           <Typography
             fontFamily='var(--fontFamilyWorkSans)'
+            fontWeight='var(--font-weight)'
             color='var(--primary-color)'>
             nidhisharma639593@gmail.com
           </Typography>
@@ -87,7 +90,8 @@ const ContactLink = () => {
               color: 'var(--secondary-color)',
             }}/>
           <Typography
-            fontFamily='var(--fontFamilyWorkSans)'>
+            fontFamily='var(--fontFamilyWorkSans)'
+            fontWeight='var(--font-weight)'>
             <a href='https://github.com/NidhiSharma63'
             className='link-github'>Github</a>
           </Typography>

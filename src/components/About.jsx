@@ -26,7 +26,7 @@ const About = () => {
       className='flex'>
       <Typography
         fontFamily='var(--fontFamilyMerriweather)'
-        fontWeight='bold'
+        fontWeight='var(--font-weight)'
         className='About-outline'
         position='relative'
         color='var(--primary-color)'
@@ -66,7 +66,7 @@ const About = () => {
                   />
                   <Typography
                     fontFamily='var(--fontFamilyWorkSans)'
-                    fontWeight='bold'
+                    fontWeight='var(--font-weight)'
                     color='var(--primary-color)'>
                     {text}
                   </Typography>

@@ -27,6 +27,7 @@
   --secondary-color: #331EB0;
   --technologies-border-color: #67087a;
   --technologies-bg-color: #b714d83d;
+  --font-weight: 700;
 }
 
 .DarkTheme {
@@ -35,6 +36,7 @@
   --secondary-color: #331EB0;
   --technologies-border-color: #67087a;
   --technologies-bg-color: #7119833d;
+  --font-weight: 300;
 }
 
 body {
