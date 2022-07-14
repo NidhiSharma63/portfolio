@@ -2,13 +2,13 @@ import React from 'react';
 
 import { Box,Typography } from '@mui/material';
 
-import calculator from '../Images/calculator.png';
 import cal from '../Images/cal.png';
+import cargame from '../Images/cargame.png'
 import Technologies from './Technologies'
-
+console.log(cal)
 const projectDetails=[
   {
-    Image:'../Images/cal.png',
+    Image:`${cargame}`,
     title:'Car game',
     description:'this car game is amazing. You can use the arrow keys to control the car.',
     technologies:[
@@ -18,7 +18,7 @@ const projectDetails=[
     ]
   },
   {
-    Image:'../Images/cal.png',
+    Image:`${cargame}`,
     title:'Exercise App',
     description:'this app show more than thousand of exercise with detailed explations and videos',
     technologies:[
@@ -28,7 +28,7 @@ const projectDetails=[
     ]
   },
   {
-    Image:'../Images/cal.png',
+    Image:`${cal}`,
     title:'Calculator',
     description:'calculator app with three diffrent themes.',
     technologies:[
@@ -69,6 +69,7 @@ const MyProjects = () => {
                     component='img'
                     src={item.Image}
                     width='100%'
+                    height='233px'
                     borderRadius='10px'/>
                   <Box
                     className='project-info-container'>
