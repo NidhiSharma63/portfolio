@@ -45,6 +45,38 @@ body {
   background-color: var(--background-color);
 }
 
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  position: relative;
+  padding: 6px;
+  width: 100%;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 6px;
+  margin: auto;
+  border: 1px solid;
+}
+
+.navbar-menu {
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
 .link::after {
   content: "";
   position: absolute;

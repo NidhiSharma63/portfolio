@@ -9,7 +9,15 @@ import ButtonComponent from './Button';
 const Navbar = () => {
   const body = document.querySelector('body');
 
-  // const []
+  const [currentDisplay,setCurrentDisplay] = useState('none');
+
+  const handleLiDisaply = () =>{
+    if(currentDisplay === 'none'){
+      setCurrentDisplay('flex');
+    }else{
+      setCurrentDisplay('none');
+    }
+  }  
 
   useEffect(()=>{
     const getTheme = localStorage.getItem('portFolioTheme');
@@ -32,38 +40,19 @@ const Navbar = () => {
     }
   }
 
-  const scroll = window.scrollY;
+
   return (
     <Box
       className="navbar"
-      width='100%'
-      position='relative'
-      display='flex'
-      p='6px'
-      justifyContent='space-between'
-      alignItems='center'
       sx={{
         boxShadow: '1px 1px 10px 1px rgba(13, 13, 24, 0.14)',
       }}
       >
-        
        <Box
-        display='flex'
-        p='6px'
-        justifyContent='space-between'
-        alignItems='center'
-        m='auto'
+        className="navbar-container"
         sx={{
           width: '1200px',
         }}>
-
-       <Box
-          display='flex'
-          flexDirection='row-reverse'
-          alignItems='center'
-          position='relative'
-          z-index='3'
-          >
           <Box
             onClick={changeTheme}
             component='img'
@@ -75,44 +64,21 @@ const Navbar = () => {
               width:{sm:'70px',xs:'50px'},
               height:{sm:'70px',xs:'60px'},
               marginTop:{sm:'-13px',xs:'-10px'},
-            }}>
-          </Box> 
-          <Box
-            sx={{
-              display:{md:'none',xs:'block'},
-            }}
-            component='span'>
-              <MenuSharpIcon
-                sx={{
-                  cursor:'pointer',
-                  width:'2rem',
-                  height:'3rem',
-                  color:"var(--primary-color)"
-                }}/>
-          </Box>
-        </Box>
+          }}/>
         <Box 
-          top='0'
-          height='100vh'
-          width='100%'
-          position='absolute'
-          display='none'// here is none display is for mobile
-          alignItems='center'
-          justifyContent='center'
-          z-index='1'
+          className="navbar-menu"
           sx={{
-            position:{xs:'absolute',md:'relative'},
-            width:{xs:'100%',md:'auto'},
-            height:{xs:'100vh',md:'auto'},
-            backgroundColor:{xs:'rgb(13, 13, 24, 0.4)',md:'transparent'},
-          }}>
+            display:{md:'flex',xs:'none'},
+          }}
+          >
             <Stack
-              fontSize={{xs:'30px',md:'20px'}}
-              spacing={{xs:3,md:13}}
+              fontSize='20px'
+              spacing='13'
               fontFamily='var(--fontFamilyWorkSans)'
               fontWeight='400'
               color='var(--primary-color)'
-              direction={{xs:'column',md:'row'}}
+              direction='row'
+              gap='90px'
             >
             <a
               className='link navbar-link'>Home</a>
@@ -124,10 +90,26 @@ const Navbar = () => {
         </Box>
         <Box
           component='span'
-          marginRight='20px'>
+          marginRight='20px'
+          sx={{
+            display:{md:'flex',xs:'none'},
+          }}>
           <ButtonComponent value='Contact me'/>
         </Box>
-
+        <Box
+            sx={{
+              display:{md:'none',xs:'block'},
+            }}
+            component='span'>
+              <MenuSharpIcon
+                onClick={handleLiDisaply}
+                sx={{
+                  cursor:'pointer',
+                  width:'2rem',
+                  height:'3rem',
+                  color:"var(--primary-color)"
+                }}/>
+          </Box>
        </Box>
     </Box>
   )

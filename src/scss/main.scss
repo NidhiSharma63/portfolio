@@ -45,6 +45,29 @@ body {
   background-color: var(--background-color);
 }
 
+.navbar{
+  @include flexproperty($alignItem:center, $justifyContent:space-between, $flexDirection:row);
+  position: relative;
+  padding: 6px;
+  width: 100%;
+}
+
+.navbar-container {
+  @include flexproperty($alignItem:center, $justifyContent:space-between, $flexDirection:row);
+  padding: 6px;
+  margin: auto;
+  border: 1px solid;
+}
+
+.navbar-menu{
+  position: relative;
+  top:0;
+  width: 100%;
+  z-index:1;
+  background-color: transparent;
+  @include flexproperty($alignItem:center, $justifyContent:center, $flexDirection:row);
+}
+
 .link::after {
   @include underline(0px);
 }
