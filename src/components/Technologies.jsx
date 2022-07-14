@@ -9,7 +9,7 @@ const Technologies = ({technology}) => {
       technology.map((item,index)=>(
         <Typography
         border='1px solid'
-        padding='0px 10px'
+        padding='0px 8px'
         borderRadius='30px'
         borderColor='var(--technologies-border-color)'
         color='var(--technologies-border-color)'

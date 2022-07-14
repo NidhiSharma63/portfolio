@@ -521,15 +521,14 @@ body {
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  margin-right: 5px;
-  gap: 10px;
+  gap: 7px;
 }
 
 .project-link {
   padding: 10px 20px;
-  background: var(--secondary-color);
+  background: transparent;
   border: 2px solid var(--secondary-color);
-  color: white;
+  color: var(--secondary-color);
   text-decoration: none;
   border-radius: 6px;
   font-family: var(--fontFamilyWorkSans);
@@ -538,9 +537,8 @@ body {
 }
 
 .project-link:hover {
-  background-color: transparent;
-  color: var(--secondary-color);
-  font-weight: bold;
+  background: var(--secondary-color);
+  color: white;
 }
 
 .form {

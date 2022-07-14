@@ -5,7 +5,6 @@ import { Box,Typography } from '@mui/material';
 import cal from '../Images/cal.png';
 import cargame from '../Images/cargame.png'
 import Technologies from './Technologies'
-console.log(cal)
 const projectDetails=[
   {
     Image:`${cargame}`,
@@ -23,8 +22,7 @@ const projectDetails=[
     description:'this app show more than thousand of exercise with detailed explations and videos',
     technologies:[
       'react',
-      'material ui',
-      'css'
+      'material ui'
     ]
   },
   {
@@ -44,6 +42,9 @@ const MyProjects = () => {
   return (
     <Box
       marginTop='50px'
+      display='flex'
+      flexDirection='column'
+      justifyContent='center'
     >
       <Typography
         fontFamily='var(--fontFamilyMerriweather)'
@@ -57,12 +58,19 @@ const MyProjects = () => {
         My<Box component='span' color='var(--secondary-color)'> project</Box>
       </Typography>
       <Box
-       mt='50px'>
+       mt='50px'
+       display='flex'
+       gap='30px'
+       sx={{
+        flexDirection:{xs:'column',sm:'row'},
+        flexWrap:{sm:'wrap',xs:'nowrap'},
+       }}>
         
             {
               projectDetails.map((item,index)=>(
                 <Box
-                  width='300px'
+                  width='320px'
+                  height='400px'
                   className='projects-container'
                   key={index}>
                   <Box 
