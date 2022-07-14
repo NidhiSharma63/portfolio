@@ -20,6 +20,7 @@ const App = () => {
   return (
     <Box 
       m='auto'
+      className='main-container'
       sx={{
         width:{
           xl:'1480px'

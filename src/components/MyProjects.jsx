@@ -63,44 +63,51 @@ const MyProjects = () => {
        display='flex'
        gap='30px'
        width='100%'
+       sx={{
+        height:{lg:'500px',xs:'auto'},
+       }}
        flexWrap='wrap'>
         
             {
               projectDetails.map((item,index)=>(
                 <Box
-                  width='320px'
-                  height='400px'
-                  className='projects-container'
+                key={index}
+                className='projects-container'
+                // border='1px solid orange'
+                >
+                  <Box
+                  className='single-projects'
                   key={index}>
-                  <Box 
+                    <Box 
                     component='img'
                     src={item.Image}
                     width='100%'
                     height='233px'
                     borderRadius='10px'/>
-                  <Box
-                    className='project-info-container'>
                     <Box
-                    className='project-info-title'>
+                    className='project-info-container'>
+                      <Box
+                      className='project-info-title'>
+                        <Typography
+                          color='var(--secondary-color)'
+                          fontFamily='var(--fontFamilyWorkSans)'
+                          fontSize='23px'
+                          fontWeight='bold'>
+                          {item.title}
+                        </Typography>
+                        <Technologies technology={item.technologies}/>
+                      </Box>
                       <Typography
-                        color='var(--secondary-color)'
+                        color='var(--primary-color)'
                         fontFamily='var(--fontFamilyWorkSans)'
-                        fontSize='23px'
-                        fontWeight='bold'>
-                        {item.title}
+                        fontSize='17px'>
+                      {item.description}
                       </Typography>
-                      <Technologies technology={item.technologies}/>
+                      <a href="https://nidhisharma63.github.io/calculator-app/"
+                        className='project-link'>
+                        checkout
+                      </a>
                     </Box>
-                    <Typography
-                      color='var(--primary-color)'
-                      fontFamily='var(--fontFamilyWorkSans)'
-                      fontSize='17px'>
-                     {item.description}
-                    </Typography>
-                    <a href="https://nidhisharma63.github.io/calculator-app/"
-                      className='project-link'>
-                      checkout
-                    </a>
                   </Box>
                 </Box>
              ))
