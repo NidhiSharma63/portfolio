@@ -16,7 +16,7 @@ const Navbar = () => {
   const handleShowNavMenu = () =>{
     setshowNavMenu(prev=>!prev);
   }
-  body.style.overflow = showNavMenu ? 'hidden' : 'visible';
+  body.style.overflowY = showNavMenu ? 'hidden' : 'visible';
   useEffect(()=>{
     const getTheme = localStorage.getItem('portFolioTheme');
     if(getTheme===null){
@@ -41,7 +41,7 @@ const Navbar = () => {
 
   return (
     <>
-      {showNavMenu && <NavMenu/>}
+      {showNavMenu && <NavMenu setshowNavMenu={setshowNavMenu}/>}
       <Box
         className="navbar"
         sx={{

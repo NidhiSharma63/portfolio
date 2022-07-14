@@ -35,7 +35,7 @@ const Contact = () => {
   return (
     <Box
       m='auto'
-      mt='30px'
+      mt='90px'
       mb='30px'
       className='flex'
       sx={{

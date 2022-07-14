@@ -2,7 +2,8 @@ import React from 'react';
 
 import { Box, Stack, Button } from '@mui/material';
 
-const NavMenu = () => {
+const NavMenu = ({setshowNavMenu}) => {
+  const body= document.querySelector('body');
   return (
     <Box
       className="sm-navbar"
@@ -17,13 +18,27 @@ const NavMenu = () => {
         align='center'
       >
         <a
-          className='sm-nav-link'>Home</a>
+          className='sm-nav-link'
+          
+          >Home</a>
         <a
-          className='sm-nav-link'>About</a>
+          className='sm-nav-link'
+          onClick={()=>{
+            setshowNavMenu(false);
+            window.scrollTo({ top:900, behavior: 'smooth' });
+          }}>About</a>
         <a
-          className='sm-nav-link'>My build</a>
+          className='sm-nav-link'
+          onClick={()=>{
+            setshowNavMenu(false);
+            window.scrollTo({ top:1700, behavior: 'smooth' });
+          }}>My build</a>
         <a
-          className='sm-nav-link'>Contact me</a>
+          className='sm-nav-link'
+          onClick={()=>{
+            setshowNavMenu(false);
+            window.scrollTo({ top:3000, behavior: 'smooth' });
+          }}>Contact me</a>
       </Stack>
     </Box>
   )

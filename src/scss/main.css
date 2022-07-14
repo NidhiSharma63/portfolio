@@ -93,6 +93,7 @@ body {
 
 .sm-nav-link {
   position: relative;
+  cursor: pointer;
 }
 
 .sm-nav-link::after {
