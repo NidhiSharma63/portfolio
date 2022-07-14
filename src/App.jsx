@@ -28,7 +28,7 @@ const App = () => {
         <Navbar />
         <HeroBanner/>
         <About />
-        {/* <MyProjects/> */}
+        <MyProjects/>
         <Contact/>
       </Box>
   )

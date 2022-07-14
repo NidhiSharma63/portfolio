@@ -89,7 +89,7 @@ body {
 .About-outline::after {
   content: "";
   position: absolute;
-  width: 104px;
+  width: 115px;
   height: 2px;
   background-color: var(--secondary-color);
   bottom: 0;
@@ -104,7 +104,7 @@ body {
 .contact-outline::after {
   content: "";
   position: absolute;
-  width: 125px;
+  width: 140px;
   height: 2px;
   background-color: var(--secondary-color);
   bottom: 0;
@@ -113,6 +113,21 @@ body {
 }
 
 .contact-outline:hover::after {
+  width: 0;
+}
+
+.myproject-outline::after {
+  content: "";
+  position: absolute;
+  width: 130px;
+  height: 2px;
+  background-color: var(--secondary-color);
+  bottom: 0;
+  left: 0;
+  transition: 0.6s;
+}
+
+.myproject-outline:hover::after {
   width: 0;
 }
 
@@ -470,6 +485,43 @@ body {
     transform-origin: left bottom;
   }
 }
+.projects-container {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 0px 4px 0px black;
+}
+
+.project-info-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project-link {
+  padding: 10px 20px;
+  background: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-family: var(--fontFamilyWorkSans);
+  box-shadow: 0px 0px 4px 0px black;
+  transition: 0.7s;
+}
+
+.project-link:hover {
+  background-color: transparent;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
 .form {
   width: 400px;
   display: flex;

@@ -74,18 +74,25 @@ body {
 }
 
 .About-outline::after {
-  @include underline(104px)
+  @include underline(115px)
 }
 
 .About-outline:hover::after {
   width: 0;
 }
 .contact-outline::after {
-  @include underline(125px)
-
+  @include underline(140px)
 }
 
 .contact-outline:hover::after {
+  width: 0;
+}
+
+.myproject-outline::after {
+  @include underline(130px)
+}
+
+.myproject-outline:hover::after {
   width: 0;
 }
 
@@ -338,6 +345,45 @@ body {
     transform-origin: left bottom;
 
   }
+}
+
+
+.projects-container{
+  // border:1px solid;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  flex-direction:column;
+  justify-content:space-between;
+  gap:10px;
+  border-radius:10px;
+  padding:10px;
+  box-shadow: 0px 0px 4px 0px  black;
+
+}
+
+.project-info-container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project-link{
+  padding: 10px 20px;
+  background: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-family: var(--fontFamilyWorkSans);
+  box-shadow: 0px 0px 4px 0px  black;
+  transition: .7s;
+}
+.project-link:hover{
+  background-color: transparent;
+  color: var(--secondary-color);
+  font-weight: bold;
 }
 
 .form{
