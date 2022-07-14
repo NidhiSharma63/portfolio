@@ -45,6 +45,7 @@ const MyProjects = () => {
       display='flex'
       flexDirection='column'
       justifyContent='center'
+      alignItems='center'
     >
       <Typography
         fontFamily='var(--fontFamilyMerriweather)'
@@ -61,10 +62,8 @@ const MyProjects = () => {
        mt='50px'
        display='flex'
        gap='30px'
-       sx={{
-        flexDirection:{xs:'column',sm:'row'},
-        flexWrap:{sm:'wrap',xs:'nowrap'},
-       }}>
+       width='100%'
+       flexWrap='wrap'>
         
             {
               projectDetails.map((item,index)=>(
