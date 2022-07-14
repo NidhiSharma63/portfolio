@@ -75,7 +75,7 @@ const Navbar = () => {
                 fontSize='20px'
                 spacing='13'
                 fontFamily='var(--fontFamilyWorkSans)'
-                fontWeight='400'
+                fontWeight='var(--font-weight)'
                 color='var(--primary-color)'
                 direction='row'
                 gap='90px'
