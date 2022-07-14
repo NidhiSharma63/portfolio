@@ -59,7 +59,15 @@ const HeroBanner = () => {
               >
               Frontend Developer with a passion for building beautiful,<br/> responsive websites and love to listening music.
             </Typography>
-            <ButtonComponent value='Hire me'/>
+            <Box
+            component='span'
+            onClick={()=>{
+              window.scrollTo({ top:1650, behavior: 'smooth' });
+            }}>
+              <ButtonComponent 
+              value='Hire me'
+              />
+            </Box>
           </Box>
           <Box
             component='img'

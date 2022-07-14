@@ -83,14 +83,23 @@ const Navbar = () => {
                 <a
                   className='link navbar-link'>Home</a>
                 <a
-                  className='link navbar-link'>About</a>
+                  className='link navbar-link'
+                  onClick={()=>{
+                    window.scrollTo({ top:550, behavior: 'smooth' });
+                  }}>About</a>
                 <a
-                  className='link my-build'>My build</a>
+                  className='link my-build'
+                  onClick={()=>{
+                    window.scrollTo({ top:1150, behavior: 'smooth' });
+                  }}>My build</a>
             </Stack>
           </Box>
           <Box
             component='span'
             marginRight='20px'
+            onClick={()=>{
+              window.scrollTo({ top:1650, behavior: 'smooth' });
+            }}
             sx={{
               display:{md:'flex',xs:'none'},
             }}>

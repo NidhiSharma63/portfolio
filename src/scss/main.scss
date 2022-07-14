@@ -97,6 +97,7 @@ body {
 }
 .link{
   position: relative;
+  cursor: pointer;
 }
 .navbar-link:hover::after {
   width: 65px;
