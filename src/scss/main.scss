@@ -63,6 +63,7 @@ body {
   z-index: 1;
   @include flexproperty($alignItem:center, $justifyContent:center, $flexDirection:column);
 }
+
 .navbar-container {
   @include flexproperty($alignItem:center, $justifyContent:space-between, $flexDirection:row);
   padding: 6px;
@@ -76,6 +77,18 @@ body {
   z-index:1;
   background-color: transparent;
   @include flexproperty($alignItem:center, $justifyContent:center, $flexDirection:row);
+}
+
+.sm-nav-link{
+  position: relative;
+}
+.sm-nav-link::after{
+  top:30px;
+  @include underline(0px);
+}
+
+.sm-nav-link:hover::after{
+  width: 100%;
 }
 
 .link::after {

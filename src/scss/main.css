@@ -91,6 +91,26 @@ body {
   flex-direction: row;
 }
 
+.sm-nav-link {
+  position: relative;
+}
+
+.sm-nav-link::after {
+  top: 30px;
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 2px;
+  background-color: var(--secondary-color);
+  bottom: 0;
+  left: 0;
+  transition: 0.6s;
+}
+
+.sm-nav-link:hover::after {
+  width: 100%;
+}
+
 .link::after {
   content: "";
   position: absolute;

@@ -9,19 +9,21 @@ const NavMenu = () => {
       >
       <Stack
         fontSize='20px'
-        spacing='13'
         fontFamily='var(--fontFamilyWorkSans)'
         fontWeight='400'
         color='white'
         direction='column'
         gap='50px'
+        align='center'
       >
         <a
-          className=''>Home</a>
+          className='sm-nav-link'>Home</a>
         <a
-          className=''>About</a>
+          className='sm-nav-link'>About</a>
         <a
-          className=''>My build</a>
+          className='sm-nav-link'>My build</a>
+        <a
+          className='sm-nav-link'>Contact me</a>
       </Stack>
     </Box>
   )
