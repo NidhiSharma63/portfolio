@@ -2,6 +2,7 @@ import React,{useEffect, useState} from 'react';
 
 import { Box,Stack,Button} from '@mui/material';
 import MenuSharpIcon from '@mui/icons-material/MenuSharp';
+import CloseIcon from '@mui/icons-material/Close';
 
 import logo from '../Images/logo.png';
 import ButtonComponent from './Button';
@@ -10,15 +11,11 @@ import NavMenu from './NavMenu';
 const Navbar = () => {
   const body = document.querySelector('body');
 
-  const [currentDisplay,setCurrentDisplay] = useState('none');
-
-  const handleLiDisaply = () =>{
-    if(currentDisplay === 'none'){
-      setCurrentDisplay('flex');
-    }else{
-      setCurrentDisplay('none');
-    }
-  }  
+  const [showNavMenu,setshowNavMenu] = useState(false);
+ 
+  const handleShowNavMenu = () =>{
+    setshowNavMenu(prev=>!prev);
+  }
 
   useEffect(()=>{
     const getTheme = localStorage.getItem('portFolioTheme');
@@ -44,7 +41,7 @@ const Navbar = () => {
 
   return (
     <>
-      <NavMenu/>
+      {showNavMenu && <NavMenu/>}
       <Box
         className="navbar"
         sx={{
@@ -100,19 +97,29 @@ const Navbar = () => {
             <ButtonComponent value='Contact me'/>
           </Box>
           <Box
-              sx={{
-                display:{md:'none',xs:'block'},
-              }}
-              component='span'>
+            onClick={handleShowNavMenu}
+            sx={{
+              display:{md:'none',xs:'block'},
+            }}
+            component='span'>
+              {
+                showNavMenu ? 
+                <CloseIcon
+                sx={{
+                  cursor:'pointer',
+                  width:'2rem',
+                  height:'3rem',
+                  color:'white'
+                }}/> : 
                 <MenuSharpIcon
-                  onClick={handleLiDisaply}
                   sx={{
                     cursor:'pointer',
                     width:'2rem',
                     height:'3rem',
                     color:"var(--primary-color)"
                   }}/>
-            </Box>
+              }
+          </Box>
         </Box>
       </Box>
     </>
@@ -120,3 +127,12 @@ const Navbar = () => {
 }
 
 export default Navbar;
+
+{/* <CloseIcon/>:
+              <MenuSharpIcon
+              sx={{
+                cursor:'pointer',
+                width:'2rem',
+                height:'3rem',
+                color:"var(--primary-color)"
+              }}/> */}
