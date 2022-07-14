@@ -5,6 +5,7 @@ import MenuSharpIcon from '@mui/icons-material/MenuSharp';
 
 import logo from '../Images/logo.png';
 import ButtonComponent from './Button';
+import NavMenu from './NavMenu';
 
 const Navbar = () => {
   const body = document.querySelector('body');
@@ -42,76 +43,79 @@ const Navbar = () => {
 
 
   return (
-    <Box
-      className="navbar"
-      sx={{
-        boxShadow: '1px 1px 10px 1px rgba(13, 13, 24, 0.14)',
-      }}
-      >
-       <Box
-        className="navbar-container"
+    <>
+      <NavMenu/>
+      <Box
+        className="navbar"
         sx={{
-          width: '1200px',
-        }}>
-          <Box
-            onClick={changeTheme}
-            component='img'
-            src={logo} 
-            alt='logo'
-            marginLeft='10px'
-            sx={{
-              cursor:'pointer',
-              width:{sm:'70px',xs:'50px'},
-              height:{sm:'70px',xs:'60px'},
-              marginTop:{sm:'-13px',xs:'-10px'},
-          }}/>
-        <Box 
-          className="navbar-menu"
-          sx={{
-            display:{md:'flex',xs:'none'},
-          }}
-          >
-            <Stack
-              fontSize='20px'
-              spacing='13'
-              fontFamily='var(--fontFamilyWorkSans)'
-              fontWeight='400'
-              color='var(--primary-color)'
-              direction='row'
-              gap='90px'
-            >
-            <a
-              className='link navbar-link'>Home</a>
-            <a
-              className='link navbar-link'>About</a>
-            <a
-              className='link my-build'>My build</a>
-          </Stack>
-        </Box>
+          boxShadow: '1px 1px 10px 1px rgba(13, 13, 24, 0.14)',
+        }}
+        >
         <Box
-          component='span'
-          marginRight='20px'
+          className="navbar-container"
           sx={{
-            display:{md:'flex',xs:'none'},
+            width: '1200px',
           }}>
-          <ButtonComponent value='Contact me'/>
-        </Box>
-        <Box
+            <Box
+              onClick={changeTheme}
+              component='img'
+              src={logo} 
+              alt='logo'
+              marginLeft='10px'
+              sx={{
+                cursor:'pointer',
+                width:{sm:'70px',xs:'50px'},
+                height:{sm:'70px',xs:'60px'},
+                marginTop:{sm:'-13px',xs:'-10px'},
+            }}/>
+          <Box 
+            className="navbar-menu"
             sx={{
-              display:{md:'none',xs:'block'},
+              display:{md:'flex',xs:'none'},
             }}
-            component='span'>
-              <MenuSharpIcon
-                onClick={handleLiDisaply}
-                sx={{
-                  cursor:'pointer',
-                  width:'2rem',
-                  height:'3rem',
-                  color:"var(--primary-color)"
-                }}/>
+            >
+              <Stack
+                fontSize='20px'
+                spacing='13'
+                fontFamily='var(--fontFamilyWorkSans)'
+                fontWeight='400'
+                color='var(--primary-color)'
+                direction='row'
+                gap='90px'
+              >
+                <a
+                  className='link navbar-link'>Home</a>
+                <a
+                  className='link navbar-link'>About</a>
+                <a
+                  className='link my-build'>My build</a>
+            </Stack>
           </Box>
-       </Box>
-    </Box>
+          <Box
+            component='span'
+            marginRight='20px'
+            sx={{
+              display:{md:'flex',xs:'none'},
+            }}>
+            <ButtonComponent value='Contact me'/>
+          </Box>
+          <Box
+              sx={{
+                display:{md:'none',xs:'block'},
+              }}
+              component='span'>
+                <MenuSharpIcon
+                  onClick={handleLiDisaply}
+                  sx={{
+                    cursor:'pointer',
+                    width:'2rem',
+                    height:'3rem',
+                    color:"var(--primary-color)"
+                  }}/>
+            </Box>
+        </Box>
+      </Box>
+    </>
   )
 }
 
