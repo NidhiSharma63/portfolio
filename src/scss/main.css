@@ -25,12 +25,16 @@
   --background-color: #FFFFFF;
   --primary-color: #1d1a1a;
   --secondary-color: #331EB0;
+  --technologies-border-color: #67087a;
+  --technologies-bg-color: #b714d83d;
 }
 
 .DarkTheme {
   --background-color: #181717;
   --primary-color: #FFFFFF;
   --secondary-color: #331EB0;
+  --technologies-border-color: #67087a;
+  --technologies-bg-color: #7119833d;
 }
 
 body {
@@ -493,7 +497,7 @@ body {
   justify-content: space-between;
   gap: 10px;
   border-radius: 10px;
-  padding: 10px;
+  padding: 10px 15px;
   box-shadow: 0px 0px 4px 0px black;
 }
 
@@ -501,7 +505,24 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
+}
+
+.project-info-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+}
+
+.project-info-technologies {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-right: 5px;
+  gap: 10px;
 }
 
 .project-link {

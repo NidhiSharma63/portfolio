@@ -4,6 +4,40 @@ import { Box,Typography } from '@mui/material';
 
 import calculator from '../Images/calculator.png';
 import cal from '../Images/cal.png';
+import Technologies from './Technologies'
+
+const projectDetails=[
+  {
+    Image:'../Images/cal.png',
+    title:'Car game',
+    description:'this car game is amazing. You can use the arrow keys to control the car.',
+    technologies:[
+      'js',
+      'css',
+      'html'
+    ]
+  },
+  {
+    Image:'../Images/cal.png',
+    title:'Exercise App',
+    description:'this app show more than thousand of exercise with detailed explations and videos',
+    technologies:[
+      'react',
+      'material ui',
+      'css'
+    ]
+  },
+  {
+    Image:'../Images/cal.png',
+    title:'Calculator',
+    description:'calculator app with three diffrent themes.',
+    technologies:[
+      'js',
+      'css',
+      'html'
+    ]
+  },
+]
 
 
 const MyProjects = () => {
@@ -24,37 +58,45 @@ const MyProjects = () => {
       </Typography>
       <Box
        mt='50px'>
-        <Box
-          width='300px'
-          className='projects-container'>
-          <Box 
-            component='img'
-            src={cal}
-            width='100%'
-            borderRadius='10px'/>
-          <Box
-            className='project-info-container'>
-            <Typography
-              color='var(--primary-color)'
-              fontFamily='var(--fontFamilyWorkSans)'
-              fontWeight='bold'
-              fontSize='14px'
-              >
-              <Box 
-                fontSize='23px'
-                component='span'
-                color='var(--secondary-color)'>
-              Calculator <br/>
-              </Box>
-              I made this by using vanilla javascript and html.
-              I have added three different themes to the calculator.
-            </Typography>
-              <a href="https://nidhisharma63.github.io/calculator-app/"
-                className='project-link'>
-                checkout
-              </a>
-          </Box>
-        </Box>
+        
+            {
+              projectDetails.map((item,index)=>(
+                <Box
+                  width='300px'
+                  className='projects-container'
+                  key={index}>
+                  <Box 
+                    component='img'
+                    src={item.Image}
+                    width='100%'
+                    borderRadius='10px'/>
+                  <Box
+                    className='project-info-container'>
+                    <Box
+                    className='project-info-title'>
+                      <Typography
+                        color='var(--secondary-color)'
+                        fontFamily='var(--fontFamilyWorkSans)'
+                        fontSize='23px'
+                        fontWeight='bold'>
+                        {item.title}
+                      </Typography>
+                      <Technologies technology={item.technologies}/>
+                    </Box>
+                    <Typography
+                      color='var(--primary-color)'
+                      fontFamily='var(--fontFamilyWorkSans)'
+                      fontSize='17px'>
+                     {item.description}
+                    </Typography>
+                    <a href="https://nidhisharma63.github.io/calculator-app/"
+                      className='project-link'>
+                      checkout
+                    </a>
+                  </Box>
+                </Box>
+             ))
+            }
       </Box>
     </Box>
   )

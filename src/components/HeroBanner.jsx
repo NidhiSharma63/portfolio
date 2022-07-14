@@ -41,7 +41,7 @@ const HeroBanner = () => {
                 fontSize:{xs:'23px',md:'29px',lg:'32px'}
               }}
               fontWeight='bold'
-              letterSpacing='1px'
+              letterSpacing='2px'
               >
               A Frontend Developer
             </Typography>
@@ -53,7 +53,7 @@ const HeroBanner = () => {
                 fontSize:{xs:'10px',sm:'13px',lg:'16px'},
               }}
               fontWeight='bold'
-              letterSpacing='1px'
+              letterSpacing='1.5px'
               marginTop='10px'
               marginBottom='30px'
               >
