@@ -29,6 +29,7 @@ const About = () => {
         fontWeight='bold'
         className='About-outline'
         position='relative'
+        color='var(--primary-color)'
         sx={{
           fontSize:'24px',
           cursor:'pointer'
@@ -65,7 +66,8 @@ const About = () => {
                   />
                   <Typography
                     fontFamily='var(--fontFamilyWorkSans)'
-                    fontWeight='bold'>
+                    fontWeight='bold'
+                    color='var(--primary-color)'>
                     {text}
                   </Typography>
                 </Box>
@@ -78,7 +80,7 @@ const About = () => {
         <Box 
           className='imagesContainer'
           sx={{
-            marginTop:{xs:'100px',md:'0px'},
+            marginTop:{xs:'50px',md:'0px'},
             width:{xs:'392px',sm:'494px',md:'663px'},
           }}>
             <Box
@@ -88,7 +90,10 @@ const About = () => {
               <Bulb id='b2'/>
               <Bulb id='b3'/>
             </Box>
-          <Box>
+          <Box
+            sx={{
+              mt:{xs:'80px',md:'50px'}
+            }}>
             <Images 
               ImageSrc={html}
               Image='htmlImg'

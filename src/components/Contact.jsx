@@ -20,6 +20,7 @@ const inputTheme = createTheme({
           }
         },
         input: {
+          color:'white',
           '&::placeholder': {
             color: 'var(--secondary-color)',
             fontWeight: 'bold',
@@ -43,9 +44,10 @@ const Contact = () => {
       <Typography
         fontFamily='var(--fontFamilyMerriweather)'
         fontWeight='bold'
-        className='heading-outline'
+        className='contact-outline'
         position='relative'
         mb='30px'
+        color='var(--primary-color)'
         sx={{
           fontSize: '24px',
           cursor: 'pointer'

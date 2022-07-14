@@ -32,7 +32,8 @@ const ContactLink = () => {
               color: 'var(--secondary-color)',
             }}/>
           <Typography
-            fontFamily='var(--fontFamilyWorkSans)'>
+            fontFamily='var(--fontFamilyWorkSans)'
+            color='var(--primary-color)'>
             +91 6395932754 <br/>
           </Typography>
         </Box>
@@ -46,7 +47,8 @@ const ContactLink = () => {
             color: 'var(--secondary-color)',
           }}/>
           <Typography
-            fontFamily='var(--fontFamilyWorkSans)'>
+            fontFamily='var(--fontFamilyWorkSans)'
+            color='var(--primary-color)'>
             Ghaziabad 
             Uttar Pradesh 
           </Typography>
@@ -70,7 +72,8 @@ const ContactLink = () => {
             }}/>
 
           <Typography
-            fontFamily='var(--fontFamilyWorkSans)'>
+            fontFamily='var(--fontFamilyWorkSans)'
+            color='var(--primary-color)'>
             nidhisharma639593@gmail.com
           </Typography>
         </Box>

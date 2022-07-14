@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect, useState} from 'react';
 
 import { Box,Stack,Button} from '@mui/material';
 import MenuSharpIcon from '@mui/icons-material/MenuSharp';
@@ -7,7 +7,31 @@ import logo from '../Images/logo.png';
 import ButtonComponent from './Button';
 
 const Navbar = () => {
-  // const window
+  const body = document.querySelector('body');
+
+  // const []
+
+  useEffect(()=>{
+    const getTheme = localStorage.getItem('portFolioTheme');
+    if(getTheme===null){
+      body.classList.add('lightTheme');
+    }else{
+      body.classList.add(getTheme);
+    }
+  },[])
+
+  const changeTheme = ()=>{
+    if(body.classList.contains("lightTheme")){
+      body.classList.add('DarkTheme');
+      body.classList.remove('lightTheme')
+      localStorage.setItem('portFolioTheme','DarkTheme');
+    }else{
+      body.classList.remove('DarkTheme');
+      body.classList.add('lightTheme');
+      localStorage.setItem('portFolioTheme','lightTheme');
+    }
+  }
+
   const scroll = window.scrollY;
   return (
     <Box
@@ -18,12 +42,9 @@ const Navbar = () => {
       p='6px'
       justifyContent='space-between'
       alignItems='center'
-      // backgroundColor='white'
       sx={{
         boxShadow: '1px 1px 10px 1px rgba(13, 13, 24, 0.14)',
       }}
-      // {window.scrollY > '100px' &&
-      //  console.log('hello')}
       >
         
        <Box
@@ -44,6 +65,7 @@ const Navbar = () => {
           z-index='3'
           >
           <Box
+            onClick={changeTheme}
             component='img'
             src={logo} 
             alt='logo'
@@ -64,7 +86,8 @@ const Navbar = () => {
                 sx={{
                   cursor:'pointer',
                   width:'2rem',
-                  height:'3rem'
+                  height:'3rem',
+                  color:"var(--primary-color)"
                 }}/>
           </Box>
         </Box>
@@ -84,21 +107,19 @@ const Navbar = () => {
             backgroundColor:{xs:'rgb(13, 13, 24, 0.4)',md:'transparent'},
           }}>
             <Stack
-              fontSize={{xs:'30px',md:'23px'}}
+              fontSize={{xs:'30px',md:'20px'}}
               spacing={{xs:3,md:13}}
               fontFamily='var(--fontFamilyWorkSans)'
               fontWeight='400'
+              color='var(--primary-color)'
               direction={{xs:'column',md:'row'}}
             >
             <a
-              className='link navbar-link'
-              position='relative'>Home</a>
+              className='link navbar-link'>Home</a>
             <a
-              className='link navbar-link'
-              position='relative'>About</a>
+              className='link navbar-link'>About</a>
             <a
-              className='link my-build'
-              position='relative'>My build</a>
+              className='link my-build'>My build</a>
           </Stack>
         </Box>
         <Box
