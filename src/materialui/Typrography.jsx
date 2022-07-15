@@ -92,6 +92,7 @@ export const technologiesTypo = createTheme({
     MuiTypography:{
       styleOverrides:{
         root:{
+          fontSize:'12px',
           border:'1px solid',
           color:'var(--technologies-border-color)',
           padding:'0px 8px',

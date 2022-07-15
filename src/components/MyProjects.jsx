@@ -75,7 +75,7 @@ const MyProjects = () => {
                     component='img'
                     src={item.Image}
                     width='100%'
-                    height='233px'
+                    height='200px'
                     borderRadius='10px'/>
                     <Box
                     className='project-info-container'>
@@ -86,7 +86,7 @@ const MyProjects = () => {
                           fontFamily='var(--fontFamilyWorkSans)'
                           
                           sx={{
-                            fontSize:{xs:'20px',sm:'23px'},
+                            fontSize:{xs:'18px',sm:'20px'},
                           }}
                           fontWeight='bold'>
                           {item.title}

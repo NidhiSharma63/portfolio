@@ -30,10 +30,14 @@ const ContactLink = () => {
             sx={{
               flexDirection: {xs:'row',md:'column'},
             }}>
-          <GitHubIcon
-            sx={{
-              color: 'var(--contact-link-icon-color)',
-            }}/>
+              <a
+                target='_blank'
+               href='https://github.com/NidhiSharma63'>
+                <GitHubIcon
+                sx={{
+                  color: 'var(--contact-link-icon-color)',
+                }}/>
+              </a>
           <ThemeProvider theme={contactLinkTypo}>
             <Typography>
               <a href='https://github.com/NidhiSharma63'
