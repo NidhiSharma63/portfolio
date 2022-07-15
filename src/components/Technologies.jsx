@@ -7,15 +7,15 @@ const Technologies = ({technology}) => {
   return (
     <Box
     className='project-info-technologies'>
-     {
-      technology.map((item,index)=>(
-        <ThemeProvider theme={technologiesTypo}>
-          <Typography key={index}>
-            {item}
-          </Typography>
-        </ThemeProvider>
-      ))
-     }
+      <ThemeProvider theme={technologiesTypo}>
+        {
+        technology.map((item,index)=>(
+            <Typography key={index}>
+              {item}
+            </Typography>
+        ))
+      }
+    </ThemeProvider>
     </Box>
   )
 }

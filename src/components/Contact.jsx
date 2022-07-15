@@ -29,14 +29,16 @@ const Contact = () => {
   
   const submitForm = (e) => {
     e.preventDefault();
-    console.log(name)
-    if(name.length==0){
+    if(name.length<2){
       setNameError(true);
       return;
     }
-    else if(!setValidEmail){
-      console.log('not set valid email')
+    if(!setValidEmail || !email){
       setEmailError(true);
+      return;
+    }
+    if(!message){
+      setMessageError(true);
       return;
     }
   }
@@ -45,7 +47,7 @@ const Contact = () => {
     <Box
       className='contact-wrapper'
       sx={{
-        width:{xs:'100%', md:'70%'},
+        width:{xs:'100%', md:'80%'},
       }}>
       <ThemeProvider theme={headingTypography}>
         <Typography className='contact-outline'>
@@ -60,10 +62,7 @@ const Contact = () => {
             sx={{
               flexDirection: { xs: 'column', sm: 'row' }
             }}>
-            <Box
-              display='flex'
-              flexDirection='column'
-              width='100%'>
+            <Box className='contact-Input-container'>
               <ThemeProvider theme={InputTheme}>
                 <Input
                   type='name'
@@ -102,6 +101,7 @@ const Contact = () => {
                 }
               </ThemeProvider>
             </Box>
+            <Box width='100%' marginBottom='20px'>
               <textarea
                 className='textarea'
                 name="message"
@@ -109,6 +109,15 @@ const Contact = () => {
                 rows="7"
                 placeholder='message'>
               </textarea>
+              {
+                messageError &&
+                <ThemeProvider theme={errorTypography}>
+                  <Typography>
+                    enter your message
+                  </Typography>
+                </ThemeProvider>
+              }
+            </Box>
           </Box>
           <Box
             className='form-btn-container'>

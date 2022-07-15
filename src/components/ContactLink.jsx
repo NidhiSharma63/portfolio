@@ -12,20 +12,20 @@ const ContactLink = () => {
     <Box
       className='contact-info'
       sx={{
-        flexDirection: {xs:'column',sm:'row'},
-        width:{xs:'98%',md:'900px',lg:'1100px'},
+        flexDirection: {xs:'column',md:'row'},
+        width:{xs:'98%',sm:'98%', md:'900px',lg:'1100px'},
       }}
       mt='30px'>
       <Box
         className='contact-form-box'
         sx={{
-          justifyContent:{xs:'space-between',sm:'space-around'},
+          justifyContent:{xs:'space-between',md:'space-around'},
         }}
         width='100%'>
         <Box
-          className='contact-box-item'
+          className='contact-link-box'
           sx={{
-            flexDirection: {xs:'row',sm:'column'},
+            flexDirection: {xs:'row',md:'column'},
           }}>
           <PhoneIcon
             sx={{
@@ -39,9 +39,9 @@ const ContactLink = () => {
           </Typography>
         </Box>
         <Box
-          className='contact-box-item'
+          className='contact-link-box'
           sx={{
-            flexDirection: {xs:'row',sm:'column'},
+            flexDirection: {xs:'row',md:'column'},
           }}>
           <LocationOnIcon
             sx={{
@@ -60,13 +60,13 @@ const ContactLink = () => {
       <Box
         className='contact-form-box'
         sx={{
-          justifyContent:{xs:'space-between',sm:'space-around'},
+          justifyContent:{xs:'space-between',md:'space-around'},
         }}
         width='100%'>
         <Box
-          className='contact-box-item'
+          className='contact-link-box'
           sx={{
-            flexDirection: {xs:'row',sm:'column'},
+            flexDirection: {xs:'row',md:'column'},
           }}>
           <EmailIcon
             sx={{
@@ -81,9 +81,9 @@ const ContactLink = () => {
           </Typography>
         </Box>
         <Box
-            className='contact-box-item'
+            className='contact-link-box'
             sx={{
-              flexDirection: {xs:'row',sm:'column'},
+              flexDirection: {xs:'row',md:'column'},
             }}>
           <GitHubIcon
             sx={{

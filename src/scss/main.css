@@ -660,15 +660,7 @@ body {
 }
 
 .contact-wrapper {
-  margin: 90px 30px auto auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.contact-form-box,
-.textArea-container {
+  margin: 90px auto 30px auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -676,8 +668,17 @@ body {
 }
 
 .contact-form-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   gap: 30px;
   padding: 0px 30px;
+}
+
+.textArea-container {
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .input,
@@ -729,15 +730,28 @@ body {
 
 .contact-form-box {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   flex-direction: row;
 }
 
-.contact-box-item {
+.contact-Input-container {
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex-direction: column;
+  width: 100%;
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.contact-link-box {
   display: flex;
   align-items: center;
-  gap: 5px;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .link-github {

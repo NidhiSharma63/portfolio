@@ -512,20 +512,20 @@ body {
 }
 
 .contact-wrapper{
-  margin: 90px 30px auto auto;
-  @include flexproperty($alignItem:center, $justifyContent:center, $flexDirection:column);
-}
-
-.contact-form-box,
-.textArea-container{
+  margin: 90px auto 30px auto;
   @include flexproperty($alignItem:center, $justifyContent:center, $flexDirection:column);
 }
 
 .contact-form-box{
+  @include flexproperty($alignItem:center, $justifyContent:center, $flexDirection:column);
   gap:30px;
   padding: 0px 30px;
 }
 
+.textArea-container{
+  width: 100%;
+  margin-bottom: 20px;
+} 
 .input,
 .textarea {
   margin-top: 10px;
@@ -560,12 +560,18 @@ body {
   gap:10px;
 }
 .contact-form-box{
-  @include flexproperty($alignItem:center, $justifyContent:space-between, $flexDirection:row);
+  @include flexproperty($alignItem:flex-start, $justifyContent:space-between, $flexDirection:row);
 }
-.contact-box-item{
-  display :flex;
-  align-items:center;
-  gap: 5px;
+.contact-Input-container{
+  height: 100%;
+  @include flexproperty($alignItem:flex-start, $justifyContent:flex-end, $flexDirection:column);
+  width: 100%;
+  gap: 24px;
+  margin-top: 20px;
+}
+.contact-link-box{
+  @include flexproperty($alignItem:center, $justifyContent:space-between, $flexDirection:column);
+  gap:10px;
 }
 .link-github{
   text-decoration: none;
