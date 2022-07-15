@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Box,Stack,Button,Typography } from '@mui/material';
+import { Box,Stack,Button,Typography, ThemeProvider } from '@mui/material';
 import main from '../Images/main2.png';
 import ButtonComponent from './Button';
 
-
+import {heroTypography1,heroTypography2} from '../materialui/Typrography'
 
 const HeroBanner = () => {
   return (
@@ -24,40 +24,23 @@ const HeroBanner = () => {
           textAlign='center'
           color='var(--primary-color)'
           gap='6px'>
-            <Typography
-              fontFamily='var(--fontFamilyMerriweather)'
-              sx={{
-                fontSize:{xs:'30px',sm:'42px',lg:'53px'}
-              }}
-              fontWeight='var(--font-weight)'
-              letterSpacing='1px'
-              >
-              <Box component='span' color='var(--secondary-color)'>Hi,</Box>I'm <Box component='span' color='var(--secondary-color)'>Nidhi Sharma</Box>
-            </Typography>
-            <Typography
-              fontFamily='var(--fontFamilyMerriweather)'
-              sx={{
-                fontSize:{xs:'23px',md:'29px',lg:'32px'}
-              }}
-              fontWeight='var(--font-weight)'
-              letterSpacing='2px'
-              >
-              A Frontend Developer
-            </Typography>
-            <Typography
-              className='underLine-pTag'
-              fontFamily='var(--fontFamilyWorkSans)'
-              position='relative'
-              sx={{
-                fontSize:{xs:'10px',sm:'13px',lg:'16px'},
-              }}
-              fontWeight='var(--font-weight)'
-              letterSpacing='1.5px'
-              marginTop='10px'
-              marginBottom='30px'
-              >
-              Frontend Developer with a passion for building beautiful,<br/> responsive websites and love to listening music.
-            </Typography>
+           <ThemeProvider theme={heroTypography1}>
+              <Typography
+                sx={{fontSize:{xs:'36px',sm:'42px',lg:'53px'}}}>
+                <Box component='span' color='var(--secondary-color)'>Hi,</Box>I'm <Box component='span' color='var(--secondary-color)'>Nidhi Sharma</Box>
+              </Typography>
+              <Typography
+                sx={{fontSize:{xs:'23px',md:'29px',lg:'32px'}}}>
+                A Frontend Developer
+              </Typography>
+           </ThemeProvider>
+            <ThemeProvider theme={heroTypography2}>
+              <Typography
+                className='underLine-pTag'
+                sx={{fontSize:{xs:'12px',sm:'13px',lg:'16px'}}}>
+                Frontend Developer with a passion for building beautiful,<br/> responsive websites and love to listening music.
+              </Typography>
+            </ThemeProvider>
             <Box
             component='span'
             onClick={()=>{
@@ -87,3 +70,17 @@ const HeroBanner = () => {
 }
 
 export default HeroBanner
+
+
+
+
+// className='underLine-pTag'
+//               fontFamily='var(--fontFamilyWorkSans)'
+//               position='relative'
+//               sx={{
+//                 fontSize:{xs:'10px',sm:'13px',lg:'16px'},
+//               }}
+//               fontWeight='var(--font-weight)'
+//               letterSpacing='1.5px'
+//               marginTop='10px'
+//               marginBottom='30px'

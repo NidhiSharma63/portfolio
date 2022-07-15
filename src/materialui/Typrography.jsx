@@ -17,3 +17,36 @@ export const headingTypography = createTheme({
     }
   }
 });
+
+
+export const heroTypography1 = createTheme({
+  components:{
+    MuiTypography:{
+      styleOverrides:{
+        root:{
+          fontFamily:'var(--fontFamilyMerriweather)',
+          letterSpacing:'1px',
+          fontWeight:'var(--font-weight)',
+        }
+      }
+    }
+  }
+});
+
+
+export const heroTypography2 = createTheme({
+  components:{
+    MuiTypography:{
+      styleOverrides:{
+        root:{
+          fontFamily:'var(--fontFamilyWorkSans)',
+          letterSpacing:'1.5px',
+          position:'relative',
+          fontWeight:'var(--font-weight)',
+          marginTop:'10px',
+          marginBottom:'30px'
+        }
+      }
+    }
+  }
+});
