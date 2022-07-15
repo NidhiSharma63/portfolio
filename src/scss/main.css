@@ -709,15 +709,18 @@ body {
 }
 
 .textarea::-moz-placeholder {
-  color: rgb(168, 160, 221);
+  color: var(--secondary-color);
+  font-weight: var(--font-weight);
 }
 
 .textarea:-ms-input-placeholder {
-  color: rgb(168, 160, 221);
+  color: var(--secondary-color);
+  font-weight: var(--font-weight);
 }
 
 .textarea::placeholder {
-  color: rgb(168, 160, 221);
+  color: var(--secondary-color);
+  font-weight: var(--font-weight);
 }
 
 .contact-info {

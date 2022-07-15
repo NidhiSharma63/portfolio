@@ -14,7 +14,7 @@ const Contact = () => {
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [message, setmessage] = useState('');
+  const [message, setMessage] = useState('');
 
   const [validEmail, setValidEmail] = useState(false);
 
@@ -24,8 +24,24 @@ const Contact = () => {
 
   useEffect(()=>{
     let result = mailformat.test(email);
-    setValidEmail(result)
+    setValidEmail(result);
+    console.log(validEmail);
   },[email]);
+
+  const handleName = (e) =>{
+    setNameError(false);
+    setName(e.target.value)
+  } 
+
+  const handleEmail = (e) =>{
+    setEmailError(false);
+    setEmail(e.target.value)
+  } 
+
+  const handleMessage = (e) =>{
+    setMessageError(false);
+    setMessage(e.target.value)
+  } 
   
   const submitForm = (e) => {
     e.preventDefault();
@@ -33,7 +49,7 @@ const Contact = () => {
       setNameError(true);
       return;
     }
-    if(!setValidEmail || !email){
+    if(!validEmail || !email){
       setEmailError(true);
       return;
     }
@@ -41,6 +57,19 @@ const Contact = () => {
       setMessageError(true);
       return;
     }
+    if(name && email && message){
+      console.log(
+        {
+          'name':name,
+          'email':email,
+          'message':message
+        }
+      )
+      setName('');
+      setEmail('');
+      setMessage('');
+    }
+    return;
   }
 
   return (
@@ -70,8 +99,8 @@ const Contact = () => {
                   name='clientName'
                   className='input'
                   autoComplete='off'
-                  onChange={(e)=>{setName(e.target.value)}}
-                  required
+                  onChange={handleName}
+                  value={name}
                   sx={{
                     fontFamily: 'var(--fontFamilyRobotoSlab)',
                   }}
@@ -90,12 +119,12 @@ const Contact = () => {
                   className='input'
                   value={email}
                   required
-                  onChange={(e)=>setEmail(e.target.value)}
+                  onChange={handleEmail}
                 />
                 {emailError && 
                   <ThemeProvider theme={errorTypography}>
                     <Typography>
-                      enter your email
+                      enter your email correctly
                     </Typography>
                   </ThemeProvider>
                 }
@@ -107,7 +136,9 @@ const Contact = () => {
                 name="message"
                 id=""
                 rows="7"
-                placeholder='message'>
+                placeholder='message'
+                value={message}
+                onChange={handleMessage}>
               </textarea>
               {
                 messageError &&

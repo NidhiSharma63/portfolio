@@ -77,7 +77,9 @@ export const errorTypography = createTheme({
         root:{
           color:'red',
           letterSpacing:'1.6px',
-          marginLeft:'10px'
+          marginLeft:'10px',
+          marginTop: '-20px',
+          marginBottom: '-21px',
         }
       }
     }
