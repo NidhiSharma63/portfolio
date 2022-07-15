@@ -37,7 +37,7 @@ const NavMenu = ({setshowNavMenu}) => {
           className='sm-nav-link'
           onClick={()=>{
             setshowNavMenu(false);
-            window.scrollTo({ top:3000, behavior: 'smooth' });
+            window.scrollTo({ top:3300, behavior: 'smooth' });
           }}>Contact me</a>
       </Stack>
     </Box>

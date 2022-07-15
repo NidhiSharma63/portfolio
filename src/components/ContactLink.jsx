@@ -31,7 +31,7 @@ const ContactLink = () => {
           }}>
           <PhoneIcon
             sx={{
-              color: 'var(--contact-link-icon-color)',
+              color: 'var(--contact-link-color)',
             }}/>
             <ThemeProvider theme={contactLinkTypo}>
               <Typography>
@@ -46,7 +46,7 @@ const ContactLink = () => {
           }}>
           <LocationOnIcon
             sx={{
-            color: 'var(--contact-link-icon-color)',
+            color: 'var(--contact-link-color)',
           }}/>
           <ThemeProvider theme={contactLinkTypo}>
             <Typography>
@@ -69,7 +69,7 @@ const ContactLink = () => {
           }}>
           <EmailIcon
             sx={{
-              color: 'var(--contact-link-icon-color)',
+              color: 'var(--contact-link-color)',
             }}/>
             <ThemeProvider theme={contactLinkTypo}>
               <Typography>
@@ -84,7 +84,7 @@ const ContactLink = () => {
             }}>
           <GitHubIcon
             sx={{
-              color: 'var(--contact-link-icon-color)',
+              color: 'var(--contact-link-color)',
             }}/>
           <ThemeProvider theme={contactLinkTypo}>
             <Typography>

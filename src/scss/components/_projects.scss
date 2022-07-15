@@ -35,6 +35,7 @@
   border-radius:10px;
   box-shadow: 0px 0px 4px 0px var(--single-project-box-shadow);
   width:92%;
+  margin: auto;
   height:90%;
   transition: .2s;
   background-color: var(--single-project-bg-color);
@@ -50,6 +51,7 @@
   flex-direction: column;
   gap: 10px;
   height: 200px;
+  justify-content: space-around;
 }
 
 .project-info-title{
@@ -76,4 +78,11 @@
   box-shadow: 0px 0px 4px 0px  black;
   background: var(--secondary-color);
   color: white;
+}
+
+
+@media screen and (max-width:600px) {
+  .single-projects{
+    height: 100%;
+  }
 }

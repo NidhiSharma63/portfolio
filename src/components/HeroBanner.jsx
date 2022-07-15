@@ -22,7 +22,7 @@ const HeroBanner = () => {
           gap='6px'>
            <ThemeProvider theme={heroTypography1}>
               <Typography
-                sx={{fontSize:{xs:'25px',sm:'42px',lg:'53px'}}}>
+                sx={{fontSize:{xs:'23px',sm:'42px',lg:'53px'}}}>
                 <Box component='span' color='var(--secondary-color)'>Hi,</Box>I'm <Box component='span' color='var(--secondary-color)'>Nidhi Sharma</Box>
               </Typography>
               <Typography

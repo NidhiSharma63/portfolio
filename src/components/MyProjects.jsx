@@ -81,7 +81,10 @@ const MyProjects = () => {
                         <Typography
                           color='var(--secondary-color)'
                           fontFamily='var(--fontFamilyWorkSans)'
-                          fontSize='23px'
+                          
+                          sx={{
+                            fontSize:{xs:'20px',sm:'23px'},
+                          }}
                           fontWeight='bold'>
                           {item.title}
                         </Typography>
@@ -90,7 +93,9 @@ const MyProjects = () => {
                       <Typography
                         color='var(--primary-color)'
                         fontFamily='var(--fontFamilyWorkSans)'
-                        fontSize='17px'>
+                        sx={{
+                          fontSize:{xs:'15px',sm:'17px'},
+                        }}>
                       {item.description}
                       </Typography>
                       <a href="https://nidhisharma63.github.io/calculator-app/"

@@ -89,5 +89,29 @@
 }
 .link-github{
   text-decoration: none;
-  color: var(--primary-color);
+  color: var(--contact-link-color);
+}
+
+
+// min-width set according to material ui min-width
+@media screen and (min-width:0px) {
+  .contact-form-box{
+    flex-direction: column;
+    gap: 10px;
+    padding: 0px 30px;
+  }
+  .contact-link-box{
+    border: 1px solid;
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 10px;background: rgb(51,30,176);
+    background: linear-gradient(90deg, rgba(51,30,176,1) 45%, rgba(179,0,255,0.9248074229691877) 100%);
+    
+
+    // background-color: rgb(81, 0, 128);
+
+//     background: rgb(0,7,36);
+// background: linear-gradient(90deg, rgba(0,7,36,0.9640231092436975) 0%, rgba(179,0,255,1) 100%);
+    color: white;
+  }
 }
