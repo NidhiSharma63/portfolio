@@ -106,7 +106,7 @@ const Contact = () => {
                   </ThemeProvider>
                 }
               </ThemeProvider>
-            </Box>
+            </Box>36i90
               <textarea
                 className='textarea'
                 name="message"
