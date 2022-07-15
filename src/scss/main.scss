@@ -61,7 +61,12 @@ body {
   position: relative;
   background-color: var(--background-color);
 }
-
+.main-container{
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  position: relative;
+}
 // Navbar sectionrgba(120, 106, 202, 0.055)
 .navbar{
   @include flexproperty($alignItem:center, $justifyContent:space-between, $flexDirection:row);
