@@ -1,0 +1,64 @@
+.navbar{
+  @include flexproperty($alignItem:center, $justifyContent:space-between, $flexDirection:row);
+  position: relative;
+  padding: 6px;
+  width: 100%;
+  z-index: 2;
+  background-color:var(--navbar-bg-color);
+}
+
+.sm-navbar{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(17, 16, 16, 0.842);
+  z-index: 1;
+  @include flexproperty($alignItem:center, $justifyContent:center, $flexDirection:column);
+}
+
+.navbar-container {
+  @include flexproperty($alignItem:center, $justifyContent:space-between, $flexDirection:row);
+  padding: 6px;
+  margin: auto;
+  background-color: rgba(181, 174, 223, 0);
+
+}
+
+.navbar-menu{
+  position: relative;
+  top:0;
+  width: 100%;
+  z-index:1;
+  background-color: transparent;
+  @include flexproperty($alignItem:center, $justifyContent:center, $flexDirection:row);
+}
+
+.sm-nav-link{
+  position: relative;
+  cursor: pointer;
+}
+.sm-nav-link::after{
+  top:30px;
+  @include underline(0px);
+}
+
+.sm-nav-link:hover::after{
+  width: 100%;
+}
+
+.link::after {
+  @include underline(0px);
+}
+.link{
+  position: relative;
+  cursor: pointer;
+}
+.navbar-link:hover::after {
+  width: 55px;
+}
+
+.my-build:hover::after {
+  width: 80px;
+}

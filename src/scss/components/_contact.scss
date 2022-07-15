@@ -1,0 +1,93 @@
+.contact-wrapper{
+  margin: 90px auto 30px auto;
+  @include flexproperty($alignItem:center, $justifyContent:center, $flexDirection:column);
+}
+
+.contact-form-box{
+  @include flexproperty($alignItem:center, $justifyContent:center, $flexDirection:column);
+  gap:30px;
+  padding: 0px 30px;
+}
+
+.contact-outline::after {
+  @include underline(140px)
+}
+
+.contact-outline:hover::after {
+  width: 0;
+}
+
+.form{
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+.form-btn-container{
+  @include flexproperty($alignItem:center, $justifyContent:center, $flexDirection:column)
+}
+.label {
+  font-size: 18px;
+  font-weight: 700;
+  align-self: flex-start;
+  letter-spacing: 1px;
+  font-family: var(--fontFamilyPtSerif);
+  color:var(--primary-color)
+}
+
+.textArea-container{
+  width: 100%;
+  margin-bottom: 20px;
+} 
+.input,
+.textarea {
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 17px;
+  box-shadow: 0px 0px 4px 0px rgb(117, 30, 218);
+  width: 100%;
+  transition: box-shadow .3s;
+  background-color: transparent;
+}
+
+.input:hover,
+.textarea:hover {
+  box-shadow: 0px 0px 4px 0px var(--secondary-color);
+}
+.textarea {
+  outline: none;
+  margin-top: 12px;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  resize: none;
+  font-family: var(--fontFamilyRobotoSlab);
+}
+
+.textarea::placeholder{
+  color:var(--secondary-color);
+  font-weight: var(--font-weight);
+}
+.contact-info{
+  @include flexproperty($alignItem:center, $justifyContent:center, $flexDirection:row);
+  gap:10px;
+}
+.contact-form-box{
+  @include flexproperty($alignItem:flex-start, $justifyContent:space-between, $flexDirection:row);
+}
+.contact-Input-container{
+  height: 100%;
+  @include flexproperty($alignItem:flex-start, $justifyContent:flex-end, $flexDirection:column);
+  width: 100%;
+  gap: 24px;
+  margin-top: 20px;
+}
+.contact-link-box{
+  @include flexproperty($alignItem:center, $justifyContent:space-between, $flexDirection:column);
+  gap:10px;
+}
+.link-github{
+  text-decoration: none;
+  color: var(--primary-color);
+}

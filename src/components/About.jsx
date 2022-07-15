@@ -89,23 +89,23 @@ const About = () => {
             <Images 
               ImageSrc={html}
               Image='htmlImg'
-              width='105px'/>
+            />
             <Images 
               ImageSrc={css2}
               Image='cssImg'
-              width='130px'/>
+            />
             <Images 
               ImageSrc={js}
               Image='jsImg'
-              width='130px'/>
+            />
             <Images 
               ImageSrc={react}
               Image='reactImg'
-              width='130px'/>
+            />
             <Images 
               ImageSrc={figma}
               Image='figmaImg'
-              width='160px'/>
+            />
           </Box>
         </Box>
         {/* imagesContainer end*/}

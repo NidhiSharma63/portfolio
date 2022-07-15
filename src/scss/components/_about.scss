@@ -1,0 +1,278 @@
+
+.About-wrapper{
+  @include flexproperty($alignItem:center, $justifyContent:center, $flexDirection:column);
+}
+.About-outline::after {
+  @include underline(115px)
+}
+
+.About-outline:hover::after {
+  width: 0;
+}
+
+.About-intro-container{
+  padding:10px 0px;
+  display:flex;
+  gap:20px;
+}
+
+// imagesContainer
+.imagesContainer {
+  position: relative;
+  margin: auto;
+  height: 400px;
+}
+
+.lampContainer {
+  position: absolute;
+  width: 100%;
+  height: 377px;
+  top: 0px;
+  z-index: 2;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.bulb-holder {
+  width: 50px;
+  height: 40px;
+  background: teal;
+  position: relative;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  transform: rotate(-32deg);
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.bulb {
+  width: 50px;
+  height: 20px;
+  background: #fff;
+  border-radius: 60%;
+  transform: translate(0px, 30px);
+  animation: light 2000ms infinite cubic-bezier(1, -0.45, 0, 1.89);
+}
+
+#b1 {
+  animation-name: bulb1;
+  @include boxShadow(var(--secondary-color))
+}
+
+#b2 {
+  margin-top: -49px;
+  @include boxShadow(rgb(183, 0, 255));
+  animation-name: bulb2;
+}
+
+#b3 {
+  transform: rotate(20deg);
+  margin-top: -49px;
+  @include boxShadow(rgb(0, 119, 255));
+  animation-name: bulb3;
+}
+
+@keyframes bulb1 {
+
+  100%,
+  0% {
+    transform: rotate(-32deg);
+    @include boxShadow(var(--secondary-color));
+  }
+
+  25% {
+    transform: rotate(-46deg);
+    @include boxShadow(rgb(183, 0, 255));
+  }
+
+  75% {
+    transform: rotate(0deg);
+    @include boxShadow(var(--secondary-color));
+  }
+}
+
+@keyframes bulb2 {
+  100%,
+  0% {
+    transform: rotate(-25deg);
+    @include boxShadow(rgb(183, 0, 255));
+  }
+
+  50% {
+    transform: rotate(15deg);
+    @include boxShadow(var(--secondary-color));
+  }
+}
+
+@keyframes bulb3 {
+
+  100%,
+  0% {
+    transform: rotate(20deg);
+    @include boxShadow(rgb(0, 119, 255));
+    animation-name: bulb3;
+  }
+
+  25% {
+    transform: rotate(2deg);
+    @include boxShadow(rgb(183, 0, 255));
+  }
+
+  75% {
+    transform: rotate(30deg);
+    @include boxShadow(var(--secondary-color));
+  }
+}
+
+// About images
+
+.htmlImg,
+.cssImg,
+.jsImg,
+.reactImg,
+.figmaImg {
+  position: relative;
+  animation-duration: .9s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  z-index: 1;
+}
+
+.htmlImg {
+  left: 38px;
+  top: 60px;
+  transform-origin: bottom;
+  width: 105px;
+  animation-name: htmlAnim1;
+}
+
+.cssImg {
+  left: 24px;
+  top: 22px;
+  animation-name: cssAnim;
+  width: 130px;
+  transform-origin: center;
+}
+
+.jsImg {
+  left: 2px;
+  top: 37px;
+  width: 130px;
+  animation-name: jsAnim;
+}
+
+.figmaImg {
+  left: 94px;
+  top: 12px;
+  width: 160px;
+
+  animation-name: figmaAnim;
+}
+
+.reactImg {
+  left: 121px;
+  top: 20px;
+  animation-name: reactAnim;
+  width: 130px;
+
+}
+
+@keyframes htmlAnim1 {
+  0% {
+    transform: rotate(8deg);
+  }
+
+  25% {
+    transform: rotate(-8deg)
+  }
+
+  50% {
+    transform: rotate(8deg);
+    top: 80px
+  }
+
+  75% {
+    transform: rotate(-8deg);
+    top: 60px
+  }
+
+  100% {
+    transform: rotate(8deg);
+    top: 60px
+  }
+}
+
+@keyframes cssAnim {
+  25% {
+    transform: rotate(-8deg);
+    top: 54px
+  }
+
+  50% {
+    transform: rotate(8deg);
+    top: 24px
+  }
+
+  75% {
+    transform: rotate(-8deg);
+  }
+
+  100% {
+    transform: rotate(-8deg);
+  }
+}
+
+@keyframes jsAnim {
+  0% {
+    transform: perspective(500px) rotate(-10deg);
+    transform-origin: -20% -20%;
+  }
+
+  50% {
+    transform: perspective(500px) rotate(10deg);
+    transform-origin: 90% 90%;
+  }
+
+  100% {
+    transform: perspective(500px) rotate(-10deg);
+    transform-origin: -20% -20%;
+  }
+}
+
+@keyframes reactAnim {
+  0% {
+    transform: perspective(500px) rotate(-10deg);
+    transform-origin: 90% 90%;
+  }
+
+  50% {
+    transform: perspective(500px) rotate(10deg);
+    transform-origin: -20% -20%;
+  }
+
+  100% {
+    transform: perspective(500px) rotate(-10deg);
+    transform-origin: 90% 90%;
+  }
+}
+
+@keyframes figmaAnim {
+  0% {
+    transform: perspective(500px) rotate(-20deg);
+    transform-origin: left bottom;
+  }
+
+  50% {
+    transform: perspective(500px) rotate(20deg);
+    transform-origin: right bottom;
+
+  }
+
+  100% {
+    transform: perspective(500px) rotate(-20deg);
+    transform-origin: left bottom;
+
+  }
+}
