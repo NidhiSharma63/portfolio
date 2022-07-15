@@ -3,6 +3,8 @@ import React,{useEffect, useState} from 'react';
 import { Box,Stack,Button} from '@mui/material';
 import MenuSharpIcon from '@mui/icons-material/MenuSharp';
 import CloseIcon from '@mui/icons-material/Close';
+import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 
 import logo from '../Images/logo.png';
 import ButtonComponent from './Button';
@@ -12,6 +14,7 @@ const Navbar = () => {
   const body = document.querySelector('body');
 
   const [showNavMenu,setshowNavMenu] = useState(false);
+  const [showDarkMode,setshowDarkMode] = useState(false);
  
   const handleShowNavMenu = () =>{
     setshowNavMenu(prev=>!prev);
@@ -24,6 +27,11 @@ const Navbar = () => {
     }else{
       body.classList.add(getTheme);
     }
+    if(getTheme==='DarkTheme'){
+      setshowDarkMode(true);
+    }else{
+      setshowDarkMode(false);
+    }
   },[])
 
   const changeTheme = ()=>{
@@ -31,10 +39,12 @@ const Navbar = () => {
       body.classList.add('DarkTheme');
       body.classList.remove('lightTheme')
       localStorage.setItem('portFolioTheme','DarkTheme');
+      setshowDarkMode(true);
     }else{
       body.classList.remove('DarkTheme');
       body.classList.add('lightTheme');
       localStorage.setItem('portFolioTheme','lightTheme');
+      setshowDarkMode(false);
     }
   }
 
@@ -54,7 +64,6 @@ const Navbar = () => {
             width: '1200px',
           }}>
             <Box
-              onClick={changeTheme}
               component='img'
               src={logo} 
               alt='logo'
@@ -106,29 +115,47 @@ const Navbar = () => {
             <ButtonComponent value='Contact me'/>
           </Box>
           <Box
-            onClick={handleShowNavMenu}
-            sx={{
-              display:{md:'none',xs:'block'},
-            }}
-            marginRight='10px'
-            component='span'>
+          component='span'
+          className='menu-themeIcon-wrapper'>
+            <Box
+              onClick={changeTheme}>
               {
-                showNavMenu ? 
-                <CloseIcon
+                showDarkMode ?
+                <DarkModeIcon
                 sx={{
-                  cursor:'pointer',
-                  width:'2rem',
-                  height:'3rem',
-                  color:'white'
-                }}/> : 
-                <MenuSharpIcon
+                  color:'white',
+                }}/>:
+                <LightModeIcon
+                sx={{
+                  color:'#ccac0e'
+                }}/> 
+              }
+            </Box>
+            <Box
+              onClick={handleShowNavMenu}
+              sx={{
+                display:{md:'none',xs:'block'},
+              }}
+              marginRight='10px'
+              component='span'>
+                {
+                  showNavMenu ? 
+                  <CloseIcon
                   sx={{
                     cursor:'pointer',
                     width:'2rem',
                     height:'3rem',
-                    color:"var(--primary-color)"
+                    color:'white'
+                  }}/> : 
+                  <MenuSharpIcon
+                    sx={{
+                      cursor:'pointer',
+                      width:'2rem',
+                      height:'3rem',
+                      color:"var(--primary-color)"
                   }}/>
-              }
+                }
+            </Box>
           </Box>
         </Box>
       </Box>
@@ -137,12 +164,3 @@ const Navbar = () => {
 }
 
 export default Navbar;
-
-{/* <CloseIcon/>:
-              <MenuSharpIcon
-              sx={{
-                cursor:'pointer',
-                width:'2rem',
-                height:'3rem',
-                color:"var(--primary-color)"
-              }}/> */}

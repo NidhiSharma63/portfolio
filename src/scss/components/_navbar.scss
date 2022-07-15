@@ -62,3 +62,8 @@
 .my-build:hover::after {
   width: 80px;
 }
+
+.menu-themeIcon-wrapper{
+  @include flexproperty($alignItem:center, $justifyContent:space-between, $flexDirection:row-reverse);
+  gap: 20px;
+}
