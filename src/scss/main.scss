@@ -510,9 +510,20 @@ body {
   font-family: var(--fontFamilyPtSerif);
   color:var(--primary-color)
 }
+
+.contact-wrapper{
+  margin: 90px 30px auto auto;
+  @include flexproperty($alignItem:center, $justifyContent:center, $flexDirection:column);
+}
+
 .contact-form-box,
 .textArea-container{
   @include flexproperty($alignItem:center, $justifyContent:center, $flexDirection:column);
+}
+
+.contact-form-box{
+  gap:30px;
+  padding: 0px 30px;
 }
 
 .input,

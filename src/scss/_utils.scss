@@ -6,9 +6,6 @@
   flex-direction: $flexDirection;
 }
 
-.flex {
-  @include flexproperty($alignItem:center, $justifyContent:center, $flexDirection:column);
-}
 
 @mixin boxShadow($color) {
   box-shadow: 

@@ -43,10 +43,7 @@ const Contact = () => {
 
   return (
     <Box
-      m='auto'
-      mt='90px'
-      mb='30px'
-      className='flex'
+      className='contact-wrapper'
       sx={{
         width:{xs:'100%', md:'70%'},
       }}>
@@ -60,8 +57,6 @@ const Contact = () => {
           >
           <Box
             className='contact-form-box'
-            gap='30px'
-            p="0px 30px"
             sx={{
               flexDirection: { xs: 'column', sm: 'row' }
             }}>
@@ -106,7 +101,7 @@ const Contact = () => {
                   </ThemeProvider>
                 }
               </ThemeProvider>
-            </Box>36i90
+            </Box>
               <textarea
                 className='textarea'
                 name="message"
@@ -120,9 +115,7 @@ const Contact = () => {
           <Box
             component='span'
             onClick={submitForm}>
-            <Button 
-              value='send'
-              alignSelf='center'/>
+            <Button value='send'/>
           </Box>
           </Box>
         </form>
