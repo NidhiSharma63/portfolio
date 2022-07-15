@@ -10,7 +10,7 @@ const HeroBanner = () => {
   return (
     <>
       <Box
-         className='flex'
+        className='flex'
         sx={{
           flexDirection:{xs:'column',md:'row'},
           margin:{xs:'50px',md:'50px 0px'},
@@ -18,11 +18,7 @@ const HeroBanner = () => {
         }}>
        
         <Box
-          display='flex'
-          flexDirection='column'
-          alignItems='center'
-          textAlign='center'
-          color='var(--primary-color)'
+          className='flex'
           gap='6px'>
            <ThemeProvider theme={heroTypography1}>
               <Typography
@@ -69,18 +65,4 @@ const HeroBanner = () => {
   )
 }
 
-export default HeroBanner
-
-
-
-
-// className='underLine-pTag'
-//               fontFamily='var(--fontFamilyWorkSans)'
-//               position='relative'
-//               sx={{
-//                 fontSize:{xs:'10px',sm:'13px',lg:'16px'},
-//               }}
-//               fontWeight='var(--font-weight)'
-//               letterSpacing='1.5px'
-//               marginTop='10px'
-//               marginBottom='30px'
+export default HeroBanner;

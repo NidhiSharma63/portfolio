@@ -1,3 +1,17 @@
+/* 
+ 1.Navbar ==> Navbar section
+  2. HeroBanner ==> HeroSection
+  3. About ==> About section 
+  [
+    imagesContainer
+    About images
+  ]
+  4. My poject ==> my project section
+  5. Contact me ==> Contact me
+*/
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap');
@@ -44,6 +58,7 @@ body {
   background-color: var(--background-color);
 }
 
+// Navbar section
 .navbar{
   grid-area: Navegation;
   @include flexproperty($alignItem:center, $justifyContent:space-between, $flexDirection:row);
@@ -107,38 +122,7 @@ body {
   width: 80px;
 }
 
-.About-outline::after {
-  @include underline(115px)
-}
-
-.About-outline:hover::after {
-  width: 0;
-}
-.contact-outline::after {
-  @include underline(140px)
-}
-
-.contact-outline:hover::after {
-  width: 0;
-}
-
-.myproject-outline::after {
-  @include underline(130px)
-}
-
-.myproject-outline:hover::after {
-  width: 0;
-}
-
-.underLine-pTag::after {
-  content: '';
-  position: relative; 
-  display: block;
-  margin-top: 10px;
-  height: 2px;
-  background-color: var(--secondary-color);
-}
-
+// HeroSection
 .bg {
   width: 100%;
   position: absolute;
@@ -152,16 +136,37 @@ body {
   background: linear-gradient(0deg, rgba(45, 53, 253, 0.08167016806722693) 5%, rgba(34, 34, 195, 0.2049194677871149) 100%);
 }
 
-.htmlImg,
-.cssImg,
-.jsImg,
-.reactImg,
-.figmaImg {
+.underLine-pTag::after {
+  content: '';
+  position: relative; 
+  display: block;
+  margin-top: 10px;
+  height: 2px;
+  background-color: var(--secondary-color);
+}
+
+
+// About section
+
+.About-outline::after {
+  @include underline(115px)
+}
+
+.About-outline:hover::after {
+  width: 0;
+}
+
+.About-intro-container{
+  padding:10px 0px;
+  display:flex;
+  gap:20px;
+}
+
+// imagesContainer
+.imagesContainer {
   position: relative;
-  animation-duration: .9s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  z-index: 1;
+  margin: auto;
+  height: 400px;
 }
 
 .lampContainer {
@@ -267,10 +272,18 @@ body {
   }
 }
 
-.imagesContainer {
+// About images
+
+.htmlImg,
+.cssImg,
+.jsImg,
+.reactImg,
+.figmaImg {
   position: relative;
-  margin: auto;
-  height: 400px;
+  animation-duration: .9s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  z-index: 1;
 }
 
 .htmlImg {
@@ -403,6 +416,15 @@ body {
   }
 }
 
+// my project section
+
+.myproject-outline::after {
+  @include underline(130px)
+}
+
+.myproject-outline:hover::after {
+  width: 0;
+}
 
 .projects-container{
   margin:auto;
@@ -459,6 +481,16 @@ body {
 .project-link:hover{
   background: var(--secondary-color);
   color: white;
+}
+
+// Contact section
+
+.contact-outline::after {
+  @include underline(140px)
+}
+
+.contact-outline:hover::after {
+  width: 0;
 }
 
 .form{

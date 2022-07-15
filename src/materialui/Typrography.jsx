@@ -27,6 +27,7 @@ export const heroTypography1 = createTheme({
           fontFamily:'var(--fontFamilyMerriweather)',
           letterSpacing:'1px',
           fontWeight:'var(--font-weight)',
+          color:'var(--primary-color)',
         }
       }
     }
@@ -44,9 +45,26 @@ export const heroTypography2 = createTheme({
           position:'relative',
           fontWeight:'var(--font-weight)',
           marginTop:'10px',
-          marginBottom:'30px'
+          marginBottom:'30px',
+          color:'var(--primary-color)',
         }
       }
     }
   }
 });
+
+
+export const AboutTypography = createTheme({
+  components:{
+    MuiTypography:{
+      styleOverrides:{
+        root:{
+          fontFamily:'var(--fontFamilyWorkSans)',
+          letterSpacing:'1px',
+          fontWeight:'var(--font-weight)',
+          color:'var(--primary-color)',
+        }
+      }
+    }
+  }
+})

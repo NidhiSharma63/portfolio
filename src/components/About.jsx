@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Box,Stack,Button,Typography, ThemeProvider } from '@mui/material';
 
-import {headingTypography} from '../materialui/Typrography';
+import {headingTypography,AboutTypography} from '../materialui/Typrography';
 
 import hand1 from '../Images/hand1.png';
 import html from '../Images/html.png';
@@ -47,9 +47,7 @@ const About = () => {
               return (
                  <Box
                   key={index}
-                  p='10px 0px'
-                  display='flex'
-                  gap='20px'>
+                  className='About-intro-container'>
                   <Box 
                     component='img'
                     src={hand1}
@@ -59,12 +57,11 @@ const About = () => {
                       height:{xs:'30px',md:'40px'},
                     }}
                   />
-                  <Typography
-                    fontFamily='var(--fontFamilyWorkSans)'
-                    fontWeight='var(--font-weight)'
-                    color='var(--primary-color)'>
-                    {text}
-                  </Typography>
+                  <ThemeProvider theme={AboutTypography}>
+                    <Typography>
+                      {text}
+                    </Typography>
+                  </ThemeProvider>
                 </Box>
               )
             })
@@ -120,3 +117,6 @@ const About = () => {
 
 export default About;
 
+
+
+/// 119lines
