@@ -143,6 +143,20 @@ body {
   width: 80px;
 }
 
+.hero-banner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hero-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .bg {
   width: 100%;
   position: absolute;

@@ -10,8 +10,6 @@
   5. Contact me ==> Contact me
 */
 
-
-
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap');
@@ -123,6 +121,15 @@ body {
 }
 
 // HeroSection
+
+.hero-banner-container{
+  @include flexproperty($alignItem:center, $justifyContent:center, $flexDirection:column);
+}
+
+.hero-banner{
+  @include flexproperty($alignItem:center, $justifyContent:center, $flexDirection:column);
+}
+
 .bg {
   width: 100%;
   position: absolute;
@@ -144,7 +151,6 @@ body {
   height: 2px;
   background-color: var(--secondary-color);
 }
-
 
 // About section
 

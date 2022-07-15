@@ -10,7 +10,7 @@ const HeroBanner = () => {
   return (
     <>
       <Box
-        className='flex'
+        className='hero-banner-container'
         sx={{
           flexDirection:{xs:'column',md:'row'},
           margin:{xs:'50px',md:'50px 0px'},
@@ -18,7 +18,7 @@ const HeroBanner = () => {
         }}>
        
         <Box
-          className='flex'
+          className='hero-banner'
           gap='6px'>
            <ThemeProvider theme={heroTypography1}>
               <Typography
