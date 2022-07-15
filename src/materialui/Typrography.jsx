@@ -67,4 +67,19 @@ export const AboutTypography = createTheme({
       }
     }
   }
+});
+
+
+export const errorTypography = createTheme({
+  components:{
+    MuiTypography:{
+      styleOverrides:{
+        root:{
+          color:'red',
+          letterSpacing:'1.6px',
+          marginLeft:'10px'
+        }
+      }
+    }
+  }
 })

@@ -5,6 +5,8 @@ export const InputTheme = createTheme({
     MuiInput: {
       styleOverrides: {
         root: {
+          fontFamily:'var(--fontFamilyRobotoSlab)',
+          marginTop:'30px',
           '&.Mui-focused::after': {
             borderBottom: '0px solid var(--secondary-color)',
           },
@@ -16,7 +18,7 @@ export const InputTheme = createTheme({
           }
         },
         input: {
-          color:'white',
+          color:'var(--primary-color)',
           '&::placeholder': {
             color: 'var(--secondary-color)',
             fontWeight: 'bold',

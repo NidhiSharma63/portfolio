@@ -5,7 +5,7 @@ import Button from './Button';
 import ContactLink from './ContactLink';
 
 import {InputTheme} from '../materialui/Input';
-import {headingTypography} from '../materialui/Typrography';
+import {headingTypography,errorTypography} from '../materialui/Typrography';
 
 
 const  mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -82,30 +82,29 @@ const Contact = () => {
                     fontFamily: 'var(--fontFamilyRobotoSlab)',
                   }}
                 />
-                {nameError && <Typography
-                  color='red'
-                  letterSpacing='1.6px'
-                  marginLeft='10px'>
-                    enter your name
-                </Typography>}
+                {nameError && 
+                  <ThemeProvider theme={errorTypography}>
+                    <Typography>
+                      enter your name
+                    </Typography>
+                  </ThemeProvider>
+                  }
                 <Input
                   type='email'
                   placeholder='Enter your email'
                   name='clientEmail'
                   className='input'
+                  value={email}
                   required
                   onChange={(e)=>setEmail(e.target.value)}
-                  sx={{
-                    marginTop:'30px',
-                    fontFamily: 'var(--fontFamilyRobotoSlab)',
-                  }}
                 />
-                {emailError && <Typography
-                  color='red'
-                  letterSpacing='1.6px'
-                  marginLeft='10px'>
-                    enter your email
-                </Typography>}
+                {emailError && 
+                  <ThemeProvider theme={errorTypography}>
+                    <Typography>
+                      enter your email
+                    </Typography>
+                  </ThemeProvider>
+                }
               </ThemeProvider>
             </Box>
               <textarea

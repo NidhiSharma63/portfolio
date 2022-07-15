@@ -1,3 +1,14 @@
+/* 
+ 1.Navbar ==> Navbar section
+  2. HeroBanner ==> HeroSection
+  3. About ==> About section 
+  [
+    imagesContainer
+    About images
+  ]
+  4. My poject ==> my project section
+  5. Contact me ==> Contact me
+*/
 @import url("https://fonts.googleapis.com/css2?family=PT+Serif&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap");
@@ -139,6 +150,28 @@ body {
   width: 80px;
 }
 
+.bg {
+  width: 100%;
+  position: absolute;
+  height: 300px;
+  border-bottom-right-radius: 11%;
+  left: 0;
+  margin-top: 80px;
+  box-shadow: 1px 0px 100px rgba(8, 8, 173, 0.137);
+  z-index: -1;
+  background: rgb(45, 53, 253);
+  background: linear-gradient(0deg, rgba(45, 53, 253, 0.0816701681) 5%, rgba(34, 34, 195, 0.2049194678) 100%);
+}
+
+.underLine-pTag::after {
+  content: "";
+  position: relative;
+  display: block;
+  margin-top: 10px;
+  height: 2px;
+  background-color: var(--secondary-color);
+}
+
 .About-outline::after {
   content: "";
   position: absolute;
@@ -154,71 +187,16 @@ body {
   width: 0;
 }
 
-.contact-outline::after {
-  content: "";
-  position: absolute;
-  width: 140px;
-  height: 2px;
-  background-color: var(--secondary-color);
-  bottom: 0;
-  left: 0;
-  transition: 0.6s;
+.About-intro-container {
+  padding: 10px 0px;
+  display: flex;
+  gap: 20px;
 }
 
-.contact-outline:hover::after {
-  width: 0;
-}
-
-.myproject-outline::after {
-  content: "";
-  position: absolute;
-  width: 130px;
-  height: 2px;
-  background-color: var(--secondary-color);
-  bottom: 0;
-  left: 0;
-  transition: 0.6s;
-}
-
-.myproject-outline:hover::after {
-  width: 0;
-}
-
-.underLine-pTag::after {
-  content: "";
+.imagesContainer {
   position: relative;
-  display: block;
-  margin-top: 10px;
-  height: 2px;
-  background-color: var(--secondary-color);
-}
-
-.bg {
-  width: 100%;
-  position: absolute;
-  height: 300px;
-  border-bottom-right-radius: 11%;
-  left: 0;
-  margin-top: 80px;
-  box-shadow: 1px 0px 100px rgba(8, 8, 173, 0.137);
-  z-index: -1;
-  background: rgb(45, 53, 253);
-  background: linear-gradient(0deg, rgba(45, 53, 253, 0.0816701681) 5%, rgba(34, 34, 195, 0.2049194678) 100%);
-}
-
-.htmlImg,
-.cssImg,
-.jsImg,
-.reactImg,
-.figmaImg {
-  position: relative;
-  -webkit-animation-duration: 0.9s;
-          animation-duration: 0.9s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  z-index: 1;
+  margin: auto;
+  height: 400px;
 }
 
 .lampContainer {
@@ -360,10 +338,19 @@ body {
     box-shadow: 0px 24px 51px -5px var(--secondary-color), 0px 56px 101px -3px var(--secondary-color), 3px 84px 87px 1px var(--secondary-color), -2px 110px 105px 10px var(--secondary-color), -48px 202px 126px 10px var(--secondary-color), 9px 316px 89px 3px var(--secondary-color);
   }
 }
-.imagesContainer {
+.htmlImg,
+.cssImg,
+.jsImg,
+.reactImg,
+.figmaImg {
   position: relative;
-  margin: auto;
-  height: 400px;
+  -webkit-animation-duration: 0.9s;
+          animation-duration: 0.9s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  z-index: 1;
 }
 
 .htmlImg {
@@ -560,6 +547,21 @@ body {
     transform-origin: left bottom;
   }
 }
+.myproject-outline::after {
+  content: "";
+  position: absolute;
+  width: 130px;
+  height: 2px;
+  background-color: var(--secondary-color);
+  bottom: 0;
+  left: 0;
+  transition: 0.6s;
+}
+
+.myproject-outline:hover::after {
+  width: 0;
+}
+
 .projects-container {
   margin: auto;
   width: 340px;
@@ -626,6 +628,21 @@ body {
   color: white;
 }
 
+.contact-outline::after {
+  content: "";
+  position: absolute;
+  width: 140px;
+  height: 2px;
+  background-color: var(--secondary-color);
+  bottom: 0;
+  left: 0;
+  transition: 0.6s;
+}
+
+.contact-outline:hover::after {
+  width: 0;
+}
+
 .form {
   width: 400px;
   display: flex;
@@ -665,7 +682,6 @@ body {
   padding: 10px;
   font-size: 17px;
   box-shadow: 0px 0px 4px 0px black;
-  outline: none;
   width: 100%;
   transition: box-shadow 0.3s;
   background-color: transparent;
@@ -677,22 +693,24 @@ body {
 }
 
 .textarea {
+  outline: none;
   margin-top: 12px;
   margin-bottom: 20px;
-  color: white;
+  color: var(--primary-color);
   resize: none;
+  font-family: var(--fontFamilyRobotoSlab);
 }
 
 .textarea::-moz-placeholder {
-  color: var(--secondary-color);
+  color: rgb(168, 160, 221);
 }
 
 .textarea:-ms-input-placeholder {
-  color: var(--secondary-color);
+  color: rgb(168, 160, 221);
 }
 
 .textarea::placeholder {
-  color: var(--secondary-color);
+  color: rgb(168, 160, 221);
 }
 
 .contact-info {

@@ -523,7 +523,6 @@ body {
   padding: 10px;
   font-size: 17px;
   box-shadow: 0px 0px 4px 0px black;
-  outline: none;
   width: 100%;
   transition: box-shadow .3s;
   background-color: transparent;
@@ -534,14 +533,16 @@ body {
   box-shadow: 0px 0px 4px 0px var(--secondary-color);
 }
 .textarea {
+  outline: none;
   margin-top: 12px;
   margin-bottom: 20px;
-  color: white;
+  color: var(--primary-color);
   resize: none;
+  font-family: var(--fontFamilyRobotoSlab);
 }
 
 .textarea::placeholder{
-  color: var(--secondary-color);
+  color: rgb(168,160,221);
 }
 .contact-info{
   @include flexproperty($alignItem:center, $justifyContent:center, $flexDirection:row);

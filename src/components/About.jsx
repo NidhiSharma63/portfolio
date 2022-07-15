@@ -116,7 +116,3 @@ const About = () => {
 }
 
 export default About;
-
-
-
-/// 119lines
