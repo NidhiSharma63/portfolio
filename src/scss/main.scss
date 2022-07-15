@@ -30,9 +30,8 @@
   --single-project-box-shadow:rgb(72,45,253);
 
   --navbar-bg-color: rgba(120, 106, 202, 0.055);
-  --contact-link-icon-color:rgb(100, 11, 160);
 
-  --contact-link-color:#fff;
+  --contact-link-icon-color:rgb(100, 11, 160);
 }
 
 .lightTheme {
@@ -41,7 +40,9 @@
   --secondary-color: #331EB0;
   --technologies-border-color: #67087a;
   --technologies-bg-color: #b714d83d;
+  --contact-link-color:#1d1a1a;
   --font-weight: 700;
+  --contact-link-font-weight: 700;
 }
 
 .DarkTheme {
@@ -50,7 +51,10 @@
   --secondary-color: #331EB0;
   --technologies-border-color: #67087a;
   --technologies-bg-color: #7119833d;
+  --contact-link-color:#fff;
   --font-weight: 300;
+  --contact-link-font-weight: 300;
+
 }
 
 body {

@@ -112,6 +112,7 @@ export const contactLinkTypo = createTheme({
       styleOverrides:{
         root:{
           fontFamily:'var(--fontFamilyWorkSans)',
+          fontWeight:'var(--contact-link-font-weight)',
           letterSpacing:'1px',
           color:'var(--contact-link-color)',
         }

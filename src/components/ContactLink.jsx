@@ -15,9 +15,10 @@ const ContactLink = () => {
       className='contact-info'
       sx={{
         flexDirection: {xs:'column',md:'row'},
-        width:{xs:'98%',sm:'98%', md:'900px',lg:'1100px'},
+        width:{xs:'98%',sm:'98%', md:'920px',lg:'1100px'},
       }}
       mt='30px'>
+
       <Box
         className='contact-form-box'
         sx={{
@@ -25,34 +26,37 @@ const ContactLink = () => {
         }}
         width='100%'>
         <Box
-          className='contact-link-box'
-          sx={{
-            flexDirection: {xs:'row',md:'column'},
-          }}>
-          <PhoneIcon
+            className='contact-link-box'
             sx={{
-              color: 'var(--contact-link-color)',
+              flexDirection: {xs:'row',md:'column'},
+            }}>
+          <GitHubIcon
+            sx={{
+              color: 'var(--contact-link-icon-color)',
             }}/>
-            <ThemeProvider theme={contactLinkTypo}>
-              <Typography>
-                +91 6395932754 <br/>
-              </Typography>
-            </ThemeProvider>
+          <ThemeProvider theme={contactLinkTypo}>
+            <Typography>
+              <a href='https://github.com/NidhiSharma63'
+              className='link-github'>Github</a>
+            </Typography>
+            
+          </ThemeProvider>
         </Box>
+
         <Box
           className='contact-link-box'
           sx={{
             flexDirection: {xs:'row',md:'column'},
           }}>
-          <LocationOnIcon
+          <EmailIcon
             sx={{
-            color: 'var(--contact-link-color)',
-          }}/>
-          <ThemeProvider theme={contactLinkTypo}>
-            <Typography>
-              Ghaziabad Uttar Pradesh 
-            </Typography>
-          </ThemeProvider>
+              color: 'var(--contact-link-icon-color)',
+            }}/>
+            <ThemeProvider theme={contactLinkTypo}>
+              <Typography>
+                nidhisharma639593@gmail.com
+              </Typography>
+            </ThemeProvider>
         </Box>
       </Box>
 
@@ -67,31 +71,29 @@ const ContactLink = () => {
           sx={{
             flexDirection: {xs:'row',md:'column'},
           }}>
-          <EmailIcon
+          <PhoneIcon
             sx={{
-              color: 'var(--contact-link-color)',
+              color: 'var(--contact-link-icon-color)',
             }}/>
             <ThemeProvider theme={contactLinkTypo}>
               <Typography>
-                nidhisharma639593@gmail.com
+                +91 6395932754 <br/>
               </Typography>
             </ThemeProvider>
         </Box>
         <Box
-            className='contact-link-box'
+          className='contact-link-box'
+          sx={{
+            flexDirection: {xs:'row',md:'column'},
+          }}>
+          <LocationOnIcon
             sx={{
-              flexDirection: {xs:'row',md:'column'},
-            }}>
-          <GitHubIcon
-            sx={{
-              color: 'var(--contact-link-color)',
-            }}/>
+            color: 'var(--contact-link-icon-color)',
+          }}/>
           <ThemeProvider theme={contactLinkTypo}>
             <Typography>
-              <a href='https://github.com/NidhiSharma63'
-              className='link-github'>Github</a>
+              Ghaziabad Uttar Pradesh 
             </Typography>
-            
           </ThemeProvider>
         </Box>
       </Box>
