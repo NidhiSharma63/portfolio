@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { Box,Typography } from '@mui/material';
+import { Box,ThemeProvider,Typography } from '@mui/material';
+import {headingTypography} from '../materialui/Typrography';
 
 import cal from '../Images/cal.png';
 import cargame from '../Images/cargame.png'
@@ -47,17 +48,11 @@ const MyProjects = () => {
       justifyContent='center'
       alignItems='center'
     >
-      <Typography
-        fontFamily='var(--fontFamilyMerriweather)'
-        fontWeight='bold'
-        color='var(--primary-color)'
-        className='myproject-outline'
-        position='relative'
-        sx={{
-          fontSize:'24px',
-        }}>
-        My<Box component='span' color='var(--secondary-color)'> project</Box>
-      </Typography>
+     <ThemeProvider theme={headingTypography}>
+        <Typography className='myproject-outline'>
+          My<Box component='span' color='var(--secondary-color)'> project</Box>
+        </Typography>
+     </ThemeProvider>
       <Box
        mt='50px'
        display='flex'

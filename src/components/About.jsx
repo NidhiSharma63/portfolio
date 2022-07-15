@@ -1,6 +1,8 @@
 import React from 'react';
 
-import { Box,Stack,Button,Typography } from '@mui/material';
+import { Box,Stack,Button,Typography, ThemeProvider } from '@mui/material';
+
+import {headingTypography} from '../materialui/Typrography';
 
 import hand1 from '../Images/hand1.png';
 import html from '../Images/html.png';
@@ -24,18 +26,11 @@ const About = () => {
     <Box
       marginTop='140px'
       className='flex'>
-      <Typography
-        fontFamily='var(--fontFamilyMerriweather)'
-        fontWeight='var(--font-weight)'
-        className='About-outline'
-        position='relative'
-        color='var(--primary-color)'
-        sx={{
-          fontSize:'24px',
-          cursor:'pointer'
-        }}>
-        <Box component='span' color='var(--secondary-color)'>About</Box> me
-      </Typography>
+      <ThemeProvider theme={headingTypography}>
+        <Typography className='About-outline'>
+          <Box component='span' color='var(--secondary-color)'>About</Box> me
+        </Typography>
+      </ThemeProvider>
       <Box
         marginTop='30px'
         display='flex'

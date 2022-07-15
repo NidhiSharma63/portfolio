@@ -1,35 +1,12 @@
 import React,{useState,useEffect} from 'react';
 
-import { Box, Typography, TextareaAutosize, Input, createTheme, ThemeProvider } from '@mui/material';
+import { Box, Typography, Input, ThemeProvider } from '@mui/material';
 import Button from './Button';
 import ContactLink from './ContactLink';
 
-const inputTheme = createTheme({
-  components: {
-    MuiInput: {
-      styleOverrides: {
-        root: {
-          '&.Mui-focused::after': {
-            borderBottom: '0px solid var(--secondary-color)',
-          },
-          '&.MuiInput-root::before': {
-            borderBottom: 'none',
-          },
-          '&.MuiInput-root:hover::before': {
-            borderBottom: 'none',
-          }
-        },
-        input: {
-          color:'white',
-          '&::placeholder': {
-            color: 'var(--secondary-color)',
-            fontWeight: 'bold',
-          }
-        }
-      }
-    },
-  }
-})
+import {InputTheme} from '../materialui/Input';
+import {headingTypography} from '../materialui/Typrography';
+
 
 const  mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
@@ -39,8 +16,30 @@ const Contact = () => {
   const [email, setEmail] = useState('');
   const [message, setmessage] = useState('');
 
-  
+  const [validEmail, setValidEmail] = useState(false);
 
+  const [nameError, setNameError] = useState(false);
+  const [emailError, setEmailError] = useState('');
+  const [messageError, setMessageError] = useState('');
+
+  useEffect(()=>{
+    let result = mailformat.test(email);
+    setValidEmail(result)
+  },[email]);
+  
+  const submitForm = (e) => {
+    e.preventDefault();
+    console.log(name)
+    if(name.length==0){
+      setNameError(true);
+      return;
+    }
+    else if(!setValidEmail){
+      console.log('not set valid email')
+      setEmailError(true);
+      return;
+    }
+  }
 
   return (
     <Box
@@ -51,19 +50,11 @@ const Contact = () => {
       sx={{
         width:{xs:'100%', md:'70%'},
       }}>
-      <Typography
-        fontFamily='var(--fontFamilyMerriweather)'
-        fontWeight='var(--font-weight)'
-        className='contact-outline'
-        position='relative'
-        mb='30px'
-        color='var(--primary-color)'
-        sx={{
-          fontSize: '24px',
-          cursor: 'pointer'
-        }}>
-        <Box component='span' color='var(--secondary-color)'>Contact</Box> me
-      </Typography>
+      <ThemeProvider theme={headingTypography}>
+        <Typography className='contact-outline'>
+          <Box component='span' color='var(--secondary-color)'>Contact</Box> me
+        </Typography>
+      </ThemeProvider>
         <form
           className='form'
           >
@@ -78,19 +69,20 @@ const Contact = () => {
               display='flex'
               flexDirection='column'
               width='100%'>
-              <ThemeProvider theme={inputTheme}>
+              <ThemeProvider theme={InputTheme}>
                 <Input
                   type='name'
                   placeholder='Enter your name'
                   name='clientName'
                   className='input'
                   autoComplete='off'
+                  onChange={(e)=>{setName(e.target.value)}}
                   required
                   sx={{
                     fontFamily: 'var(--fontFamilyRobotoSlab)',
                   }}
                 />
-                {<Typography
+                {nameError && <Typography
                   color='red'
                   letterSpacing='1.6px'
                   marginLeft='10px'>
@@ -102,12 +94,13 @@ const Contact = () => {
                   name='clientEmail'
                   className='input'
                   required
+                  onChange={(e)=>setEmail(e.target.value)}
                   sx={{
                     marginTop:'30px',
                     fontFamily: 'var(--fontFamilyRobotoSlab)',
                   }}
                 />
-                {<Typography
+                {emailError && <Typography
                   color='red'
                   letterSpacing='1.6px'
                   marginLeft='10px'>
@@ -125,9 +118,13 @@ const Contact = () => {
           </Box>
           <Box
             className='form-btn-container'>
-          <Button 
-            value='send'
-            alignSelf='center'/>
+          <Box
+            component='span'
+            onClick={submitForm}>
+            <Button 
+              value='send'
+              alignSelf='center'/>
+          </Box>
           </Box>
         </form>
         <ContactLink/>
