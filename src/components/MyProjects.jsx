@@ -11,6 +11,7 @@ const projectDetails=[
     Image:`${cargame}`,
     title:'Car game',
     description:'this car game is amazing. You can use the arrow keys to control the car.',
+    link:'https://nidhisharma63.github.io/car-game/',
     technologies:[
       'js',
       'css',
@@ -21,6 +22,7 @@ const projectDetails=[
     Image:`${cargame}`,
     title:'Exercise App',
     description:'this app show more than thousand of exercise with detailed explations and videos',
+    link:"https://nidhisharma63.github.io/calculator-app/",
     technologies:[
       'react',
       'material ui'
@@ -30,6 +32,7 @@ const projectDetails=[
     Image:`${cal}`,
     title:'Calculator',
     description:'calculator app with three diffrent themes.',
+    link:"https://nidhisharma63.github.io/calculator-app/",
     technologies:[
       'js',
       'css',
@@ -98,7 +101,8 @@ const MyProjects = () => {
                         }}>
                       {item.description}
                       </Typography>
-                      <a href="https://nidhisharma63.github.io/calculator-app/"
+                      <a href={item.link}
+                        target='_blank'                
                         className='project-link'>
                         checkout
                       </a>
