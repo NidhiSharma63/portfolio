@@ -42,11 +42,7 @@ const projectDetails=[
 const MyProjects = () => {
   return (
     <Box
-      marginTop='50px'
-      display='flex'
-      flexDirection='column'
-      justifyContent='center'
-      alignItems='center'
+      className='MyProjects'
     >
      <ThemeProvider theme={headingTypography}>
         <Typography className='myproject-outline'>

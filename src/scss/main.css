@@ -23,6 +23,8 @@
   --fontFamilyRobotoSlab: "Roboto Slab", serif;
   --fontFamilyMerriweather: "Merriweather", serif;
   --fontFamilyWorkSans: "Work Sans", sans-serif;
+  --single-project-bg-color:rgba(181, 174, 223, 0);
+  --single-project-box-shadow:rgb(72,45,253);
 }
 
 .lightTheme {
@@ -560,6 +562,16 @@ body {
     transform-origin: left bottom;
   }
 }
+.MyProjects {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(72, 45, 253);
+  background: linear-gradient(0deg, rgba(72, 45, 253, 0) 1%, rgba(72, 45, 253, 0.0284488796) 11%, rgba(72, 45, 253, 0.0928746499) 43%, rgba(72, 45, 253, 0.006039916) 100%);
+}
+
 .myproject-outline::after {
   content: "";
   position: absolute;
@@ -589,10 +601,11 @@ body {
   gap: 10px;
   padding: 10px 15px;
   border-radius: 10px;
-  box-shadow: 0px 0px 4px 0px black;
+  box-shadow: 0px 0px 4px 0px var(--single-project-box-shadow);
   width: 92%;
   height: 90%;
   transition: 0.2s;
+  background-color: var(--single-project-bg-color);
 }
 
 .single-projects:hover {
@@ -632,11 +645,11 @@ body {
   text-decoration: none;
   border-radius: 6px;
   font-family: var(--fontFamilyWorkSans);
-  box-shadow: 0px 0px 4px 0px black;
   transition: 0.7s;
 }
 
 .project-link:hover {
+  box-shadow: 0px 0px 4px 0px black;
   background: var(--secondary-color);
   color: white;
 }
