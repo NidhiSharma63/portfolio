@@ -25,7 +25,7 @@ const About = () => {
   return (
     <Box
       marginTop='140px'
-      className='flex'>
+      className='About-wrapper'>
       <ThemeProvider theme={headingTypography}>
         <Typography className='About-outline'>
           <Box component='span' color='var(--secondary-color)'>About</Box> me
@@ -36,7 +36,7 @@ const About = () => {
         display='flex'
         sx={{
           flexDirection:{xs:'column',md:'row'},
-          width:{xs:'100%',md:'900px',lg:'1100px'},
+          width:{xs:'100%',md:'920px',lg:'1100px'},
         }}>
         {/* textContainer */}
         <Box
@@ -84,12 +84,12 @@ const About = () => {
             </Box>
           <Box
             sx={{
-              mt:{xs:'80px',md:'50px'}
+              mt:{xs:'60px',md:'50px'}
             }}>
             <Images 
               ImageSrc={html}
               Image='htmlImg'
-              width='120px'/>
+              width='105px'/>
             <Images 
               ImageSrc={css2}
               Image='cssImg'

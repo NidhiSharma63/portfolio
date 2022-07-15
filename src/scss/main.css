@@ -179,6 +179,13 @@ body {
   background-color: var(--secondary-color);
 }
 
+.About-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .About-outline::after {
   content: "";
   position: absolute;

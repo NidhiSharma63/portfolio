@@ -154,6 +154,9 @@ body {
 
 // About section
 
+.About-wrapper{
+  @include flexproperty($alignItem:center, $justifyContent:center, $flexDirection:column);
+}
 .About-outline::after {
   @include underline(115px)
 }
