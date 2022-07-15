@@ -22,7 +22,7 @@ const HeroBanner = () => {
           gap='6px'>
            <ThemeProvider theme={heroTypography1}>
               <Typography
-                sx={{fontSize:{xs:'36px',sm:'42px',lg:'53px'}}}>
+                sx={{fontSize:{xs:'33px',sm:'42px',lg:'53px'}}}>
                 <Box component='span' color='var(--secondary-color)'>Hi,</Box>I'm <Box component='span' color='var(--secondary-color)'>Nidhi Sharma</Box>
               </Typography>
               <Typography
@@ -33,7 +33,7 @@ const HeroBanner = () => {
             <ThemeProvider theme={heroTypography2}>
               <Typography
                 className='underLine-pTag'
-                sx={{fontSize:{xs:'12px',sm:'13px',lg:'16px'}}}>
+                sx={{fontSize:{xs:'10px',sm:'13px',lg:'16px'}}}>
                 Frontend Developer with a passion for building beautiful,<br/> responsive websites and love to listening music.
               </Typography>
             </ThemeProvider>

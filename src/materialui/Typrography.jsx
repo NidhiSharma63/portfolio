@@ -47,6 +47,7 @@ export const heroTypography2 = createTheme({
           marginTop:'10px',
           marginBottom:'30px',
           color:'var(--primary-color)',
+          textAlign:'center',
         }
       }
     }
