@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/portfolio%20%20/static/css/main.78d865fe.css",
-    "main.js": "/portfolio%20%20/static/js/main.134bcb8d.js",
-    "static/media/main2.png": "/portfolio%20%20/static/media/main2.15ff4eaf61d754e413f5.png",
-    "static/media/cargame.png": "/portfolio%20%20/static/media/cargame.1d7ae35837c7458ead44.png",
-    "static/media/react.png": "/portfolio%20%20/static/media/react.32a47a6c314fea118567.png",
-    "static/media/css2.png": "/portfolio%20%20/static/media/css2.04b142a9efa2776a699d.png",
-    "static/media/html.png": "/portfolio%20%20/static/media/html.3d162703e0fddca2e458.png",
-    "static/media/hand1.png": "/portfolio%20%20/static/media/hand1.94a743d24d58c2083d72.png",
-    "static/media/figma.png": "/portfolio%20%20/static/media/figma.c53ac072c7e75acf4aeb.png",
-    "static/media/cal.png": "/portfolio%20%20/static/media/cal.3341b63d30566d7676b5.png",
-    "static/media/js.png": "/portfolio%20%20/static/media/js.294bf7f6bba515576cde.png",
-    "index.html": "/portfolio%20%20/index.html",
-    "main.78d865fe.css.map": "/portfolio%20%20/static/css/main.78d865fe.css.map",
-    "main.134bcb8d.js.map": "/portfolio%20%20/static/js/main.134bcb8d.js.map"
+    "main.css": "/portfolio/static/css/main.5740da57.css",
+    "main.js": "/portfolio/static/js/main.905b6d64.js",
+    "static/media/main2.png": "/portfolio/static/media/main2.15ff4eaf61d754e413f5.png",
+    "static/media/cargame.png": "/portfolio/static/media/cargame.1d7ae35837c7458ead44.png",
+    "static/media/react.png": "/portfolio/static/media/react.32a47a6c314fea118567.png",
+    "static/media/css2.png": "/portfolio/static/media/css2.04b142a9efa2776a699d.png",
+    "static/media/html.png": "/portfolio/static/media/html.3d162703e0fddca2e458.png",
+    "static/media/hand1.png": "/portfolio/static/media/hand1.94a743d24d58c2083d72.png",
+    "static/media/figma.png": "/portfolio/static/media/figma.c53ac072c7e75acf4aeb.png",
+    "static/media/cal.png": "/portfolio/static/media/cal.3341b63d30566d7676b5.png",
+    "static/media/js.png": "/portfolio/static/media/js.294bf7f6bba515576cde.png",
+    "index.html": "/portfolio/index.html",
+    "main.5740da57.css.map": "/portfolio/static/css/main.5740da57.css.map",
+    "main.905b6d64.js.map": "/portfolio/static/js/main.905b6d64.js.map"
   },
   "entrypoints": [
-    "static/css/main.78d865fe.css",
-    "static/js/main.134bcb8d.js"
+    "static/css/main.5740da57.css",
+    "static/js/main.905b6d64.js"
   ]
 }
