@@ -106,3 +106,18 @@ export const technologiesTypo = createTheme({
 });
 
 
+export const contactLinkTypo = createTheme({
+  components:{
+    MuiTypography:{
+      styleOverrides:{
+        root:{
+          fontFamily:'var(--fontFamilyWorkSans)',
+          letterSpacing:'1px',
+          fontWeight:'var(--font-weight)',
+          color:'var(--primary-color)',
+        }
+      }
+    }
+  }
+});
+

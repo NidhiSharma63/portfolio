@@ -28,8 +28,11 @@
   --fontFamilyMerriweather: 'Merriweather', serif;
   --fontFamilyWorkSans: 'Work Sans', sans-serif;
 
-  --single-project-bg-color:rgba(181, 174, 223, 0);
+  --single-project-bg-color:rgba(181, 174, 223, 0.0.55);
   --single-project-box-shadow:rgb(72,45,253);
+
+  --navbar-bg-color: rgba(120, 106, 202, 0.055);
+  --contact-link-icon-color:rgb(100, 11, 160);
 }
 
 .lightTheme {
@@ -58,14 +61,14 @@ body {
   background-color: var(--background-color);
 }
 
-// Navbar section
+// Navbar sectionrgba(120, 106, 202, 0.055)
 .navbar{
-  grid-area: Navegation;
   @include flexproperty($alignItem:center, $justifyContent:space-between, $flexDirection:row);
   position: relative;
   padding: 6px;
   width: 100%;
   z-index: 2;
+  background-color:var(--navbar-bg-color);
 }
 
 .sm-navbar{
@@ -83,6 +86,8 @@ body {
   @include flexproperty($alignItem:center, $justifyContent:space-between, $flexDirection:row);
   padding: 6px;
   margin: auto;
+  background-color: rgba(181, 174, 223, 0);
+
 }
 
 .navbar-menu{
@@ -509,6 +514,17 @@ body {
 
 // Contact section
 
+.contact-wrapper{
+  margin: 90px auto 30px auto;
+  @include flexproperty($alignItem:center, $justifyContent:center, $flexDirection:column);
+}
+
+.contact-form-box{
+  @include flexproperty($alignItem:center, $justifyContent:center, $flexDirection:column);
+  gap:30px;
+  padding: 0px 30px;
+}
+
 .contact-outline::after {
   @include underline(140px)
 }
@@ -535,17 +551,6 @@ body {
   color:var(--primary-color)
 }
 
-.contact-wrapper{
-  margin: 90px auto 30px auto;
-  @include flexproperty($alignItem:center, $justifyContent:center, $flexDirection:column);
-}
-
-.contact-form-box{
-  @include flexproperty($alignItem:center, $justifyContent:center, $flexDirection:column);
-  gap:30px;
-  padding: 0px 30px;
-}
-
 .textArea-container{
   width: 100%;
   margin-bottom: 20px;
@@ -557,7 +562,7 @@ body {
   border-radius: 10px;
   padding: 10px;
   font-size: 17px;
-  box-shadow: 0px 0px 4px 0px black;
+  box-shadow: 0px 0px 4px 0px rgb(117, 30, 218);
   width: 100%;
   transition: box-shadow .3s;
   background-color: transparent;

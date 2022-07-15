@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Box,ThemeProvider,Typography } from '@mui/material';
-import {headingTypography} from '../materialui/Typrography';
+import { headingTypography } from '../materialui/Typrography';
 
 import cal from '../Images/cal.png';
 import cargame from '../Images/cargame.png'

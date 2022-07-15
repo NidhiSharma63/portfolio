@@ -1,6 +1,8 @@
 import React from 'react';
 
-import {Box,Typography} from '@mui/material';
+import {Box,ThemeProvider,Typography} from '@mui/material';
+
+import { contactLinkTypo } from '../materialui/Typrography';
 
 import PhoneIcon from '@mui/icons-material/Phone';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
@@ -29,14 +31,13 @@ const ContactLink = () => {
           }}>
           <PhoneIcon
             sx={{
-              color: 'var(--secondary-color)',
+              color: 'var(--contact-link-icon-color)',
             }}/>
-          <Typography
-            fontFamily='var(--fontFamilyWorkSans)'
-            color='var(--primary-color)'
-            fontWeight='var(--font-weight)'>
-            +91 6395932754 <br/>
-          </Typography>
+            <ThemeProvider theme={contactLinkTypo}>
+              <Typography>
+                +91 6395932754 <br/>
+              </Typography>
+            </ThemeProvider>
         </Box>
         <Box
           className='contact-link-box'
@@ -45,15 +46,13 @@ const ContactLink = () => {
           }}>
           <LocationOnIcon
             sx={{
-            color: 'var(--secondary-color)',
+            color: 'var(--contact-link-icon-color)',
           }}/>
-          <Typography
-            fontFamily='var(--fontFamilyWorkSans)'
-            color='var(--primary-color)'
-            fontWeight='var(--font-weight)'>
-            Ghaziabad 
-            Uttar Pradesh 
-          </Typography>
+          <ThemeProvider theme={contactLinkTypo}>
+            <Typography>
+              Ghaziabad Uttar Pradesh 
+            </Typography>
+          </ThemeProvider>
         </Box>
       </Box>
 
@@ -70,15 +69,13 @@ const ContactLink = () => {
           }}>
           <EmailIcon
             sx={{
-              color: 'var(--secondary-color)',
+              color: 'var(--contact-link-icon-color)',
             }}/>
-
-          <Typography
-            fontFamily='var(--fontFamilyWorkSans)'
-            fontWeight='var(--font-weight)'
-            color='var(--primary-color)'>
-            nidhisharma639593@gmail.com
-          </Typography>
+            <ThemeProvider theme={contactLinkTypo}>
+              <Typography>
+                nidhisharma639593@gmail.com
+              </Typography>
+            </ThemeProvider>
         </Box>
         <Box
             className='contact-link-box'
@@ -87,14 +84,15 @@ const ContactLink = () => {
             }}>
           <GitHubIcon
             sx={{
-              color: 'var(--secondary-color)',
+              color: 'var(--contact-link-icon-color)',
             }}/>
-          <Typography
-            fontFamily='var(--fontFamilyWorkSans)'
-            fontWeight='var(--font-weight)'>
-            <a href='https://github.com/NidhiSharma63'
-            className='link-github'>Github</a>
-          </Typography>
+          <ThemeProvider theme={contactLinkTypo}>
+            <Typography>
+              <a href='https://github.com/NidhiSharma63'
+              className='link-github'>Github</a>
+            </Typography>
+            
+          </ThemeProvider>
         </Box>
       </Box>
     </Box> 
