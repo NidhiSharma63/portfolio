@@ -276,3 +276,32 @@
 
   }
 }
+
+
+
+@media screen and (max-width:600px) {
+  .htmlImg {
+    width: 100px;
+  }
+  
+  .cssImg {
+    width: 110px;
+  }
+  
+  .jsImg {
+    width: 110px;
+  }
+  
+  .figmaImg {
+    width: 140px;
+  }
+  
+  .reactImg {
+    width: 110px;
+  }
+
+  .lampContainer{
+    width: 80%;
+    left: 8%;
+  }
+}
