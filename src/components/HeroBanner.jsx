@@ -22,18 +22,18 @@ const HeroBanner = () => {
           gap='6px'>
            <ThemeProvider theme={heroTypography1}>
               <Typography
-                sx={{fontSize:{xs:'33px',sm:'42px',lg:'53px'}}}>
+                sx={{fontSize:{xs:'25px',sm:'42px',lg:'53px'}}}>
                 <Box component='span' color='var(--secondary-color)'>Hi,</Box>I'm <Box component='span' color='var(--secondary-color)'>Nidhi Sharma</Box>
               </Typography>
               <Typography
-                sx={{fontSize:{xs:'23px',md:'29px',lg:'32px'}}}>
+                sx={{fontSize:{xs:'18px',md:'29px',lg:'32px'}}}>
                 A Frontend Developer
               </Typography>
            </ThemeProvider>
             <ThemeProvider theme={heroTypography2}>
               <Typography
                 className='underLine-pTag'
-                sx={{fontSize:{xs:'10px',sm:'13px',lg:'16px'}}}>
+                sx={{fontSize:{xs:'8px',sm:'13px',lg:'16px'}}}>
                 Frontend Developer with a passion for building beautiful,<br/> responsive websites and love to listening music.
               </Typography>
             </ThemeProvider>
@@ -51,7 +51,7 @@ const HeroBanner = () => {
             component='img'
             src={main}
             sx={{
-              width:{xs:'500px',sm:'500px',md:'400px',lg:'600px'},
+              width:{xs:'300px',sm:'500px',md:'400px',lg:'600px'},
             }}
           />
       </Box>
