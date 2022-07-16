@@ -98,7 +98,7 @@ const Navbar = () => {
                   }}>Home</a>
                 <a
                   className='link navbar-link'
-                  href='#about'
+                  href='#About-wrapper'
                   >About</a>
                 <a
                   className='link my-build'

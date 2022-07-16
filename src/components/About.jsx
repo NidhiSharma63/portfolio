@@ -1,8 +1,9 @@
 import React from 'react';
 
-import { Box,Stack,Button,Typography, ThemeProvider } from '@mui/material';
+import { Box,Typography, ThemeProvider } from '@mui/material';
 
-import {headingTypography,AboutTypography} from '../materialui/Typrography';
+import { headingTypography,AboutTypography } from '../materialui/Typrography';
+import { AboutWrapperAnim } from '../js/AboutAnim';
 
 import hand1 from '../Images/hand1.png';
 import html from '../Images/html.png';
@@ -12,6 +13,7 @@ import react from '../Images/react.png';
 import js from '../Images/js.png';
 import Bulb from './Bulb';
 import Images from './Images';
+import { useEffect } from 'react';
 
 
 const IntroText = [
@@ -22,11 +24,15 @@ const IntroText = [
 ]
 
 const About = () => {
+
+  useEffect(()=>{
+    AboutWrapperAnim()
+  },[])
   return (
     <Box
       marginTop='140px'
-      className='About-wrapper'
-      id='about'>
+      className='About-wrapper About-wrapper-anim'
+      id='About-wrapper'>
       <ThemeProvider theme={headingTypography}>
         <Typography className='About-outline'>
           <Box component='span' color='var(--secondary-color)'>About</Box> me
@@ -48,7 +54,7 @@ const About = () => {
               return (
                  <Box
                   key={index}
-                  className='About-intro-container'>
+                  className='About-intro-container About-text'>
                   <Box 
                     component='img'
                     src={hand1}

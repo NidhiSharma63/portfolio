@@ -37,7 +37,7 @@ const NavMenu = ({setshowNavMenu}) => {
           >Home</a>
         <a
           className='sm-nav-link'
-          href='#about'
+          href='#About-wrapper'
           onClick={()=>{
             setshowNavMenu(false);
           }}>About</a>

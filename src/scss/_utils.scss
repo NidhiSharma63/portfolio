@@ -38,4 +38,10 @@
   transform: translateY(120px);
   opacity: .2;
 }
-
+.About-wrapper-anim{
+  perspective: 1000px;
+  transform: translateY(200px);
+}
+.About-text{
+  opacity: .2;
+}

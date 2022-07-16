@@ -11,6 +11,15 @@
   opacity: 0.2;
 }
 
+.About-wrapper-anim {
+  perspective: 1000px;
+  transform: translateY(200px);
+}
+
+.About-text {
+  opacity: 0.2;
+}
+
 .contact-wrapper {
   margin: 90px auto 30px auto;
   display: flex;
@@ -174,6 +183,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  transition: all 1s ease-in-out;
 }
 
 .About-outline::after {

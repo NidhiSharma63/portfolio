@@ -1,6 +1,7 @@
 
 .About-wrapper{
   @include flexproperty($alignItem:center, $justifyContent:center, $flexDirection:column);
+  transition:  all 1s ease-in-out;
 }
 .About-outline::after {
   @include underline(115px)
