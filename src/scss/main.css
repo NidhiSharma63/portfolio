@@ -754,6 +754,8 @@
 .sm-nav-link {
   position: relative;
   cursor: pointer;
+  text-decoration: none;
+  color: white;
 }
 
 .sm-nav-link::after {

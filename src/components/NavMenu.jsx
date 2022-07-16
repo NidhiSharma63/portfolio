@@ -19,25 +19,28 @@ const NavMenu = ({setshowNavMenu}) => {
       >
         <a
           className='sm-nav-link'
-          
+          href='#hero-banner'
+          onClick={()=>{
+            setshowNavMenu(false);
+          }}
           >Home</a>
         <a
           className='sm-nav-link'
+          href='#about'
           onClick={()=>{
             setshowNavMenu(false);
-            window.scrollTo({ top:900, behavior: 'smooth' });
           }}>About</a>
         <a
           className='sm-nav-link'
+          href='#my-build'
           onClick={()=>{
             setshowNavMenu(false);
-            window.scrollTo({ top:1700, behavior: 'smooth' });
           }}>My build</a>
         <a
           className='sm-nav-link'
+          href='#contact'
           onClick={()=>{
             setshowNavMenu(false);
-            window.scrollTo({ top:3300, behavior: 'smooth' });
           }}>Contact me</a>
       </Stack>
     </Box>
