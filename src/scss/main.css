@@ -152,7 +152,7 @@
   justify-content: center;
   flex-direction: row;
   gap: 10px;
-  transition: all 2s;
+  transition: all 0.7s;
 }
 
 .contact-form-box {

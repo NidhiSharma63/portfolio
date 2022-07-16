@@ -73,7 +73,7 @@
 .contact-info{
   @include flexproperty($alignItem:center, $justifyContent:center, $flexDirection:row);
   gap:10px;
-  transition: all 2s;
+  transition: all .7s;
 }
 .contact-form-box{
   @include flexproperty($alignItem:flex-start, $justifyContent:space-between, $flexDirection:row);
