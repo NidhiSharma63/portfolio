@@ -5,7 +5,7 @@ export const AboutWrapperAnim = ({selector,classes}) =>{
 
   let options = {
     root: document.querySelector('#scrollArea'),
-    threshold: 0,
+    threshold: 0.1,
     rootMargin:'0px 0px -10px 0px'
   }
   
@@ -54,13 +54,6 @@ export const AboutBannerTextAnim = () =>{
 export const AboutImageAnim = () =>{
   const Item = document.querySelector('.About-wrapper');
   const ItemImage = document.querySelector('.imagesContainer');
-  console.log(Item);
-
-  let options = {
-    root: document.querySelector('#scrollArea'),
-    threshold: 0,
-    rootMargin:'0px 0px -300px 0px'
-  }
   
   let observer = new IntersectionObserver(function(
     entries,

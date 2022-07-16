@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 
 import { Box,ThemeProvider,Typography } from '@mui/material';
 import { headingTypography } from '../materialui/Typrography';
@@ -6,6 +6,9 @@ import { headingTypography } from '../materialui/Typrography';
 import cal from '../Images/cal.png';
 import cargame from '../Images/cargame.png'
 import Technologies from './Technologies'
+
+import { MyProjectsAnim,MyProjectsChildAnim } from '../js/Mybuild';
+
 const projectDetails=[
   {
     Image:`${cargame}`,
@@ -43,9 +46,14 @@ const projectDetails=[
 
 
 const MyProjects = () => {
+
+  useEffect(()=>{
+    MyProjectsAnim();
+    MyProjectsChildAnim()
+  },[])
   return (
     <Box
-      className='MyProjects'
+      className='MyProjects project-wraaper-anim'
       id='my-build'
     >
      <ThemeProvider theme={headingTypography}>
@@ -67,7 +75,7 @@ const MyProjects = () => {
               projectDetails.map((item,index)=>(
                 <Box
                 key={index}
-                className='projects-container'
+                className='projects-container projects-container-anim'
                 >
                   <Box
                   className='single-projects'

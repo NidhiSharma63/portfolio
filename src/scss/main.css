@@ -14,6 +14,7 @@
 .About-wrapper-anim {
   perspective: 1000px;
   transform: translateY(200px);
+  opacity: 0.1;
 }
 
 .About-text {
@@ -23,6 +24,23 @@
 .About-Image-Anim {
   transform: translateX(700px);
   opacity: 0.2;
+}
+
+.project-wraaper-anim {
+  perspective: 1000px;
+  transform: translateY(400px);
+  opacity: 0.125;
+}
+
+.projects-container-anim {
+  transform: translateY(100px);
+  opacity: 0.1;
+}
+
+.contact-wrapper-anim {
+  perspective: 1000px;
+  transform: translateY(20px);
+  opacity: 0.1;
 }
 
 .contact-wrapper {
@@ -601,6 +619,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: all 0.5s ease;
   background: rgb(72, 45, 253);
   background: linear-gradient(0deg, rgba(72, 45, 253, 0) 5%, rgba(72, 45, 253, 0.0284488796) 11%, rgba(72, 45, 253, 0.0928746499) 43%, rgba(72, 45, 253, 0.006039916) 100%);
 }
@@ -624,6 +643,7 @@
   margin: auto;
   width: 340px;
   height: 440px;
+  transition: all 0.5s;
 }
 
 .single-projects {

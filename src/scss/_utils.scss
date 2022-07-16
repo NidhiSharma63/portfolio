@@ -41,6 +41,7 @@
 .About-wrapper-anim{
   perspective: 1000px;
   transform: translateY(200px);
+  opacity: 0.1;
 }
 .About-text{
   opacity: .2;
@@ -48,4 +49,19 @@
 .About-Image-Anim{
   transform: translateX(700px);
   opacity: .2;
+}
+.project-wraaper-anim{
+  perspective: 1000px;
+
+  transform: translateY(400px);
+  opacity: 0.125;
+}
+.projects-container-anim{
+  transform: translateY(100px);
+  opacity: 0.1;
+}
+.contact-wrapper-anim{
+  perspective: 1000px;
+  transform: translateY(20px);
+  opacity: 0.1;
 }
