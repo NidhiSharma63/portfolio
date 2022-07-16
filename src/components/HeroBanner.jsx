@@ -10,6 +10,7 @@ import { heroTypography1,heroTypography2 } from '../materialui/Typrography'
 const anim = () =>{
   const heroBaner = document.getElementById('hero-banner-container');
   const heroBannerText = document.querySelector('.hero-banner');
+  const heroBannerImage = document.querySelector('.hero-banner-image');
 
   let options = {
     root: document.querySelector('#scrollArea'),
@@ -25,6 +26,7 @@ const anim = () =>{
     entries.forEach(entry => {
       if(!entry.isIntersecting) return;
       heroBannerText.classList.remove('tranfrom-left');
+      heroBannerImage.classList.remove('tranfrom-image');
       observer.disconnect();
     })
   }, options);
@@ -78,6 +80,7 @@ const HeroBanner = () => {
             </Box>
           </Box>
           <Box
+            className='hero-banner-image tranfrom-image'
             component='img'
             src={main}
             sx={{
