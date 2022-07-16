@@ -23,5 +23,4 @@ export const MyProjectsChildAnim = () =>{
     observer.observe(list);
   }
   );
-  // observer.observe(Item);
 };

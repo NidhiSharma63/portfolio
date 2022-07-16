@@ -46,10 +46,7 @@
 .About-text{
   opacity: .2;
 }
-.About-Image-Anim{
-  transform: translateX(700px);
-  opacity: .2;
-}
+
 .project-wraaper-anim{
   perspective: 1000px;
   transform: translateY(200px);
@@ -64,7 +61,7 @@
   transform: translateY(20px);
   opacity: 0.1;
 }
-.contact-info-box-anim{
+.translateX-Anim{
   transform: translateX(50%);
   opacity: 0.1;
 }

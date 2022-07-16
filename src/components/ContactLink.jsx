@@ -17,15 +17,15 @@ const ContactLink = () => {
 
   let childObj = {
     selector:'contact-info',
-    classes:'contact-info-box-anim'
+    classes:'translateX-Anim'
   }
 
   useEffect(()=>{
-    ContactInfoAnim(childObj);
+    childTranslateX(childObj);
   },[])
   return (
     <Box
-      className='contact-info contact-info-box-anim'
+      className='contact-info translateX-Anim'
       sx={{
         flexDirection: {xs:'column',md:'row'},
         width:{xs:'98%',sm:'98%', md:'920px',lg:'1100px'},

@@ -28,20 +28,3 @@ export const AboutBannerTextAnim = () =>{
   });
 }
 
-
-export const AboutImageAnim = () =>{
-  const Item = document.querySelector('.About-wrapper');
-  const ItemImage = document.querySelector('.imagesContainer');
-  
-  let observer = new IntersectionObserver(function(
-    entries,
-    observer
-  ) {
-    entries.forEach(entry => {
-      if(!entry.isIntersecting) return;
-      ItemImage.classList.remove('About-Image-Anim');
-      observer.disconnect();
-    })
-  }, CommonOptions);
-  observer.observe(Item);
-};
