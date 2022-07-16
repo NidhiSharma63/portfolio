@@ -1,13 +1,24 @@
 import React from 'react';
 
 import { Box, Stack, Button } from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
+
 
 const NavMenu = ({setshowNavMenu}) => {
-  const body= document.querySelector('body');
   return (
     <Box
       className="sm-navbar"
       >
+        <CloseIcon
+        sx={{
+          cursor:'pointer',
+          width:'3rem',
+          height:'3rem',
+          color:'white'
+        }}
+        onClick={
+          ()=>setshowNavMenu(false)
+        }/>
       <Stack
         fontSize='20px'
         fontFamily='var(--fontFamilyWorkSans)'

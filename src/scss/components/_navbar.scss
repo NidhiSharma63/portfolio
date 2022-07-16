@@ -16,7 +16,7 @@
   height: 100vh;
   background-color: rgba(17, 16, 16, 0.842);
   z-index: 4;
-  @include flexproperty($alignItem:center, $justifyContent:center, $flexDirection:column);
+  @include flexproperty($alignItem:center, $justifyContent:space-around, $flexDirection:column);
 }
 
 .navbar-container {

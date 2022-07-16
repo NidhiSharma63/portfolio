@@ -17,6 +17,7 @@ const Navbar = () => {
   const [showDarkMode,setshowDarkMode] = useState(false);
  
   const handleShowNavMenu = () =>{
+
     setshowNavMenu(prev=>!prev);
   }
   body.style.overflowY = showNavMenu ? 'hidden' : 'visible';
@@ -91,7 +92,10 @@ const Navbar = () => {
               >
                 <a
                   className='link navbar-link'
-                  href='#hero-banner'>Home</a>
+                  href='#hero-banner'
+                  onClick={()=>{
+
+                  }}>Home</a>
                 <a
                   className='link navbar-link'
                   href='#about'
@@ -143,14 +147,7 @@ const Navbar = () => {
               marginRight='10px'
               component='span'>
                 {
-                  showNavMenu ? 
-                  <CloseIcon
-                  sx={{
-                    cursor:'pointer',
-                    width:'2rem',
-                    height:'3rem',
-                    color:'white'
-                  }}/> : 
+                  !showNavMenu &&
                   <MenuSharpIcon
                     sx={{
                       cursor:'pointer',
