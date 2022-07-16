@@ -30,7 +30,7 @@ const NavMenu = ({setshowNavMenu}) => {
       >
         <a
           className='sm-nav-link'
-          href='#hero-banner'
+          href='#hero-banner-container'
           onClick={()=>{
             setshowNavMenu(false);
           }}

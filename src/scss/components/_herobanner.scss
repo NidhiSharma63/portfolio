@@ -1,9 +1,11 @@
 
 .hero-banner-container{
   @include flexproperty($alignItem:center, $justifyContent:center, $flexDirection:column);
+  gap: 30px;
 }
 
 .hero-banner{
+  transition: all 1s ease-in-out;
   @include flexproperty($alignItem:center, $justifyContent:center, $flexDirection:column);
 }
 

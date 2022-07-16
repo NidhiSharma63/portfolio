@@ -25,7 +25,6 @@ const Contact = () => {
   useEffect(()=>{
     let result = mailformat.test(email);
     setValidEmail(result);
-    console.log(validEmail);
   },[email]);
 
   const handleName = (e) =>{

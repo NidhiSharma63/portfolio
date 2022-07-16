@@ -92,7 +92,7 @@ const Navbar = () => {
               >
                 <a
                   className='link navbar-link'
-                  href='#hero-banner'
+                  href='#hero-banner-container'
                   onClick={()=>{
 
                   }}>Home</a>

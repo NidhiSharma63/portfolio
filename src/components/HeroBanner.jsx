@@ -1,17 +1,45 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { Box,Stack,Button,Typography, ThemeProvider } from '@mui/material';
 import main from '../Images/main2.png';
 import ButtonComponent from './Button';
 
-import {heroTypography1,heroTypography2} from '../materialui/Typrography'
+import { heroTypography1,heroTypography2 } from '../materialui/Typrography'
+
+
+const anim = () =>{
+  const heroBaner = document.getElementById('hero-banner-container');
+  const heroBannerText = document.querySelector('.hero-banner');
+
+  let options = {
+    root: document.querySelector('#scrollArea'),
+    rootMargin: '0px',
+    threshold: 0,
+    rootMargin:'0px 0px -100px 0px'
+  }
+  
+  let observer = new IntersectionObserver(function(
+    entries,
+    observer
+  ) {
+    entries.forEach(entry => {
+      if(!entry.isIntersecting) return;
+      heroBannerText.classList.remove('tranfrom-left');
+      observer.disconnect();
+    })
+  }, options);
+  observer.observe(heroBaner);
+}
 
 const HeroBanner = () => {
+  useEffect(()=>{ 
+    anim();
+  },[]);
   return (
     <>
       <Box
         className='hero-banner-container'
-        id='hero-banner'
+        id='hero-banner-container'
         sx={{
           flexDirection:{xs:'column',md:'row'},
           margin:{xs:'50px',md:'50px 0px'},
@@ -20,7 +48,7 @@ const HeroBanner = () => {
         }}>
        
         <Box
-          className='hero-banner'
+          className='hero-banner tranfrom-left'
           gap='6px'>
            <ThemeProvider theme={heroTypography1}>
               <Typography

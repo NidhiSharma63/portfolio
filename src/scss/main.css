@@ -2,6 +2,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap");
+.tranfrom-left {
+  transform: translateX(-100%);
+}
+
+.tranfrom-right {
+  transition: all 2s ease-in-out;
+  transform: translateX(0%);
+}
+
 .contact-wrapper {
   margin: 90px auto 30px auto;
   display: flex;
@@ -672,9 +681,11 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  gap: 30px;
 }
 
 .hero-banner {
+  transition: all 1s ease-in-out;
   display: flex;
   align-items: center;
   justify-content: center;

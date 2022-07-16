@@ -28,3 +28,13 @@
   left: 0;
   transition: .6s;
 }
+
+
+.tranfrom-left {
+  transform: translateX(-100%);
+}
+
+.tranfrom-right {
+  transition: all 2s ease-in-out;
+  transform: translateX(0%);
+}
