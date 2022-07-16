@@ -129,13 +129,15 @@ const Navbar = () => {
                 <DarkModeIcon
                 sx={{
                   color:'white',
+                  cursor:'pointer',
                 }}/>:
                 <LightModeIcon
                 sx={{
                   border:'1px solid var(--sun-color)',
                   borderRadius:'50%',
                   padding:'1px',
-                  color:'var(--sun-color)'
+                  color:'var(--sun-color)',
+                  cursor:'pointer',
                 }}/> 
               }
             </Box>
