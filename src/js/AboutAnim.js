@@ -6,7 +6,7 @@ export const AboutWrapperAnim = ({selector,classes}) =>{
   let options = {
     root: document.querySelector('#scrollArea'),
     threshold: 0.1,
-    rootMargin:'0px 0px -10px 0px'
+    rootMargin:'0px 0px 100px 0px'
   }
   
   let observer = new IntersectionObserver(function(

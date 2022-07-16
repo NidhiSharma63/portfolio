@@ -7,7 +7,9 @@ import cal from '../Images/cal.png';
 import cargame from '../Images/cargame.png'
 import Technologies from './Technologies'
 
-import { MyProjectsAnim,MyProjectsChildAnim } from '../js/Mybuild';
+import { MyProjectsChildAnim } from '../js/Mybuild';
+import { MainWrapperAnim } from '../js/CommonAnim';
+
 
 const projectDetails=[
   {
@@ -47,8 +49,13 @@ const projectDetails=[
 
 const MyProjects = () => {
 
+  let obj1= {
+    selector:'MyProjects',
+    classes:'project-wraaper-anim'
+  }
+
   useEffect(()=>{
-    MyProjectsAnim();
+    MainWrapperAnim(obj1);
     MyProjectsChildAnim()
   },[])
   return (

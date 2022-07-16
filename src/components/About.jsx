@@ -3,7 +3,9 @@ import React from 'react';
 import { Box,Typography, ThemeProvider } from '@mui/material';
 
 import { headingTypography,AboutTypography } from '../materialui/Typrography';
-import { AboutWrapperAnim,AboutBannerTextAnim,AboutImageAnim } from '../js/AboutAnim';
+import { AboutBannerTextAnim,AboutImageAnim } from '../js/AboutAnim';
+
+import { MainWrapperAnim } from '../js/CommonAnim';
 
 import hand1 from '../Images/hand1.png';
 import html from '../Images/html.png';
@@ -31,7 +33,7 @@ const About = () => {
     selector:'About-wrapper',
     classes:'About-wrapper-anim'
   }
-    AboutWrapperAnim(obj1);
+    MainWrapperAnim(obj1);
     AboutImageAnim()
     AboutBannerTextAnim();
   },[]);

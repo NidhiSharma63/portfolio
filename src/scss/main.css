@@ -28,7 +28,7 @@
 
 .project-wraaper-anim {
   perspective: 1000px;
-  transform: translateY(400px);
+  transform: translateY(200px);
   opacity: 0.125;
 }
 
