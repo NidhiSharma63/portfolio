@@ -3,7 +3,7 @@ import React from 'react';
 import { Box,Typography, ThemeProvider } from '@mui/material';
 
 import { headingTypography,AboutTypography } from '../materialui/Typrography';
-import { AboutWrapperAnim } from '../js/AboutAnim';
+import { AboutWrapperAnim,AboutBannerTextAnim,AboutImageAnim } from '../js/AboutAnim';
 
 import hand1 from '../Images/hand1.png';
 import html from '../Images/html.png';
@@ -26,8 +26,16 @@ const IntroText = [
 const About = () => {
 
   useEffect(()=>{
-    AboutWrapperAnim()
-  },[])
+
+  let obj1={
+    selector:'About-wrapper',
+    classes:'About-wrapper-anim'
+  }
+    AboutWrapperAnim(obj1);
+    AboutImageAnim()
+    AboutBannerTextAnim();
+  },[]);
+
   return (
     <Box
       marginTop='140px'
@@ -77,7 +85,7 @@ const About = () => {
         {/* textContainer end */}
         {/* imagesContainer */}
         <Box 
-          className='imagesContainer'
+          className='imagesContainer About-Image-Anim'
           sx={{
             marginTop:{xs:'50px',md:'0px'},
             width:{xs:'392px',sm:'494px',md:'663px'},

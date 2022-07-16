@@ -20,6 +20,11 @@
   opacity: 0.2;
 }
 
+.About-Image-Anim {
+  transform: translateX(700px);
+  opacity: 0.2;
+}
+
 .contact-wrapper {
   margin: 90px auto 30px auto;
   display: flex;
@@ -205,12 +210,14 @@
   padding: 10px 0px;
   display: flex;
   gap: 20px;
+  transition: 0.5s;
 }
 
 .imagesContainer {
   position: relative;
   margin: auto;
   height: 400px;
+  transition: 1s;
 }
 
 .lampContainer {
@@ -365,6 +372,7 @@
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
   z-index: 1;
+  transition: 0.5s;
 }
 
 .htmlImg {
