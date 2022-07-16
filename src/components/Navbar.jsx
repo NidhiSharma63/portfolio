@@ -128,7 +128,10 @@ const Navbar = () => {
                 }}/>:
                 <LightModeIcon
                 sx={{
-                  color:'#ccac0e'
+                  border:'1px solid var(--sun-color)',
+                  borderRadius:'50%',
+                  padding:'1px',
+                  color:'var(--sun-color)'
                 }}/> 
               }
             </Box>

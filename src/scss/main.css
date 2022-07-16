@@ -823,6 +823,7 @@
   --single-project-box-shadow:rgb(72,45,253);
   --navbar-bg-color: rgba(120, 106, 202, 0.055);
   --contact-link-icon-color:rgb(100, 11, 160);
+  --sun-color:rgb(252, 227, 7);
 }
 
 .lightTheme {
