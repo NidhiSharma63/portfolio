@@ -16,6 +16,7 @@ const HeroBanner = () => {
           flexDirection:{xs:'column',md:'row'},
           margin:{xs:'50px',md:'50px 0px'},
           gap:{xs:'40px',md:'0px'},
+          marginTop:{xs:'150px',md:'150px',lg:'150px'},
         }}>
        
         <Box

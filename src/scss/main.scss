@@ -11,8 +11,12 @@
 @import './components/herobanner';
 @import './components/navbar';
 
-
-
+/*
+  Z-INDEX 
+  LAMPCONTAINER----->2
+  NAVBAR----->3
+  SM-NAVBAR----->4
+*/
 
 * {
   margin: 0;
