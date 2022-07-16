@@ -43,8 +43,14 @@
   opacity: 0.1;
 }
 
+.contact-info-box-anim {
+  transform: translateX(50%);
+  opacity: 0.1;
+}
+
 .contact-wrapper {
   margin: 90px auto 30px auto;
+  transition: all 1s;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -151,6 +157,7 @@
   justify-content: center;
   flex-direction: row;
   gap: 10px;
+  transition: all 2s;
 }
 
 .contact-form-box {

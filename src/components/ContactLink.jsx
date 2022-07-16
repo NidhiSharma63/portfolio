@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import {Box,ThemeProvider,Typography} from '@mui/material';
 
@@ -9,10 +9,18 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EmailIcon from '@mui/icons-material/Email';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
+import { ContactInfoAnim } from '../js/ContactAnim'
+
+
 const ContactLink = () => {
+
+
+  useEffect(()=>{
+    ContactInfoAnim();
+  },[])
   return (
     <Box
-      className='contact-info'
+      className='contact-info contact-info-box-anim'
       sx={{
         flexDirection: {xs:'column',md:'row'},
         width:{xs:'98%',sm:'98%', md:'920px',lg:'1100px'},

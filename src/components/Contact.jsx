@@ -7,6 +7,8 @@ import ContactLink from './ContactLink';
 import {InputTheme} from '../materialui/Input';
 import {headingTypography,errorTypography} from '../materialui/Typrography';
 
+import { ContactAnim } from '../js/ContactAnim'
+
 
 const  mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
@@ -21,6 +23,10 @@ const Contact = () => {
   const [nameError, setNameError] = useState(false);
   const [emailError, setEmailError] = useState('');
   const [messageError, setMessageError] = useState('');
+
+  useEffect(()=>{
+    ContactAnim();
+  },[])
 
   useEffect(()=>{
     let result = mailformat.test(email);
@@ -73,7 +79,7 @@ const Contact = () => {
 
   return (
     <Box
-      className='contact-wrapper'
+      className='contact-wrapper contact-wrapper-anim'
       id='contact'
       sx={{
         width:{xs:'100%', md:'80%'},
