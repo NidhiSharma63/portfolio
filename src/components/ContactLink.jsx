@@ -9,14 +9,19 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EmailIcon from '@mui/icons-material/Email';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
-import { ContactInfoAnim } from '../js/ContactAnim'
+import { childTranslateX } from '../js/CommonAnim';
+
 
 
 const ContactLink = () => {
 
+  let childObj = {
+    selector:'contact-info',
+    classes:'contact-info-box-anim'
+  }
 
   useEffect(()=>{
-    ContactInfoAnim();
+    ContactInfoAnim(childObj);
   },[])
   return (
     <Box
