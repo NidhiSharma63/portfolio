@@ -46,6 +46,7 @@ const MyProjects = () => {
   return (
     <Box
       className='MyProjects'
+      id='my-build'
     >
      <ThemeProvider theme={headingTypography}>
         <Typography className='myproject-outline'>

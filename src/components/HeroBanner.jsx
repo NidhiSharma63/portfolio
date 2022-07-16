@@ -11,6 +11,7 @@ const HeroBanner = () => {
     <>
       <Box
         className='hero-banner-container'
+        id='hero-banner'
         sx={{
           flexDirection:{xs:'column',md:'row'},
           margin:{xs:'50px',md:'50px 0px'},

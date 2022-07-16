@@ -54,6 +54,8 @@
 .link{
   position: relative;
   cursor: pointer;
+  text-decoration: none;
+  color: var(--primary-color);
 }
 .navbar-link:hover::after {
   width: 55px;

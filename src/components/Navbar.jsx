@@ -90,14 +90,15 @@ const Navbar = () => {
                 gap='90px'
               >
                 <a
-                  className='link navbar-link'>Home</a>
+                  className='link navbar-link'
+                  href='#hero-banner'>Home</a>
                 <a
                   className='link navbar-link'
-                  onClick={()=>{
-                    window.scrollTo({ top:550, behavior: 'smooth' });
-                  }}>About</a>
+                  href='#about'
+                  >About</a>
                 <a
                   className='link my-build'
+                  href='#my-build'
                   onClick={()=>{
                     window.scrollTo({ top:1150, behavior: 'smooth' });
                   }}>My build</a>
@@ -107,7 +108,7 @@ const Navbar = () => {
             component='span'
             marginRight='20px'
             onClick={()=>{
-              window.scrollTo({ top:1650, behavior: 'smooth' });
+              window.scrollTo({ top:1850, behavior: 'smooth' });
             }}
             sx={{
               display:{md:'flex',xs:'none'},

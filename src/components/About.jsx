@@ -25,7 +25,8 @@ const About = () => {
   return (
     <Box
       marginTop='140px'
-      className='About-wrapper'>
+      className='About-wrapper'
+      id='about'>
       <ThemeProvider theme={headingTypography}>
         <Typography className='About-outline'>
           <Box component='span' color='var(--secondary-color)'>About</Box> me

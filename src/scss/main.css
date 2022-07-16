@@ -570,13 +570,13 @@
   }
 }
 .MyProjects {
-  margin-top: 50px;
+  margin-top: 150px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background: rgb(72, 45, 253);
-  background: linear-gradient(0deg, rgba(72, 45, 253, 0) 1%, rgba(72, 45, 253, 0.0284488796) 11%, rgba(72, 45, 253, 0.0928746499) 43%, rgba(72, 45, 253, 0.006039916) 100%);
+  background: linear-gradient(0deg, rgba(72, 45, 253, 0) 5%, rgba(72, 45, 253, 0.0284488796) 11%, rgba(72, 45, 253, 0.0928746499) 43%, rgba(72, 45, 253, 0.006039916) 100%);
 }
 
 .myproject-outline::after {
@@ -786,6 +786,8 @@
 .link {
   position: relative;
   cursor: pointer;
+  text-decoration: none;
+  color: var(--primary-color);
 }
 
 .navbar-link:hover::after {
@@ -841,6 +843,10 @@
   --contact-link-color:#fff;
   --font-weight: 300;
   --contact-link-font-weight: 300;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {

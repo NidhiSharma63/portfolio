@@ -75,6 +75,7 @@ const Contact = () => {
   return (
     <Box
       className='contact-wrapper'
+      id='contact'
       sx={{
         width:{xs:'100%', md:'80%'},
       }}>
