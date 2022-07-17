@@ -6,7 +6,6 @@ import About from './components/About';
 import MyProjects from './components/MyProjects';
 import Contact from './components/Contact';
 import HeroBanner from './components/HeroBanner';
-// import './App.css';
 import './scss/main.css';
 
 

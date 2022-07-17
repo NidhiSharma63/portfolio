@@ -24,9 +24,9 @@ const Navbar = () => {
   useEffect(()=>{
     const getTheme = localStorage.getItem('portFolioTheme');
     if(getTheme===null){
-      body.classList.add('lightTheme');
+      body.className = 'lightTheme';
     }else{
-      body.classList.add(getTheme);
+      body.className = getTheme;
     }
     if(getTheme==='DarkTheme'){
       setshowDarkMode(true);
@@ -37,13 +37,11 @@ const Navbar = () => {
 
   const changeTheme = ()=>{
     if(body.classList.contains("lightTheme")){
-      body.classList.add('DarkTheme');
-      body.classList.remove('lightTheme')
+      body.className = 'DarkTheme';
       localStorage.setItem('portFolioTheme','DarkTheme');
       setshowDarkMode(true);
     }else{
-      body.classList.remove('DarkTheme');
-      body.classList.add('lightTheme');
+      body.className ='lightTheme';
       localStorage.setItem('portFolioTheme','lightTheme');
       setshowDarkMode(false);
     }
