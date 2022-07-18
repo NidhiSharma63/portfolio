@@ -38,7 +38,7 @@ const projectDetails=[
     Image:`${cal}`,
     title:'Calculator',
     description:'calculator app with three diffrent themes.',
-    link:"https://nidhisharma63.github.io/calculator-app/",
+    link:"https://nidhisharma63.github.io/calculator-app2/calculator-app-master/",
     technologies:[
       'js',
       'css',
