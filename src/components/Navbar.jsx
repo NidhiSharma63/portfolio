@@ -64,7 +64,10 @@ const Navbar = () => {
           sx={{
             width: '1300px',
           }}>
-            <Box width='300px'>
+            <Box 
+            sx={{
+              width:{sm:'300px',xs:'auto'}
+            }}>
               <ThemeProvider theme={logoTypography}>
                 <Typography
                 sx={{
