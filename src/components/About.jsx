@@ -45,7 +45,7 @@ const About = () => {
 
   return (
     <Box
-      marginTop='140px'
+      marginTop='200px'
       className='About-wrapper About-wrapper-anim'
       id='About-wrapper'>
       <ThemeProvider theme={headingTypography}>
@@ -58,7 +58,8 @@ const About = () => {
         display='flex'
         sx={{
           flexDirection:{xs:'column',md:'row'},
-          width:{xs:'100%',md:'920px',lg:'1100px'},
+          gap:'20px',
+          width:{xs:'100%',md:'920px',lg:'1200px'},
         }}>
         {/* textContainer */}
         <Box
@@ -80,7 +81,10 @@ const About = () => {
                     }}
                   />
                   <ThemeProvider theme={AboutTypography}>
-                    <Typography>
+                    <Typography
+                    sx={{
+                      fontSize: {lg:'19px',md:'17px',sm:'19px',xs:'15px'},
+                    }}>
                       {text}
                     </Typography>
                   </ThemeProvider>

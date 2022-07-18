@@ -5,6 +5,7 @@ import { headingTypography } from '../materialui/Typrography';
 
 import cal from '../Images/cal.png';
 import cargame from '../Images/cargame.png'
+import exerciseImg from '../Images/exercise2.png';
 import Technologies from './Technologies'
 
 import { MyProjectsChildAnim } from '../js/Mybuild';
@@ -24,7 +25,7 @@ const projectDetails=[
     ]
   },
   {
-    Image:`${cargame}`,
+    Image:`${exerciseImg}`,
     title:'Exercise App',
     description:'this app show more than thousand of exercise with detailed explations and videos',
     link:"https://nidhisharma63.github.io/calculator-app/",

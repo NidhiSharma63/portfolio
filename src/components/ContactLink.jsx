@@ -45,7 +45,7 @@ const ContactLink = () => {
             }}>
               <a
                 target='_blank'
-               href='https://github.com/NidhiSharma63'>
+                href='https://github.com/NidhiSharma63'>
                 <GitHubIcon
                 sx={{
                   color: 'var(--contact-link-icon-color)',

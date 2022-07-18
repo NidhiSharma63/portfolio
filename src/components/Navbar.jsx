@@ -1,6 +1,6 @@
 import React,{useEffect, useState} from 'react';
 
-import { Box,Stack,Button} from '@mui/material';
+import { Box,Stack,Button,Typography,ThemeProvider } from '@mui/material';
 import MenuSharpIcon from '@mui/icons-material/MenuSharp';
 import CloseIcon from '@mui/icons-material/Close';
 import LightModeIcon from '@mui/icons-material/LightMode';
@@ -9,6 +9,7 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 import logo from '../Images/logo.png';
 import ButtonComponent from './Button';
 import NavMenu from './NavMenu';
+import { logoTypography } from '../materialui/Typrography'
 
 const Navbar = () => {
   const body = document.querySelector('body');
@@ -54,25 +55,27 @@ const Navbar = () => {
       <Box
         className="navbar"
         sx={{
-          boxShadow: '1px 1px 10px 1px rgba(13, 13, 24, 0.14)',
+          padding:{sm:'15px',xs:'10px'},
+          paddingTop:{sm:'20px',xs:'0px'},
         }}
         >
         <Box
           className="navbar-container"
           sx={{
-            width: '1200px',
+            width: '1300px',
           }}>
-            <Box
-              component='img'
-              src={logo} 
-              alt='logo'
-              marginLeft='10px'
-              sx={{
-                cursor:'pointer',
-                width:{sm:'70px',xs:'50px'},
-                height:{sm:'70px',xs:'60px'},
-                marginTop:{sm:'-13px',xs:'-10px'},
-            }}/>
+            <Box width='300px'>
+              <ThemeProvider theme={logoTypography}>
+                <Typography
+                sx={{
+                  fontSize: {
+                    lg:'23px',md:'20px',sm:'18px',xs:'16px',
+                  }
+                }}>
+                    NIDHI SHARMA
+                </Typography>
+              </ThemeProvider>
+            </Box>
           <Box 
             className="navbar-menu"
             sx={{
@@ -153,7 +156,7 @@ const Navbar = () => {
                       cursor:'pointer',
                       width:'2rem',
                       height:'3rem',
-                      color:"var(--primary-color)"
+                      color:"var(--secondary-color)"
                   }}/>
                 }
             </Box>

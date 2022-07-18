@@ -1,5 +1,21 @@
 import { createTheme, fontFamily } from "@mui/material";
 
+export const logoTypography = createTheme({
+  components:{
+    MuiTypography:{
+      styleOverrides:{
+        root:{
+          fontFamily: 'var(--fontFamilyBitter)',
+          fontWeight: '600',
+          letterSpacing: '2px',
+          fontSize: '22px',
+          color: 'var(--primary-color)',
+        }
+      }
+    }
+  }
+});
+
 export const headingTypography = createTheme({
   components:{
     MuiTypography:{
@@ -60,6 +76,8 @@ export const AboutTypography = createTheme({
     MuiTypography:{
       styleOverrides:{
         root:{
+          fontSize:'19px',
+          lineHeight:'30px',
           fontFamily:'var(--fontFamilyWorkSans)',
           letterSpacing:'1px',
           fontWeight:'var(--font-weight)',
