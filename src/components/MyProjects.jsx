@@ -17,7 +17,7 @@ const projectDetails=[
     Image:`${cargame}`,
     title:'Car game',
     description:'this car game is amazing. You can use the arrow keys to control the car.',
-    link:'https://nidhisharma63.github.io/car-game/',
+    link:'https://nidhisharma63.github.io/Car_game/',
     technologies:[
       'js',
       'css',
