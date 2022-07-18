@@ -28,7 +28,7 @@ const projectDetails=[
     Image:`${exerciseImg}`,
     title:'Exercise App',
     description:'this app show more than thousand of exercise with detailed explations and videos',
-    link:"https://nidhisharma63.github.io/calculator-app/",
+    link:"https://nidhisharma63.github.io/FITNESS-EXERCISE-REACT-APP/",
     technologies:[
       'react',
       'material ui'
