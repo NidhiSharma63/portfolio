@@ -9,18 +9,6 @@
   @include flexproperty($alignItem:center, $justifyContent:center, $flexDirection:column);
 }
 
-.bg {
-  width: 100%;
-  position: absolute;
-  height: 300px;
-  border-bottom-right-radius: 11%;
-  left: 0;
-  margin-top: 80px;
-  z-index: -1;
-  background: rgb(72,45,253);
-  background: linear-gradient(0deg, rgba(72,45,253,0.00043767507002800965) 0%, rgba(72,45,253,0.30575980392156865) 98%);
-}
-
 .underLine-pTag::after {
   content: '';
   position: relative; 

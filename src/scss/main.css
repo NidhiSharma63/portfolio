@@ -1,7 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=PT+Serif&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Bitter:wght@300;400&family=Lobster+Two&display=swap");
 .tranfrom-left {
   transform: translateX(-100%);
 }
@@ -44,7 +43,7 @@
 }
 
 .contact-wrapper {
-  margin: 90px auto 30px auto;
+  margin: 150px auto 30px auto;
   transition: all 1s;
   display: flex;
   align-items: center;
@@ -111,7 +110,7 @@
   border-radius: 10px;
   padding: 10px;
   font-size: 17px;
-  box-shadow: 0px 0px 4px 0px rgb(117, 30, 218);
+  box-shadow: 0px 2px 14px 0px var(--single-project-box-shadow);
   width: 100%;
   transition: box-shadow 0.3s;
   background-color: transparent;
@@ -174,6 +173,7 @@
 }
 
 .contact-link-box {
+  background-color: var(--contact-box-bg-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -188,9 +188,6 @@
 
 @media screen and (min-width: 0px) and (max-width: 500px) {
   .contact-form-box {
-    --contact-link-icon-color:white;
-    --contact-link-color:#fff;
-    --contact-link-font-weight: 300;
     flex-direction: column;
     gap: 10px;
     padding: 0px 10px;
@@ -199,8 +196,7 @@
     width: 100%;
     padding: 5px 10px;
     border-radius: 10px;
-    background: rgb(51, 30, 176);
-    background: linear-gradient(90deg, rgb(51, 30, 176) 45%, rgba(179, 0, 255, 0.924807423) 100%);
+    box-shadow: 0px 0px 6px 0px var(--single-project-box-shadow);
   }
 }
 .About-wrapper {
@@ -616,14 +612,12 @@
   }
 }
 .MyProjects {
-  margin-top: 150px;
+  margin-top: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   transition: all 0.5s ease;
-  background: rgb(72, 45, 253);
-  background: linear-gradient(0deg, rgba(72, 45, 253, 0) 5%, rgba(72, 45, 253, 0.0284488796) 11%, rgba(72, 45, 253, 0.0928746499) 43%, rgba(72, 45, 253, 0.006039916) 100%);
 }
 
 .myproject-outline::after {
@@ -656,12 +650,12 @@
   gap: 10px;
   padding: 10px 15px;
   border-radius: 10px;
-  box-shadow: 0px 0px 4px 0px var(--single-project-box-shadow);
   width: 90%;
   margin: auto;
   height: 90%;
   transition: 0.2s;
   background-color: var(--single-project-bg-color);
+  box-shadow: 0px 0px 14px 0px var(--single-project-box-shadow);
 }
 
 .single-projects:hover {
@@ -703,10 +697,11 @@
   border-radius: 6px;
   font-family: var(--fontFamilyWorkSans);
   transition: 0.7s;
+  box-shadow: 0px 9px 20px -13px var(--secondary-color);
 }
 
 .project-link:hover {
-  box-shadow: 0px 0px 4px 0px black;
+  box-shadow: 0px 0px 4px 0px var(--single-project-box-shadow);
   background: var(--secondary-color);
   color: white;
 }
@@ -732,18 +727,6 @@
   flex-direction: column;
 }
 
-.bg {
-  width: 100%;
-  position: absolute;
-  height: 300px;
-  border-bottom-right-radius: 11%;
-  left: 0;
-  margin-top: 80px;
-  z-index: -1;
-  background: rgb(72, 45, 253);
-  background: linear-gradient(0deg, rgba(72, 45, 253, 0.0004376751) 0%, rgba(72, 45, 253, 0.3057598039) 98%);
-}
-
 .underLine-pTag::after {
   content: "";
   position: relative;
@@ -763,11 +746,12 @@
   justify-content: space-between;
   flex-direction: row;
   position: fixed;
-  padding: 6px;
   width: 100%;
+  left: 0;
   background-color: var(--navbar-bg-color);
-  background-color: var(--background-color);
   z-index: 3;
+  padding: 15px;
+  padding-top: 30px;
 }
 
 .sm-navbar {
@@ -791,7 +775,6 @@
   flex-direction: row;
   padding: 6px;
   margin: auto;
-  background-color: rgba(181, 174, 223, 0);
 }
 
 .navbar-menu {
@@ -876,35 +859,40 @@
 }
 
 :root {
-  --fontFamilyPtSerif: "PT Serif", serif;
-  --fontFamilyRobotoSlab: "Roboto Slab", serif;
   --fontFamilyMerriweather: "Merriweather", serif;
   --fontFamilyWorkSans: "Work Sans", sans-serif;
-  --single-project-bg-color:rgba(181, 174, 223, 0.0.55);
-  --single-project-box-shadow:rgb(72,45,253);
-  --navbar-bg-color: rgba(120, 106, 202, 0.055);
-  --contact-link-icon-color:rgb(100, 11, 160);
+  --fontFamilyBitter:"Bitter", serif;
   --sun-color:rgb(252, 227, 7);
 }
 
 .lightTheme {
-  --background-color: #FFFFFF;
+  --background-color: #f5f5f5;
   --primary-color: #1d1a1a;
-  --secondary-color: #331EB0;
+  --secondary-color: #03434E;
+  --navbar-bg-color: #f5f5f5;
   --technologies-border-color: #67087a;
   --technologies-bg-color: #b714d83d;
-  --contact-link-color:#1d1a1a;
-  --font-weight: 700;
-  --contact-link-font-weight: 700;
+  --contact-box-bg-color: whitesmoke;
+  --contact-link-color:#03434E;
+  --contact-link-icon-color:#03434E;
+  --single-project-bg-color:whitesmoke;
+  --single-project-box-shadow:rgb(192 214 226);
+  --font-weight: 500;
+  --contact-link-font-weight: 600;
 }
 
 .DarkTheme {
   --background-color: #181717;
   --primary-color: #FFFFFF;
-  --secondary-color: #331EB0;
+  --secondary-color: #26c6e2;
+  --navbar-bg-color: #181717;
   --technologies-border-color: #67087a;
   --technologies-bg-color: #7119833d;
+  --contact-box-bg-color: #181717;
   --contact-link-color:#fff;
+  --contact-link-icon-color:#26c6e2;
+  --single-project-bg-color:#181717;
+  --single-project-box-shadow:rgb(10, 9, 9);
   --font-weight: 300;
   --contact-link-font-weight: 300;
 }

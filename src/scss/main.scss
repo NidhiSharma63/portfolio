@@ -1,8 +1,8 @@
 
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Bitter:wght@300;400&family=Lobster+Two&display=swap');
 
 @import './utils';
 @import './components/contact';
@@ -25,38 +25,54 @@
 }
 
 :root {
-  --fontFamilyPtSerif: 'PT Serif', serif;
-  --fontFamilyRobotoSlab: 'Roboto Slab', serif;
   --fontFamilyMerriweather: 'Merriweather', serif;
   --fontFamilyWorkSans: 'Work Sans', sans-serif;
 
-  --single-project-bg-color:rgba(181, 174, 223, 0.0.55);
-  --single-project-box-shadow:rgb(72,45,253);
+  --fontFamilyBitter:'Bitter', serif;
 
-  --navbar-bg-color: rgba(120, 106, 202, 0.055);
-
-  --contact-link-icon-color:rgb(100, 11, 160);
   --sun-color:rgb(252, 227, 7);
 }
 
 .lightTheme {
-  --background-color: #FFFFFF;
+  --background-color: #f5f5f5;
   --primary-color: #1d1a1a;
-  --secondary-color: #331EB0;
+  --secondary-color: #03434E;
+  
+  --navbar-bg-color: #f5f5f5;
+  
   --technologies-border-color: #67087a;
   --technologies-bg-color: #b714d83d;
-  --contact-link-color:#1d1a1a;
-  --font-weight: 700;
-  --contact-link-font-weight: 700;
+  
+  --contact-box-bg-color: whitesmoke;
+  --contact-link-color:#03434E;
+  --contact-link-icon-color:#03434E;
+  
+  --single-project-bg-color:whitesmoke;
+  --single-project-box-shadow:rgb(192 214 226);
+  
+  --font-weight: 500;
+  --contact-link-font-weight: 600;
 }
 
 .DarkTheme {
   --background-color: #181717;
   --primary-color: #FFFFFF;
-  --secondary-color: #331EB0;
+
+  --secondary-color: #26c6e2;
+
+  --navbar-bg-color: #181717;
+
   --technologies-border-color: #67087a;
   --technologies-bg-color: #7119833d;
+
+  --contact-box-bg-color: #181717;
   --contact-link-color:#fff;
+  --contact-link-icon-color:#26c6e2;
+
+  
+  --single-project-bg-color:#181717;
+  --single-project-box-shadow:rgb(10, 9, 9);
+
   --font-weight: 300;
   --contact-link-font-weight: 300;
 

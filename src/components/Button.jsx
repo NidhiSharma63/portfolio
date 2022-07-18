@@ -15,7 +15,8 @@ const ButtonComponent = ({value}) => {
         fontWeight:'bold',
         width:'110px',
         height:'40px',
-        boxShadow: '1px 1px 8px 1px rgba(13, 13, 24, 0.24)',
+        // boxShadow: '1px 1px 8px 1px rgba(13, 13, 24, 0.24)',
+        boxShadow: '0px 13px 29px -14px var(--secondary-color)',
         "&.MuiButtonBase-root:hover": {
           bgcolor: "transparent",
           border: "3px solid var(--secondary-color)",

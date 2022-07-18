@@ -18,9 +18,8 @@ const HeroBanner = () => {
         id='hero-banner-container'
         sx={{
           flexDirection:{xs:'column',md:'row'},
-          margin:{xs:'50px',md:'50px 0px'},
           gap:{xs:'40px',md:'0px'},
-          marginTop:{xs:'150px',md:'150px',lg:'150px'},
+          marginTop:{xs:'150px',md:'170px',lg:'170px'},
         }}>
        
         <Box
@@ -28,11 +27,11 @@ const HeroBanner = () => {
           gap='6px'>
            <ThemeProvider theme={heroTypography1}>
               <Typography
-                sx={{fontSize:{xs:'23px',sm:'42px',lg:'53px'}}}>
+                sx={{fontSize:{xs:'25px',sm:'42px',lg:'53px'}}}>
                 <Box component='span' color='var(--secondary-color)'>Hi,</Box>I'm <Box component='span' color='var(--secondary-color)'>Nidhi Sharma</Box>
               </Typography>
               <Typography
-                sx={{fontSize:{xs:'18px',md:'29px',lg:'32px'}}}>
+                sx={{fontSize:{xs:'18px',md:'29px',md:'32px',lg:'32px'}}}>
                 A Frontend Developer
               </Typography>
            </ThemeProvider>
@@ -61,12 +60,6 @@ const HeroBanner = () => {
               width:{xs:'300px',sm:'500px',md:'400px',lg:'600px'},
             }}
           />
-      </Box>
-      <Box
-        className='bg'
-        sx={{
-          top:{sm:'0px',xs:'-3px'}
-        }}>
       </Box>
     </>
   )

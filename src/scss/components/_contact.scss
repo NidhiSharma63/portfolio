@@ -1,5 +1,5 @@
 .contact-wrapper{
-  margin: 90px auto 30px auto;
+  margin: 150px auto 30px auto;
   transition: all 1s;
   @include flexproperty($alignItem:center, $justifyContent:center, $flexDirection:column);
 }
@@ -47,7 +47,7 @@
   border-radius: 10px;
   padding: 10px;
   font-size: 17px;
-  box-shadow: 0px 0px 4px 0px rgb(117, 30, 218);
+  box-shadow: 0px 2px 14px 0px var(--single-project-box-shadow);
   width: 100%;
   transition: box-shadow .3s;
   background-color: transparent;
@@ -86,6 +86,7 @@
   margin-top: 20px;
 }
 .contact-link-box{
+  background-color: var(--contact-box-bg-color);
   @include flexproperty($alignItem:center, $justifyContent:space-between, $flexDirection:column);
   gap:10px;
 }
@@ -100,10 +101,7 @@
 and (max-width:500px){
   
   .contact-form-box{
-    --contact-link-icon-color:white;
-    --contact-link-color:#fff;
-    --contact-link-font-weight: 300;
-    
+
     flex-direction: column;
     gap: 10px;
     padding: 0px 10px;
@@ -111,7 +109,7 @@ and (max-width:500px){
   .contact-link-box{
     width: 100%;
     padding: 5px 10px;
-    border-radius: 10px;background: rgb(51,30,176);
-    background: linear-gradient(90deg, rgba(51,30,176,1) 45%, rgba(179,0,255,0.9248074229691877) 100%);
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px 0px var(--single-project-box-shadow);
   }
 }

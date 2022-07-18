@@ -1,11 +1,12 @@
 .navbar{
   @include flexproperty($alignItem:center, $justifyContent:space-between, $flexDirection:row);
   position: fixed;
-  padding: 6px;
   width: 100%;
-  background-color:var(--navbar-bg-color);
-  background-color: var(--background-color);
+  left: 0;
+  background-color: var(--navbar-bg-color);
   z-index: 3;
+  padding: 15px;
+  padding-top: 30px;
 }
 
 .sm-navbar{
@@ -23,8 +24,6 @@
   @include flexproperty($alignItem:center, $justifyContent:space-between, $flexDirection:row);
   padding: 6px;
   margin: auto;
-  background-color: rgba(181, 174, 223, 0);
-
 }
 
 .navbar-menu{

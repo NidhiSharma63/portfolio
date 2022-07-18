@@ -1,12 +1,10 @@
 .MyProjects{
-  margin-top:150px;
+  margin-top:200px;
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
   transition: all .5s ease;
-  background: rgb(72,45,253);
-  background: linear-gradient(0deg, rgba(72,45,253,0) 5%, rgba(72,45,253,0.028448879551820738) 11%, rgba(72,45,253,0.09287464985994398) 43%, rgba(72,45,253,0.006039915966386533) 100%);
 }
 
 .myproject-outline::after {
@@ -31,12 +29,12 @@
   gap:10px;
   padding:10px 15px;
   border-radius:10px;
-  box-shadow: 0px 0px 4px 0px var(--single-project-box-shadow);
   width:90%;
   margin: auto;
   height:90%;
   transition: .2s;
   background-color: var(--single-project-bg-color);
+  box-shadow: 0px 0px 14px 0px var(--single-project-box-shadow);
 }
 .single-projects:hover{
   transform: translateY(-10px);
@@ -71,9 +69,10 @@
   border-radius: 6px;
   font-family: var(--fontFamilyWorkSans);
   transition: .7s;
+  box-shadow: 0px 9px 20px -13px var(--secondary-color);
 }
 .project-link:hover{
-  box-shadow: 0px 0px 4px 0px  black;
+  box-shadow: 0px 0px 4px 0px  var(--single-project-box-shadow);
   background: var(--secondary-color);
   color: white;
 }
