@@ -16,14 +16,7 @@ import js from '../Images/js.png';
 import Bulb from './Bulb';
 import Images from './Images';
 import { useEffect } from 'react';
-
-
-const IntroText = [
-  "I have completed my 12th in 2021 and i got 89%.",
-  "I took a gap for  one year due to some personal issues, i utilized that time to learn front-end skills.",
-  "I am a self-taught developer. I’m learning everthing from google and from youtube.",
-  "Currently, I’m looking for internship to improve my coding skills and to get experience.",
-]
+import { IntroText } from '../data.js';
 
 const About = () => {
 
