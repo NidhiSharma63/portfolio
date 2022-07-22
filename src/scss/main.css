@@ -181,7 +181,8 @@
   gap: 10px;
 }
 
-.link-github {
+.link-github,
+.link-linkedin {
   text-decoration: none;
   color: var(--contact-link-color);
 }
@@ -637,7 +638,7 @@
 
 .projects-container {
   width: 400px;
-  height: 440px;
+  height: 500px;
   transition: all 0.5s;
 }
 

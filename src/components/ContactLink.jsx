@@ -56,7 +56,6 @@ const ContactLink = () => {
               <a href='https://github.com/NidhiSharma63'
               className='link-github'>Github</a>
             </Typography>
-            
           </ThemeProvider>
         </Box>
 
@@ -88,14 +87,23 @@ const ContactLink = () => {
           sx={{
             flexDirection: {xs:'row',md:'column'},
           }}>
-          <LinkedInIcon
-            sx={{
-              color: 'var(--contact-link-icon-color)',
-            }}/>
+          <a 
+          target="_blank"
+          href="https://www.linkedin.com/in/nidhi-sharma-55329823b/">
+            <LinkedInIcon
+              sx={{
+                color: 'var(--contact-link-icon-color)',
+              }}/>
+          </a>
             <ThemeProvider theme={contactLinkTypo}>
+              <a 
+              className='link-linkedin'
+              target="_blank"
+              href="https://www.linkedin.com/in/nidhi-sharma-55329823b/">
               <Typography>
                 Linkdin <br/>
               </Typography>
+              </a>
             </ThemeProvider>
         </Box>
         <Box

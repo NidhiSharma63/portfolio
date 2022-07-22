@@ -90,7 +90,8 @@
   @include flexproperty($alignItem:center, $justifyContent:space-between, $flexDirection:column);
   gap:10px;
 }
-.link-github{
+.link-github,
+.link-linkedin{
   text-decoration: none;
   color: var(--contact-link-color);
 }
