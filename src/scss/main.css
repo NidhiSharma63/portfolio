@@ -636,8 +636,7 @@
 }
 
 .projects-container {
-  margin: auto;
-  width: 340px;
+  width: 400px;
   height: 440px;
   transition: all 0.5s;
 }

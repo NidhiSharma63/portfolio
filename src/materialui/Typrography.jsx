@@ -113,7 +113,7 @@ export const technologiesTypo = createTheme({
           fontSize:'12px',
           border:'1px solid',
           color:'var(--technologies-border-color)',
-          padding:'0px 8px',
+          padding:'3px 8px',
           borderRadius:'30px',
           borderColor:'var(--technologies-border-color)',
           backgroundColor:'var(--technologies-bg-color)',

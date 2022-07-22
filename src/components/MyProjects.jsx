@@ -3,9 +3,9 @@ import React,{useEffect} from 'react';
 import { Box,ThemeProvider,Typography } from '@mui/material';
 import { headingTypography } from '../materialui/Typrography';
 
-import cal from '../Images/cal.png';
+import portfolio from '../Images/portfolio1.png';
 import cargame from '../Images/cargame.png'
-import exerciseImg from '../Images/exercise2.png';
+import exerciseImg from '../Images/exercise1.png';
 import Technologies from './Technologies'
 
 import { MyProjectsChildAnim } from '../js/Mybuild';
@@ -35,14 +35,13 @@ const projectDetails=[
     ]
   },
   {
-    Image:`${cal}`,
-    title:'Calculator',
-    description:'calculator app with three diffrent themes.',
-    link:"https://nidhisharma63.github.io/calculator-app2/calculator-app-master/",
+    Image:`${portfolio}`,
+    title:'portfolio',
+    description:'complete responsive portfolio website',
+    link:"https://nidhisharma63.github.io/client-portfolio/",
     technologies:[
-      'js',
-      'css',
-      'html'
+      'react',
+      'material ui'
     ]
   },
 ]
@@ -74,9 +73,7 @@ const MyProjects = () => {
        display='flex'
        gap='30px'
        width='100%'
-       sx={{
-        height:{lg:'500px',xs:'auto'},
-       }}
+       justifyContent='center'
        flexWrap='wrap'>
         
             {
@@ -92,7 +89,7 @@ const MyProjects = () => {
                     component='img'
                     src={item.Image}
                     width='100%'
-                    height='200px'
+                    height='240px'
                     borderRadius='10px'/>
                     <Box
                     className='project-info-container'>
