@@ -1,5 +1,5 @@
-import React,{useState,useEffect} from 'react';
-
+import React,{useState,useEffect, useRef} from 'react';
+import emailjs from 'emailjs-com';
 import { Box, Typography, Input, ThemeProvider } from '@mui/material';
 import Button from './Button';
 import ContactLink from './ContactLink';
@@ -63,13 +63,7 @@ const Contact = () => {
       return;
     }
     if(name && email && message){
-      console.log(
-        {
-          'name':name,
-          'email':email,
-          'message':message
-        }
-      )
+      emailjs.sendForm('service_g5wb7nq','template_rwo6xed',formRef.current,'Nw9mYKs-BMJleDqIB')
       setName('');
       setEmail('');
       setMessage('');
@@ -77,6 +71,7 @@ const Contact = () => {
     return;
   }
 
+  const formRef = useRef();
   return (
     <Box
       className='contact-wrapper contact-wrapper-anim'
@@ -91,6 +86,8 @@ const Contact = () => {
       </ThemeProvider>
         <form
           className='form'
+          id='form'
+          ref={formRef}
           >
           <Box
             className='contact-form-box'
@@ -107,9 +104,6 @@ const Contact = () => {
                   autoComplete='off'
                   onChange={handleName}
                   value={name}
-                  sx={{
-                    fontFamily: 'var(--fontFamilyRobotoSlab)',
-                  }}
                 />
                 {nameError && 
                   <ThemeProvider theme={errorTypography}>
@@ -159,8 +153,10 @@ const Contact = () => {
           <Box
             className='form-btn-container'>
           <Box
+          type='submit'
             component='span'
-            onClick={submitForm}>
+            onClick={submitForm}
+            >
             <Button value='send'/>
           </Box>
           </Box>

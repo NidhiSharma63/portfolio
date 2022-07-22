@@ -113,6 +113,7 @@
   box-shadow: 0px 2px 14px 0px var(--single-project-box-shadow);
   width: 100%;
   transition: box-shadow 0.3s;
+  color: var(--primary-color);
   background-color: transparent;
 }
 
@@ -127,7 +128,7 @@
   margin-bottom: 20px;
   color: var(--primary-color);
   resize: none;
-  font-family: var(--fontFamilyRobotoSlab);
+  font-family: var(--fontFamilyWorkSans);
 }
 
 .textarea::-moz-placeholder {

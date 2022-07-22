@@ -36,7 +36,6 @@ export const childTranslateX = ({selector,classes}) =>{
   ) {
     entries.forEach(entry => {
       if(!entry.isIntersecting) return;
-      console.log('intersecting');
       Item.classList.remove(`${classes}`);
       observer.disconnect();
     })
