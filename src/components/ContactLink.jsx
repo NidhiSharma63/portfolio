@@ -4,7 +4,7 @@ import {Box,ThemeProvider,Typography} from '@mui/material';
 
 import { contactLinkTypo } from '../materialui/Typrography';
 
-import PhoneIcon from '@mui/icons-material/Phone';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EmailIcon from '@mui/icons-material/Email';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -88,13 +88,13 @@ const ContactLink = () => {
           sx={{
             flexDirection: {xs:'row',md:'column'},
           }}>
-          <PhoneIcon
+          <LinkedInIcon
             sx={{
               color: 'var(--contact-link-icon-color)',
             }}/>
             <ThemeProvider theme={contactLinkTypo}>
               <Typography>
-                +91 6395932754 <br/>
+                Linkdin <br/>
               </Typography>
             </ThemeProvider>
         </Box>
@@ -109,7 +109,7 @@ const ContactLink = () => {
           }}/>
           <ThemeProvider theme={contactLinkTypo}>
             <Typography>
-              Ghaziabad Uttar Pradesh 
+              Ghaziabad,U.P 
             </Typography>
           </ThemeProvider>
         </Box>
