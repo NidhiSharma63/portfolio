@@ -6,6 +6,7 @@ export const InputTheme = createTheme({
       styleOverrides: {
         root: {
           fontFamily:'var(--fontFamilyWorkSans)',
+          color:'var(--primary-color)',
           '&.Mui-focused::after': {
             borderBottom: '0px solid var(--secondary-color)',
           },

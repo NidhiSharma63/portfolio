@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-import { Box,Stack,Button,Typography, ThemeProvider } from '@mui/material';
+import { Box,Typography, ThemeProvider } from '@mui/material';
 import main from '../Images/main2.png';
 import ButtonComponent from './Button';
 import anim from '../js/HeroBanner'
