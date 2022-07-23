@@ -42,15 +42,14 @@ const HeroBanner = () => {
                 Frontend Developer with a passion for building beautiful,<br/> responsive websites and love to listening music.
               </Typography>
             </ThemeProvider>
-            <Box
-            component='span'
-            onClick={()=>{
-              window.scrollTo({ top:1650, behavior: 'smooth' });
-            }}>
+            <a
+            className='resume-link'
+            target="_blank"
+            href="https://resume.io/r/m1c8MtdL8">
               <ButtonComponent 
-              value='Hire me'
+              value='Get Resume'
               />
-            </Box>
+            </a>
           </Box>
           <Box
             className='hero-banner-image tranfrom-image'

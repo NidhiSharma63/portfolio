@@ -741,6 +741,10 @@
   transition: all 1s ease-in-out;
 }
 
+.resume-link {
+  text-decoration: none;
+}
+
 .navbar {
   display: flex;
   align-items: center;
